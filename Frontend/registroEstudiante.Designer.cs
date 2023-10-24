@@ -43,7 +43,6 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtDirección = new System.Windows.Forms.TextBox();
-            this.txtFechaNacimiento = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.txtGenero = new System.Windows.Forms.TextBox();
@@ -51,6 +50,7 @@
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnSiguienteDocente = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegEstudiante)).BeginInit();
             this.SuspendLayout();
@@ -194,15 +194,6 @@
             this.txtDirección.Size = new System.Drawing.Size(304, 25);
             this.txtDirección.TabIndex = 14;
             // 
-            // txtFechaNacimiento
-            // 
-            this.txtFechaNacimiento.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.txtFechaNacimiento.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFechaNacimiento.Location = new System.Drawing.Point(163, 458);
-            this.txtFechaNacimiento.Name = "txtFechaNacimiento";
-            this.txtFechaNacimiento.Size = new System.Drawing.Size(304, 25);
-            this.txtFechaNacimiento.TabIndex = 15;
-            // 
             // txtUsuario
             // 
             this.txtUsuario.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -303,12 +294,20 @@
             this.btnSiguienteDocente.UseVisualStyleBackColor = false;
             this.btnSiguienteDocente.Click += new System.EventHandler(this.btnSiguienteDocente_Click);
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(163, 458);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(304, 25);
+            this.dateTimePicker1.TabIndex = 23;
+            // 
             // registroEstudiante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(1159, 701);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.btnSiguienteDocente);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnActualizar);
@@ -316,7 +315,6 @@
             this.Controls.Add(this.txtGenero);
             this.Controls.Add(this.txtContraseña);
             this.Controls.Add(this.txtUsuario);
-            this.Controls.Add(this.txtFechaNacimiento);
             this.Controls.Add(this.txtDirección);
             this.Controls.Add(this.txtApellido);
             this.Controls.Add(this.txtNombre);
@@ -358,7 +356,6 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.TextBox txtDirección;
-        private System.Windows.Forms.TextBox txtFechaNacimiento;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.TextBox txtGenero;
@@ -366,5 +363,6 @@
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnSiguienteDocente;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroDocente));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtFechaNacimientoDocente = new System.Windows.Forms.TextBox();
             this.txtDirecciónDocente = new System.Windows.Forms.TextBox();
             this.txtApellidoDocente = new System.Windows.Forms.TextBox();
             this.txtNombreDocente = new System.Windows.Forms.TextBox();
@@ -51,6 +50,7 @@
             this.btnEliminarDocente = new System.Windows.Forms.Button();
             this.btnActualizarDocente = new System.Windows.Forms.Button();
             this.btnSiguienteDocente = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegDocente)).BeginInit();
             this.SuspendLayout();
@@ -78,15 +78,6 @@
             this.label1.Size = new System.Drawing.Size(322, 40);
             this.label1.TabIndex = 4;
             this.label1.Text = "\"Registro Docente\"";
-            // 
-            // txtFechaNacimientoDocente
-            // 
-            this.txtFechaNacimientoDocente.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.txtFechaNacimientoDocente.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFechaNacimientoDocente.Location = new System.Drawing.Point(141, 418);
-            this.txtFechaNacimientoDocente.Name = "txtFechaNacimientoDocente";
-            this.txtFechaNacimientoDocente.Size = new System.Drawing.Size(304, 25);
-            this.txtFechaNacimientoDocente.TabIndex = 24;
             // 
             // txtDirecciónDocente
             // 
@@ -303,12 +294,20 @@
             this.btnSiguienteDocente.UseVisualStyleBackColor = false;
             this.btnSiguienteDocente.Click += new System.EventHandler(this.btnSiguienteDocente_Click);
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(141, 418);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(304, 25);
+            this.dateTimePicker1.TabIndex = 36;
+            // 
             // RegistroDocente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(1090, 659);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.btnSiguienteDocente);
             this.Controls.Add(this.btnEliminarDocente);
             this.Controls.Add(this.btnActualizarDocente);
@@ -320,7 +319,6 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtFechaNacimientoDocente);
             this.Controls.Add(this.txtDirecciónDocente);
             this.Controls.Add(this.txtApellidoDocente);
             this.Controls.Add(this.txtNombreDocente);
@@ -347,7 +345,6 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtFechaNacimientoDocente;
         private System.Windows.Forms.TextBox txtDirecciónDocente;
         private System.Windows.Forms.TextBox txtApellidoDocente;
         private System.Windows.Forms.TextBox txtNombreDocente;
@@ -367,5 +364,6 @@
         private System.Windows.Forms.Button btnEliminarDocente;
         private System.Windows.Forms.Button btnActualizarDocente;
         private System.Windows.Forms.Button btnSiguienteDocente;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

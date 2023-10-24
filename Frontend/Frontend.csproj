@@ -52,11 +52,29 @@
     <Compile Include="Administrador.Designer.cs">
       <DependentUpon>Administrador.cs</DependentUpon>
     </Compile>
+    <Compile Include="AsignacionDocente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AsignacionDocente.Designer.cs">
+      <DependentUpon>AsignacionDocente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AsignacionEstudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AsignacionEstudiante.Designer.cs">
+      <DependentUpon>AsignacionEstudiante.cs</DependentUpon>
+    </Compile>
     <Compile Include="BIENVENIDA.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BIENVENIDA.Designer.cs">
       <DependentUpon>BIENVENIDA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BoletaCalificaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BoletaCalificaciones.Designer.cs">
+      <DependentUpon>BoletaCalificaciones.cs</DependentUpon>
     </Compile>
     <Compile Include="DocenteMenu.cs">
       <SubType>Form</SubType>
@@ -90,11 +108,26 @@
     <Compile Include="registroEstudiante.Designer.cs">
       <DependentUpon>registroEstudiante.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegistroNotas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroNotas.Designer.cs">
+      <DependentUpon>RegistroNotas.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Administrador.resx">
       <DependentUpon>Administrador.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AsignacionDocente.resx">
+      <DependentUpon>AsignacionDocente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AsignacionEstudiante.resx">
+      <DependentUpon>AsignacionEstudiante.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BIENVENIDA.resx">
       <DependentUpon>BIENVENIDA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BoletaCalificaciones.resx">
+      <DependentUpon>BoletaCalificaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DocenteMenu.resx">
       <DependentUpon>DocenteMenu.cs</DependentUpon>
@@ -119,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="registroEstudiante.resx">
       <DependentUpon>registroEstudiante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroNotas.resx">
+      <DependentUpon>RegistroNotas.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
