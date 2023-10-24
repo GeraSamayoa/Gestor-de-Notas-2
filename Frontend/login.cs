@@ -29,7 +29,14 @@ namespace Frontend
 
         private void buttonRegDocente_Click(object sender, EventArgs e)
         {
+            RegistroDocente login = new RegistroDocente();
+            login.Show();
+        }
 
+        private void buttonRegEstudiante_Click(object sender, EventArgs e)
+        {
+            registroEstudiante login = new registroEstudiante();
+            login.Show();
         }
     }
 }

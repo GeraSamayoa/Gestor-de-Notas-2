@@ -75,6 +75,7 @@
             this.buttonRegEstudiante.TabIndex = 1;
             this.buttonRegEstudiante.Text = "Registro \r\nEstudiante";
             this.buttonRegEstudiante.UseVisualStyleBackColor = false;
+            this.buttonRegEstudiante.Click += new System.EventHandler(this.buttonRegEstudiante_Click);
             // 
             // buttonAdmin
             // 
