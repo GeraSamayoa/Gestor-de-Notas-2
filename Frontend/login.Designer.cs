@@ -32,8 +32,8 @@
             this.buttonRegEstudiante = new System.Windows.Forms.Button();
             this.buttonAdmin = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textUsuario = new System.Windows.Forms.TextBox();
-            this.textPassword = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.buttonSiguiente = new System.Windows.Forms.Button();
@@ -106,25 +106,29 @@
             this.label1.Text = "Log In";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textUsuario
+            // txtUsuario
             // 
-            this.textUsuario.Location = new System.Drawing.Point(252, 189);
-            this.textUsuario.Name = "textUsuario";
-            this.textUsuario.Size = new System.Drawing.Size(413, 20);
-            this.textUsuario.TabIndex = 4;
+            this.txtUsuario.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtUsuario.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.Location = new System.Drawing.Point(252, 189);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(413, 25);
+            this.txtUsuario.TabIndex = 4;
             // 
-            // textPassword
+            // txtPassword
             // 
-            this.textPassword.Location = new System.Drawing.Point(252, 253);
-            this.textPassword.Name = "textPassword";
-            this.textPassword.Size = new System.Drawing.Size(413, 20);
-            this.textPassword.TabIndex = 5;
+            this.txtPassword.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtPassword.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(252, 253);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(413, 25);
+            this.txtPassword.TabIndex = 5;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(252, 168);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 18);
@@ -135,7 +139,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(252, 232);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 18);
@@ -170,8 +174,8 @@
             this.Controls.Add(this.buttonSiguiente);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textPassword);
-            this.Controls.Add(this.textUsuario);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonAdmin);
             this.Controls.Add(this.buttonRegEstudiante);
@@ -190,8 +194,8 @@
         private System.Windows.Forms.Button buttonRegEstudiante;
         private System.Windows.Forms.Button buttonAdmin;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textUsuario;
-        private System.Windows.Forms.TextBox textPassword;
+        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button buttonSiguiente;
