@@ -40,7 +40,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnAgregarRegEstudiante = new System.Windows.Forms.Button();
+            this.btnAgregarRegDocente = new System.Windows.Forms.Button();
             this.txtGeneroDocente = new System.Windows.Forms.TextBox();
             this.txtContraseniaDocente = new System.Windows.Forms.TextBox();
             this.txtUsuarioDocente = new System.Windows.Forms.TextBox();
@@ -48,8 +48,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnActualizar = new System.Windows.Forms.Button();
+            this.btnEliminarDocente = new System.Windows.Forms.Button();
+            this.btnActualizarDocente = new System.Windows.Forms.Button();
             this.btnSiguienteDocente = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegDocente)).BeginInit();
@@ -164,23 +164,23 @@
             this.label2.TabIndex = 16;
             this.label2.Text = "Nombre:";
             // 
-            // btnAgregarRegEstudiante
+            // btnAgregarRegDocente
             // 
-            this.btnAgregarRegEstudiante.BackColor = System.Drawing.Color.SlateGray;
-            this.btnAgregarRegEstudiante.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnAgregarRegEstudiante.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnAgregarRegEstudiante.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray;
-            this.btnAgregarRegEstudiante.FlatAppearance.BorderSize = 0;
-            this.btnAgregarRegEstudiante.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateGray;
-            this.btnAgregarRegEstudiante.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAgregarRegEstudiante.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarRegEstudiante.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarRegEstudiante.Location = new System.Drawing.Point(547, 388);
-            this.btnAgregarRegEstudiante.Name = "btnAgregarRegEstudiante";
-            this.btnAgregarRegEstudiante.Size = new System.Drawing.Size(137, 55);
-            this.btnAgregarRegEstudiante.TabIndex = 32;
-            this.btnAgregarRegEstudiante.Text = "Agregar";
-            this.btnAgregarRegEstudiante.UseVisualStyleBackColor = false;
+            this.btnAgregarRegDocente.BackColor = System.Drawing.Color.SlateGray;
+            this.btnAgregarRegDocente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAgregarRegDocente.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnAgregarRegDocente.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray;
+            this.btnAgregarRegDocente.FlatAppearance.BorderSize = 0;
+            this.btnAgregarRegDocente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateGray;
+            this.btnAgregarRegDocente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAgregarRegDocente.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarRegDocente.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarRegDocente.Location = new System.Drawing.Point(547, 388);
+            this.btnAgregarRegDocente.Name = "btnAgregarRegDocente";
+            this.btnAgregarRegDocente.Size = new System.Drawing.Size(137, 55);
+            this.btnAgregarRegDocente.TabIndex = 32;
+            this.btnAgregarRegDocente.Text = "Agregar";
+            this.btnAgregarRegDocente.UseVisualStyleBackColor = false;
             // 
             // txtGeneroDocente
             // 
@@ -248,41 +248,41 @@
             this.label6.TabIndex = 25;
             this.label6.Text = "Genero:";
             // 
-            // btnEliminar
+            // btnEliminarDocente
             // 
-            this.btnEliminar.BackColor = System.Drawing.Color.SlateGray;
-            this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray;
-            this.btnEliminar.FlatAppearance.BorderSize = 0;
-            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateGray;
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEliminar.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(918, 388);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(137, 55);
-            this.btnEliminar.TabIndex = 34;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminarDocente.BackColor = System.Drawing.Color.SlateGray;
+            this.btnEliminarDocente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnEliminarDocente.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnEliminarDocente.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray;
+            this.btnEliminarDocente.FlatAppearance.BorderSize = 0;
+            this.btnEliminarDocente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateGray;
+            this.btnEliminarDocente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEliminarDocente.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarDocente.ForeColor = System.Drawing.Color.White;
+            this.btnEliminarDocente.Location = new System.Drawing.Point(918, 388);
+            this.btnEliminarDocente.Name = "btnEliminarDocente";
+            this.btnEliminarDocente.Size = new System.Drawing.Size(137, 55);
+            this.btnEliminarDocente.TabIndex = 34;
+            this.btnEliminarDocente.Text = "Eliminar";
+            this.btnEliminarDocente.UseVisualStyleBackColor = false;
             // 
-            // btnActualizar
+            // btnActualizarDocente
             // 
-            this.btnActualizar.BackColor = System.Drawing.Color.SlateGray;
-            this.btnActualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnActualizar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnActualizar.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray;
-            this.btnActualizar.FlatAppearance.BorderSize = 0;
-            this.btnActualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateGray;
-            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnActualizar.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizar.ForeColor = System.Drawing.Color.White;
-            this.btnActualizar.Location = new System.Drawing.Point(726, 388);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(137, 55);
-            this.btnActualizar.TabIndex = 33;
-            this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizarDocente.BackColor = System.Drawing.Color.SlateGray;
+            this.btnActualizarDocente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnActualizarDocente.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnActualizarDocente.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray;
+            this.btnActualizarDocente.FlatAppearance.BorderSize = 0;
+            this.btnActualizarDocente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateGray;
+            this.btnActualizarDocente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnActualizarDocente.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizarDocente.ForeColor = System.Drawing.Color.White;
+            this.btnActualizarDocente.Location = new System.Drawing.Point(726, 388);
+            this.btnActualizarDocente.Name = "btnActualizarDocente";
+            this.btnActualizarDocente.Size = new System.Drawing.Size(137, 55);
+            this.btnActualizarDocente.TabIndex = 33;
+            this.btnActualizarDocente.Text = "Actualizar";
+            this.btnActualizarDocente.UseVisualStyleBackColor = false;
             // 
             // btnSiguienteDocente
             // 
@@ -309,9 +309,9 @@
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(1090, 659);
             this.Controls.Add(this.btnSiguienteDocente);
-            this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnActualizar);
-            this.Controls.Add(this.btnAgregarRegEstudiante);
+            this.Controls.Add(this.btnEliminarDocente);
+            this.Controls.Add(this.btnActualizarDocente);
+            this.Controls.Add(this.btnAgregarRegDocente);
             this.Controls.Add(this.txtGeneroDocente);
             this.Controls.Add(this.txtContraseniaDocente);
             this.Controls.Add(this.txtUsuarioDocente);
@@ -355,7 +355,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnAgregarRegEstudiante;
+        private System.Windows.Forms.Button btnAgregarRegDocente;
         private System.Windows.Forms.TextBox txtGeneroDocente;
         private System.Windows.Forms.TextBox txtContraseniaDocente;
         private System.Windows.Forms.TextBox txtUsuarioDocente;
@@ -363,8 +363,8 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.Button btnEliminarDocente;
+        private System.Windows.Forms.Button btnActualizarDocente;
         private System.Windows.Forms.Button btnSiguienteDocente;
     }
 }
