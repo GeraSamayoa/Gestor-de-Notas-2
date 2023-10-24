@@ -38,5 +38,11 @@ namespace Frontend
             registroEstudiante login = new registroEstudiante();
             login.Show();
         }
+
+        private void buttonAdmin_Click(object sender, EventArgs e)
+        {
+            Administrador login = new Administrador();
+            login.Show();
+        }
     }
 }

@@ -94,6 +94,7 @@
             this.buttonAdmin.TabIndex = 2;
             this.buttonAdmin.Text = "Administración";
             this.buttonAdmin.UseVisualStyleBackColor = false;
+            this.buttonAdmin.Click += new System.EventHandler(this.buttonAdmin_Click);
             // 
             // label1
             // 
