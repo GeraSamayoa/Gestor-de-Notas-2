@@ -36,7 +36,7 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.buttonSiguiente = new System.Windows.Forms.Button();
+            this.btnSiguiente = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonRegDocente
@@ -146,24 +146,24 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Password";
             // 
-            // buttonSiguiente
+            // btnSiguiente
             // 
-            this.buttonSiguiente.BackColor = System.Drawing.Color.SlateGray;
-            this.buttonSiguiente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.buttonSiguiente.Cursor = System.Windows.Forms.Cursors.Default;
-            this.buttonSiguiente.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray;
-            this.buttonSiguiente.FlatAppearance.BorderSize = 0;
-            this.buttonSiguiente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateGray;
-            this.buttonSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonSiguiente.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSiguiente.ForeColor = System.Drawing.Color.White;
-            this.buttonSiguiente.Location = new System.Drawing.Point(681, 368);
-            this.buttonSiguiente.Name = "buttonSiguiente";
-            this.buttonSiguiente.Size = new System.Drawing.Size(95, 31);
-            this.buttonSiguiente.TabIndex = 8;
-            this.buttonSiguiente.Text = "Siguiente";
-            this.buttonSiguiente.UseVisualStyleBackColor = false;
-            this.buttonSiguiente.Click += new System.EventHandler(this.button4_Click);
+            this.btnSiguiente.BackColor = System.Drawing.Color.SlateGray;
+            this.btnSiguiente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSiguiente.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnSiguiente.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray;
+            this.btnSiguiente.FlatAppearance.BorderSize = 0;
+            this.btnSiguiente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateGray;
+            this.btnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSiguiente.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSiguiente.ForeColor = System.Drawing.Color.White;
+            this.btnSiguiente.Location = new System.Drawing.Point(673, 390);
+            this.btnSiguiente.Name = "btnSiguiente";
+            this.btnSiguiente.Size = new System.Drawing.Size(95, 31);
+            this.btnSiguiente.TabIndex = 8;
+            this.btnSiguiente.Text = "Siguiente";
+            this.btnSiguiente.UseVisualStyleBackColor = false;
+            this.btnSiguiente.Click += new System.EventHandler(this.button4_Click);
             // 
             // login
             // 
@@ -171,7 +171,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.buttonSiguiente);
+            this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtPassword);
@@ -198,6 +198,6 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button buttonSiguiente;
+        private System.Windows.Forms.Button btnSiguiente;
     }
 }
