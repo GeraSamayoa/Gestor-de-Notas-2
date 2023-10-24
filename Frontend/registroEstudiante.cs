@@ -16,5 +16,11 @@ namespace Frontend
         {
             InitializeComponent();
         }
+
+        private void btnSiguienteDocente_Click(object sender, EventArgs e)
+        {
+            EstudianteMenu registroEstudiante = new EstudianteMenu();
+            registroEstudiante.Show();
+        }
     }
 }

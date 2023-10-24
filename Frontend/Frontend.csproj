@@ -52,6 +52,18 @@
     <Compile Include="BIENVENIDA.Designer.cs">
       <DependentUpon>BIENVENIDA.cs</DependentUpon>
     </Compile>
+    <Compile Include="DocenteMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DocenteMenu.Designer.cs">
+      <DependentUpon>DocenteMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EstudianteMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EstudianteMenu.Designer.cs">
+      <DependentUpon>EstudianteMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +86,12 @@
     </Compile>
     <EmbeddedResource Include="BIENVENIDA.resx">
       <DependentUpon>BIENVENIDA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DocenteMenu.resx">
+      <DependentUpon>DocenteMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EstudianteMenu.resx">
+      <DependentUpon>EstudianteMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>

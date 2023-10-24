@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace Frontend
 {
-    public partial class RegistroDocente : Form
+    public partial class EstudianteMenu : Form
     {
-        public RegistroDocente()
+        public EstudianteMenu()
         {
             InitializeComponent();
-        }
-
-        private void btnSiguienteDocente_Click(object sender, EventArgs e)
-        {
-            DocenteMenu RegistroDocente = new DocenteMenu();
-            RegistroDocente.Show();
         }
     }
 }

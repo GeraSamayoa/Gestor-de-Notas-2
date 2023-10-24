@@ -72,7 +72,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(857, 29);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(244, 248);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -301,6 +301,7 @@
             this.btnSiguienteDocente.TabIndex = 22;
             this.btnSiguienteDocente.Text = "Siguiente";
             this.btnSiguienteDocente.UseVisualStyleBackColor = false;
+            this.btnSiguienteDocente.Click += new System.EventHandler(this.btnSiguienteDocente_Click);
             // 
             // registroEstudiante
             // 
@@ -331,7 +332,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "registroEstudiante";
             this.Text = "RegistroEstudiante";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
