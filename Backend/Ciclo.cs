@@ -18,7 +18,7 @@ namespace Backend
         {
             IdCiclo = idCiclo;
             TipoCiclo = tipociclo;
- 
+            
         }
     }
 }
