@@ -14,13 +14,17 @@ namespace Backend
         public Jornada IdJornada { get; set; }
         public bool status { get; set; }
         public Universidad IdUniversidad { get; set; }
-
-        public Carrera(string idcarrera, string namecarrera)
+        public List<Ciclo> ciclo { get; set; }
+        public Carrera(string idcarrera, string namecarrera, Ciclo ciclos)
         {
             this.idCarrera = idcarrera;
             this.NameCarrera = namecarrera;
             this.status = true;
-        }
+            ciclo = new List<Ciclo>();
+            this.ciclo.Add(ciclos);
+
+
+    }
         public List<Carrera> CarreraList;
 
         public void RepositorioCarrera()
@@ -37,6 +41,12 @@ namespace Backend
         {
             CarreraList.Remove(carrera);
         }
+
+
+        public Carrera carrera { get; set; }
+
+      
+
     }
 }
 
