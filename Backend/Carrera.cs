@@ -9,14 +9,13 @@ namespace Backend
     public class Carrera
     {
         public string idCarrera { get; set; }
-
         public string NameCarrera { get; set; }
         public Ciclo IdCiclo { get; set; }
         public Jornada IdJornada { get; set; }
         public bool status { get; set; }
         public Universidad IdUniversidad { get; set; }
 
-        public Carrera(string idcarrera, string namecarrera, int idciclo, TimeSpan idjornada)
+        public Carrera(string idcarrera, string namecarrera)
         {
             this.idCarrera = idcarrera;
             this.NameCarrera = namecarrera;
