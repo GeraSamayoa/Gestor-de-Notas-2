@@ -11,14 +11,18 @@ namespace Backend
         public int IdUniversidad { get; set; }
         public string NombreUniversidad { get; set; }
         public string Direccion { get; set; }
+        public List<Carrera> Carreras { get; set; }
 
         //Dependencia de persona
 
-public List <Persona>Personas { get; set; }
+        public List <Persona>Personas { get; set; }
+       
 
         public Universidad ()
         {
             Personas = new List<Persona>();
+            Carreras = new List<Carrera>();
+
         }
 
         public bool Guardar (Persona persona)
@@ -31,6 +35,19 @@ public List <Persona>Personas { get; set; }
         {
             var persona = Personas.Find(x => x.IdPersona == idPersona);
             return persona;
+        }
+
+        // Métodos para gestionar carreras
+        public void AgregarCarrera(Carrera carrera)
+        {
+            Carreras.Add(carrera);
+            carrera.Universidad = this; // Asociar la carrera a esta universidad
+        }
+
+        public void EliminarCarrera(Carrera carrera)
+        {
+            Carreras.Remove(carrera);
+            carrera.Universidad = null; // Desasociar la carrera de esta universidad
         }
     }
 }
