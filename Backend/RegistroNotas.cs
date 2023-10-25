@@ -82,22 +82,6 @@ namespace Backend
                     break;
             }
         }
-            //Metodo para eliminar registro de notas
-            public void EliminarRegistroNotas(RegistroNotas registroNotas)
-        {
-            ListaRegistroNotas.Remove(registroNotas);
-        }
 
-        //Metodo para modificar registro de notas
-        public void ModificarRegistroNotas(int indice, RegistroNotas registroNotas)
-        {
-            ListaRegistroNotas[indice] = registroNotas;
-        }
-
-        //Metodo para mostrar registro de notas
-        public List<RegistroNotas> MostrarRegistroNotas()
-        {
-            return ListaRegistroNotas;
-        }
     }
     }

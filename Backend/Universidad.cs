@@ -37,17 +37,6 @@ namespace Backend
             return persona;
         }
 
-        // Métodos para gestionar carreras
-        public void AgregarCarrera(Carrera carrera)
-        {
-            Carreras.Add(carrera);
-            carrera.Universidad = this; // Asociar la carrera a esta universidad
-        }
-
-        public void EliminarCarrera(Carrera carrera)
-        {
-            Carreras.Remove(carrera);
-            carrera.Universidad = null; // Desasociar la carrera de esta universidad
-        }
+  
     }
 }

@@ -27,14 +27,6 @@ namespace Backend
             this.Ciclos.Add(ciclo);
         }
 
-        public void AgregarCarrera(Carrera carrera)
-        {
-            carreraList.Add(carrera);
-        }
 
-        public void EliminarCarrera(Carrera carrera)
-        {
-            carreraList.Remove(carrera);
-        }
     }
 }

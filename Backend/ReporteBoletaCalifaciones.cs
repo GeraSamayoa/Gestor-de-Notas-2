@@ -25,9 +25,6 @@ namespace Backend
 
         public static List<ReporteBoletaCalifaciones> ListaReporteBoletaCalifaciones = new List<ReporteBoletaCalifaciones>();
 
-        public List<ReporteBoletaCalifaciones> ObtenerBoletaCalificaciones(int idBoletaCalificaciones)
-        {
-            return ListaReporteBoletaCalifaciones.Where(r => r.IdBoletaCalificaciones == idBoletaCalificaciones).ToList();
-        }
+
     }
 }
