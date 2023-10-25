@@ -32,7 +32,17 @@ namespace Backend
             jornadas = new List<Jornada>();
         }
 
- 
+        //Agregar una lista de jornada
+        public void AgregarJornada(Jornada jornada) 
+        {
+            jornadas.Add(jornada);
+        }
+
+        //Eliminar una lista de jornada
+        public void EliminarJornada(Jornada jornada) 
+        {
+            jornadas.Remove(jornada);
+        }
 
     }
 }

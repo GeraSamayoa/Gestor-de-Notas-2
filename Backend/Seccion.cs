@@ -20,6 +20,14 @@ namespace Backend
         }
         public List<Seccion> listaSeccion = new List<Seccion>();
         //Metodo para agregar Seccion
-
+        public void AgregarSeccion(Seccion seccion)
+        {
+            listaSeccion.Add(seccion);
+        }
+        //Metodo para eliminar Seccion
+        public void EliminarSeccion(Seccion seccion)
+        {
+            listaSeccion.Remove(seccion);
+        }
     }
 }

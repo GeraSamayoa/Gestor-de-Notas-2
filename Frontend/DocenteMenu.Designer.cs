@@ -36,7 +36,6 @@
             this.btnAsignarse = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.btnSalirDocente = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,7 +88,7 @@
             this.btnAsignarNotas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAsignarNotas.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAsignarNotas.ForeColor = System.Drawing.Color.White;
-            this.btnAsignarNotas.Location = new System.Drawing.Point(360, 287);
+            this.btnAsignarNotas.Location = new System.Drawing.Point(424, 309);
             this.btnAsignarNotas.Name = "btnAsignarNotas";
             this.btnAsignarNotas.Size = new System.Drawing.Size(137, 55);
             this.btnAsignarNotas.TabIndex = 37;
@@ -108,7 +107,7 @@
             this.btnAsignarse.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAsignarse.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAsignarse.ForeColor = System.Drawing.Color.White;
-            this.btnAsignarse.Location = new System.Drawing.Point(128, 287);
+            this.btnAsignarse.Location = new System.Drawing.Point(171, 309);
             this.btnAsignarse.Name = "btnAsignarse";
             this.btnAsignarse.Size = new System.Drawing.Size(137, 55);
             this.btnAsignarse.TabIndex = 36;
@@ -143,31 +142,12 @@
             this.btnSalirDocente.Text = "Salir";
             this.btnSalirDocente.UseVisualStyleBackColor = false;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.SlateGray;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateGray;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(556, 287);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(137, 55);
-            this.button1.TabIndex = 39;
-            this.button1.Text = "Reporte Notas";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // DocenteMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(817, 427);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnSalirDocente);
             this.Controls.Add(this.btnAsignarNotas);
             this.Controls.Add(this.btnAsignarse);
@@ -192,6 +172,5 @@
         private System.Windows.Forms.Button btnAsignarse;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnSalirDocente;
-        private System.Windows.Forms.Button button1;
     }
 }

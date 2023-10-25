@@ -27,6 +27,24 @@ namespace Backend
         // Lista de asignaciones
         public static List<AsignacionEstudiante> listaAsignacionesEstudiantes = new List<AsignacionEstudiante>();
 
+        public void AgregarAsignacion(AsignacionEstudiante asignacionEstudiante)
+        {
+            listaAsignacionesEstudiantes.Add(asignacionEstudiante);
+        }
 
+        public void EliminarAsignacion(AsignacionEstudiante asignacionEstudiante)
+        {
+            listaAsignacionesEstudiantes.Remove(asignacionEstudiante);
+        }
+
+        public void ModificarAsignacion(int indice, AsignacionEstudiante asignacionEstudiante)
+        {
+            listaAsignacionesEstudiantes[indice] = asignacionEstudiante;
+        }
+
+        public List<AsignacionEstudiante> MostrarAsignacion()
+        {
+            return listaAsignacionesEstudiantes;
+        }
     }
 }

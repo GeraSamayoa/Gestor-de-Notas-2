@@ -21,6 +21,14 @@ namespace Backend
 
         public List<Docente> listaDocente = new List<Docente>();
         
-
+        public void AgregarDocente(Docente docente)
+        {
+            listaDocente.Add(docente);
+        }
+        
+        public void EliminarDocente(Docente docente)
+        {
+            listaDocente.Remove(docente);
+        }
     }
 }
