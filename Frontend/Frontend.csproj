@@ -114,6 +114,12 @@
     <Compile Include="RegistroNotas.Designer.cs">
       <DependentUpon>RegistroNotas.cs</DependentUpon>
     </Compile>
+    <Compile Include="StatusReporteNotas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StatusReporteNotas.Designer.cs">
+      <DependentUpon>StatusReporteNotas.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Administrador.resx">
       <DependentUpon>Administrador.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RegistroNotas.resx">
       <DependentUpon>RegistroNotas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StatusReporteNotas.resx">
+      <DependentUpon>StatusReporteNotas.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

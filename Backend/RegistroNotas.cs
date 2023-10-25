@@ -10,7 +10,6 @@ namespace Backend
         public int NotaAlumno { get; set; }
         public int Zona { get; set; }
         public int NotaTotal { get; set; }
-
         public Docente Docente { get; set; }
         public Carrera Carrera { get; set; }
         public Jornada Jornada { get; set; }
@@ -68,17 +67,6 @@ namespace Backend
                     registroNotas.NotaTotal = registroNotas.Zona + registroNotas.NotaAlumno;
                     break;
             }
-        }
-            //Metodo para eliminar registro de notas
-            public void EliminarRegistroNotas(RegistroNotas registroNotas)
-        {
-            ListaRegistroNotas.Remove(registroNotas);
-        }
-
-        //Metodo para modificar registro de notas
-        public void ModificarRegistroNotas(int indice, RegistroNotas registroNotas)
-        {
-            ListaRegistroNotas[indice] = registroNotas;
         }
 
         //Metodo para mostrar registro de notas

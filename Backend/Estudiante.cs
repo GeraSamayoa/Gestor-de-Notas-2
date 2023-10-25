@@ -26,15 +26,7 @@ namespace Backend
 
         public List<Estudiante> listaEstudiante = new List<Estudiante>();
 
-        public void AgregarEstudiante(Estudiante estudiante)
-        {
-            listaEstudiante.Add(estudiante);
-        }
-
-        public void EliminarEstudiante(Estudiante estudiante)
-        {
-            listaEstudiante.Remove(estudiante);
-        }
+ 
 
     }
 }

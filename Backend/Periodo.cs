@@ -25,14 +25,5 @@ namespace Backend
             PeriodoList = new List<Periodo>();
         } 
 
-        public void AgregarPeriodo (Periodo periodo) 
-        { 
-            PeriodoList.Add(periodo);
-        }
-
-        public void EliminarPeriodo (Periodo periodo) 
-        { 
-            PeriodoList.Remove(periodo);
-        }
     }
 }

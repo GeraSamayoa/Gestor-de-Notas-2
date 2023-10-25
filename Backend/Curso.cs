@@ -42,14 +42,5 @@ namespace Backend
             CursoList = new List<Curso>();
         }
 
-        public void AgregarCurso(Curso curso) 
-        {
-            CursoList.Add(curso);
-        }
-
-        public void EliminarCurso (Curso curso)
-        {
-            CursoList.Remove(curso);
-        }
     }
 }

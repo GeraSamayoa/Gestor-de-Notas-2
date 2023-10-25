@@ -33,7 +33,7 @@
             this.buttonAdmin = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtContraseña = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnSiguiente = new System.Windows.Forms.Button();
@@ -117,14 +117,14 @@
             this.txtUsuario.Size = new System.Drawing.Size(413, 25);
             this.txtUsuario.TabIndex = 4;
             // 
-            // txtPassword
+            // txtContraseña
             // 
-            this.txtPassword.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.txtPassword.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(252, 253);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(413, 25);
-            this.txtPassword.TabIndex = 5;
+            this.txtContraseña.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtContraseña.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraseña.Location = new System.Drawing.Point(252, 253);
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.Size = new System.Drawing.Size(413, 25);
+            this.txtContraseña.TabIndex = 5;
             // 
             // label2
             // 
@@ -163,7 +163,7 @@
             this.btnSiguiente.Name = "btnSiguiente";
             this.btnSiguiente.Size = new System.Drawing.Size(95, 31);
             this.btnSiguiente.TabIndex = 8;
-            this.btnSiguiente.Text = "Siguiente";
+            this.btnSiguiente.Text = "Ingresar";
             this.btnSiguiente.UseVisualStyleBackColor = false;
             this.btnSiguiente.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -176,7 +176,7 @@
             this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtContraseña);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonAdmin);
@@ -197,7 +197,7 @@
         private System.Windows.Forms.Button buttonAdmin;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnSiguiente;
