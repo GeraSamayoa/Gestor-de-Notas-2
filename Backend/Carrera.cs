@@ -8,35 +8,30 @@ namespace Backend
 {
     public class Carrera
     {
-        public string idCarrera { get; set; }
+        public string IdCarrera { get; set; }
         public string NameCarrera { get; set; }
-        public Ciclo IdCiclo { get; set; }
-        public Jornada IdJornada { get; set; }
-        public bool status { get; set; }
-        public Universidad IdUniversidad { get; set; }
+        public List<Ciclo> Ciclos { get; set; } = new List<Ciclo>();
+        public List<Jornada> Jornadas { get; set; } = new List<Jornada>();
+        public bool Status { get; set; }
+        public Universidad Universidad { get; set; }
 
-        public Carrera(string idcarrera, string namecarrera)
-        {
-            this.idCarrera = idcarrera;
-            this.NameCarrera = namecarrera;
-            this.status = true;
-        }
-        public List<Carrera> CarreraList;
+        private List<Carrera> carreraList;
 
-        public void RepositorioCarrera()
+        public Carrera(string idCarrera, string nameCarrera)
         {
-            CarreraList = new List<Carrera>();
+            this.IdCarrera = idCarrera;
+            this.NameCarrera = nameCarrera;
+            this.Status = true;
+            this.carreraList = new List<Carrera>();
         }
 
         public void AgregarCarrera(Carrera carrera)
         {
-            CarreraList.Add(carrera);
+            carreraList.Add(carrera);
         }
 
         public void EliminarCarrera(Carrera carrera)
         {
-            CarreraList.Remove(carrera);
+            carreraList.Remove(carrera);
         }
     }
-}
-
