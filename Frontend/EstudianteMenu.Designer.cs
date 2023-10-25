@@ -34,6 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnAsignarseEstudiante = new System.Windows.Forms.Button();
             this.btnBoleta = new System.Windows.Forms.Button();
+            this.btnSalirEstudiante = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,6 +92,7 @@
             this.btnAsignarseEstudiante.TabIndex = 39;
             this.btnAsignarseEstudiante.Text = "Asignarse";
             this.btnAsignarseEstudiante.UseVisualStyleBackColor = false;
+            this.btnAsignarseEstudiante.Click += new System.EventHandler(this.btnAsignarseEstudiante_Click);
             // 
             // btnBoleta
             // 
@@ -109,6 +111,25 @@
             this.btnBoleta.TabIndex = 38;
             this.btnBoleta.Text = "Boleta Calificaciones";
             this.btnBoleta.UseVisualStyleBackColor = false;
+            this.btnBoleta.Click += new System.EventHandler(this.btnBoleta_Click);
+            // 
+            // btnSalirEstudiante
+            // 
+            this.btnSalirEstudiante.BackColor = System.Drawing.Color.SlateGray;
+            this.btnSalirEstudiante.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSalirEstudiante.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnSalirEstudiante.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray;
+            this.btnSalirEstudiante.FlatAppearance.BorderSize = 0;
+            this.btnSalirEstudiante.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateGray;
+            this.btnSalirEstudiante.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSalirEstudiante.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalirEstudiante.ForeColor = System.Drawing.Color.White;
+            this.btnSalirEstudiante.Location = new System.Drawing.Point(794, 346);
+            this.btnSalirEstudiante.Name = "btnSalirEstudiante";
+            this.btnSalirEstudiante.Size = new System.Drawing.Size(137, 55);
+            this.btnSalirEstudiante.TabIndex = 40;
+            this.btnSalirEstudiante.Text = "Salir";
+            this.btnSalirEstudiante.UseVisualStyleBackColor = false;
             // 
             // EstudianteMenu
             // 
@@ -116,13 +137,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(966, 413);
+            this.Controls.Add(this.btnSalirEstudiante);
             this.Controls.Add(this.btnAsignarseEstudiante);
             this.Controls.Add(this.btnBoleta);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "EstudianteMenu";
             this.Text = "Estudiante";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -138,5 +160,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAsignarseEstudiante;
         private System.Windows.Forms.Button btnBoleta;
+        private System.Windows.Forms.Button btnSalirEstudiante;
     }
 }

@@ -21,5 +21,17 @@ namespace Frontend
         {
 
         }
+
+        private void btnAsignarse_Click(object sender, EventArgs e)
+        {
+            AsignacionDocente DocenteMenu= new AsignacionDocente();
+            DocenteMenu.Show();
+        }
+
+        private void btnAsignarNotas_Click(object sender, EventArgs e)
+        {
+            RegistroNotas DocenteMenu = new RegistroNotas();
+            DocenteMenu.Show();
+        }
     }
 }

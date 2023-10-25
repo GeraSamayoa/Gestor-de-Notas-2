@@ -16,5 +16,17 @@ namespace Frontend
         {
             InitializeComponent();
         }
+
+        private void btnBoleta_Click(object sender, EventArgs e)
+        {
+            BoletaCalificaciones EstudianteMenu= new BoletaCalificaciones();
+            EstudianteMenu.Show();
+        }
+
+        private void btnAsignarseEstudiante_Click(object sender, EventArgs e)
+        {
+            AsignacionEstudiante EstudianteMenu = new AsignacionEstudiante();
+            EstudianteMenu.Show();
+        }
     }
 }

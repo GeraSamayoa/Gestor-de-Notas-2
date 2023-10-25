@@ -290,7 +290,7 @@
             this.btnSiguienteDocente.Name = "btnSiguienteDocente";
             this.btnSiguienteDocente.Size = new System.Drawing.Size(137, 55);
             this.btnSiguienteDocente.TabIndex = 22;
-            this.btnSiguienteDocente.Text = "Siguiente";
+            this.btnSiguienteDocente.Text = "Salir";
             this.btnSiguienteDocente.UseVisualStyleBackColor = false;
             this.btnSiguienteDocente.Click += new System.EventHandler(this.btnSiguienteDocente_Click);
             // 
