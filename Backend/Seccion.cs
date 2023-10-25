@@ -12,7 +12,6 @@ namespace Backend
         public char Tipo { get; set; }
         public Curso idCurso { get; set; }
         public Ciclo idCiclo { get; set; }
-        //public char Estatus { get; set; }
 
         public Seccion(int IdSeccion, char Tipo)
         {

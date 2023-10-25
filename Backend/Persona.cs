@@ -15,13 +15,17 @@ namespace Backend
         public DateTime FechaNacimiento {  get; set; } 
         public string Genero {  get; set; }
 
+         public List <Universidad> Universidades { get; set; }
+        
         //Contructor
         public Persona(int idpersona, string nombre, string apellido, DateTime fechanacimiento, string genero) { 
-            this.IdPersona = idpersona;
-            this.Nombre = nombre; 
-            this.Apellido = apellido;
-            this.FechaNacimiento = fechanacimiento;
-            this.Genero = genero;
+            IdPersona = idpersona;
+            Nombre = nombre; 
+            Apellido = apellido;
+            FechaNacimiento = fechanacimiento;
+            Genero = genero;
         }
+
+        
     }
 }

@@ -8,6 +8,29 @@ namespace Backend
 {
     public class Universidad
     {
+        public int IdUniversidad { get; set; }
+        public string NombreUniversidad { get; set; }
+        public string Direccion { get; set; }
 
+        //Dependencia de persona
+
+public List <Persona>Personas { get; set; }
+
+        public Universidad ()
+        {
+            Personas = new List<Persona>();
+        }
+
+        public bool Guardar (Persona persona)
+        {
+            Personas.Add(persona);
+            return true;
+        }
+
+        public Persona Obtener (int idPersona)
+        {
+            var persona = Personas.Find(x => x.IdPersona == idPersona);
+            return persona;
+        }
     }
 }

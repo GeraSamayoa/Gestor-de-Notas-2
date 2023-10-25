@@ -9,6 +9,7 @@ namespace Backend
     public class Curso
     {
         public List<Ciclo> ciclo { get; set; }
+        public List<Seccion> seccion{ get; set; }
 
         public int IdCurso {  get; set; }
 
@@ -24,13 +25,14 @@ namespace Backend
 
         public Curso(int idcurso, string nombrecurso, int cantidadAlaSemana , TimeSpan inicio,TimeSpan final) 
         { 
-            this.IdCurso = idcurso;
-            this.NombreCurso = nombrecurso;
-            this.CantidadPorSemana = cantidadAlaSemana;
-            this.HoraInicio = new TimeSpan();
-            this.HoraFinal = new TimeSpan();
-            this.status = true;
-            this.ciclo = new List<Ciclo>();
+            IdCurso = idcurso;
+            NombreCurso = nombrecurso;
+            CantidadPorSemana = cantidadAlaSemana;
+            HoraInicio = new TimeSpan();
+            HoraFinal = new TimeSpan();
+            status = true;
+            ciclo = new List<Ciclo>();
+            seccion= new List<Seccion>();
         }
 
         public List<Curso> CursoList;
