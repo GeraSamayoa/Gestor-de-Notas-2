@@ -10,7 +10,20 @@ namespace Backend
         public int NotaAlumno { get; set; }
         public int Zona { get; set; }
         public int NotaTotal { get; set; }
-
+        public string EstatusAprobacion
+        {
+            get
+            {
+                if (NotaTotal >= 61)
+                {
+                    return "Aprobado";
+                }
+                else
+                {
+                    return "Reprobado";
+                }
+            }
+        }
         public Docente Docente { get; set; }
         public Carrera Carrera { get; set; }
         public Jornada Jornada { get; set; }
