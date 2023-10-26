@@ -13,12 +13,6 @@ namespace Backend
         public AsignacionDocente IdAsignacionDocente { get; set; }
         public char Estatus { get; set; }
 
-        public Docente(int idDocente, char estatus, int idpersona, string nombre, string apellido, DateTime fechanacimiento, string genero)
-            :base(idpersona, nombre, apellido, fechanacimiento, genero) {
-            this.IdDocente = idDocente;
-            this.Estatus = estatus;
-        }
-
         public List<Docente> listaDocente = new List<Docente>();
         
 

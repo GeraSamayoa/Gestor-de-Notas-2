@@ -13,14 +13,14 @@ namespace Backend
 
         public string Tipo { get; set; }
 
-        public bool Status { get; set;}
+        public bool Estatus { get; set;}
 
         //Metodo Constructor
         public Jornada (int idJornada, string tipo, bool status)
         {
             this.IdJornada = idJornada;
             this.Tipo = tipo;
-            this.Status = status;
+            this.Estatus = status;
         }
 
         // Creacion de listas

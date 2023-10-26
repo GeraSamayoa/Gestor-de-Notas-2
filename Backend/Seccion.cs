@@ -11,11 +11,7 @@ namespace Backend
         public int IdSeccion { get; set; }
         public char Tipo { get; set; }
 
-        public Seccion(int IdSeccion, char Tipo)
-        {
-            this.IdSeccion = IdSeccion;
-            this.Tipo = Tipo;
-        }
+
         public List<Seccion> listaSeccion = new List<Seccion>();
 
     }

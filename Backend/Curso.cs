@@ -21,16 +21,7 @@ namespace Backend
 
         public bool Estatus { get; set; }
 
-        public Curso(int idcurso, string nombrecurso, TimeSpan inicio,TimeSpan final) 
-        { 
-            IdCurso = idcurso;
-            NombreCurso = nombrecurso;
-            HoraInicio = new TimeSpan();
-            HoraFinal = new TimeSpan();
-            Estatus = true;
-            ciclo = new List<Ciclo>();
-            seccion= new List<Seccion>();
-        }
+ 
 
         public List<Curso> CursoList;
 

@@ -1,10 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Backend
 {
     public class AsignacionDocente
     {
         public int IdAsignacionDocente { get; set; }
+        public DateTime fecha { get; set; }
         public Docente Docente { get; set; }
         public Seccion Seccion { get; set; }
         public Ciclo Ciclo { get; set; }

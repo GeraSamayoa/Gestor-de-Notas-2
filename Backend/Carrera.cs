@@ -15,17 +15,9 @@ namespace Backend
         public bool Estatus { get; set; }
         public Universidad Universidad { get; set; }
 
-        private List<Carrera> carreraList;
 
-        public Carrera(int idCarrera, string nombreCarrera,bool estatus, Ciclo ciclo)
-        {
-            this.IdCarrera = idCarrera;
-            this.NombreCarrera = nombreCarrera;
-            this.Estatus = true;
-            this.carreraList = new List<Carrera>();
-            Ciclos = new List<Ciclo>();
-            this.Ciclos.Add(ciclo);
-        }
+
+
 
 
     }

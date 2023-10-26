@@ -11,14 +11,5 @@ namespace Backend
 
         public int IdCiclo { get; set; }
         public string TipoCiclo { get; set; }
-
-        //Asociacion Ciclo y Curso
-
-        public Ciclo (int idCiclo, string tipociclo)
-        {
-            IdCiclo = idCiclo;
-            TipoCiclo = tipociclo;
-            
-        }
     }
 }
