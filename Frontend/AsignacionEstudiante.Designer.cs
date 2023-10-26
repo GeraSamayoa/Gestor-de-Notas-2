@@ -92,6 +92,7 @@
             this.btnActualizarAsigEst.TabIndex = 39;
             this.btnActualizarAsigEst.Text = "Actualizar";
             this.btnActualizarAsigEst.UseVisualStyleBackColor = false;
+            this.btnActualizarAsigEst.Click += new System.EventHandler(this.btnActualizarAsigEst_Click);
             // 
             // btnAgregarAsigEstudiante
             // 
@@ -110,6 +111,7 @@
             this.btnAgregarAsigEstudiante.TabIndex = 38;
             this.btnAgregarAsigEstudiante.Text = "Agregar";
             this.btnAgregarAsigEstudiante.UseVisualStyleBackColor = false;
+            this.btnAgregarAsigEstudiante.Click += new System.EventHandler(this.btnAgregarAsigEstudiante_Click);
             // 
             // dgvAsigEstudiante
             // 
@@ -250,6 +252,7 @@
             this.btnEliminarAsigEstudiante.TabIndex = 44;
             this.btnEliminarAsigEstudiante.Text = "Eliminar";
             this.btnEliminarAsigEstudiante.UseVisualStyleBackColor = false;
+            this.btnEliminarAsigEstudiante.Click += new System.EventHandler(this.btnEliminarAsigEstudiante_Click);
             // 
             // comboBoxNCarneEst
             // 

@@ -42,8 +42,8 @@
             this.dgvRegEstudiante = new System.Windows.Forms.DataGridView();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
-            this.txtDirección = new System.Windows.Forms.TextBox();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.txtEstatus = new System.Windows.Forms.TextBox();
+            this.txtNoCarne = new System.Windows.Forms.TextBox();
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.txtGenero = new System.Windows.Forms.TextBox();
             this.btnAgregarRegEstudiante = new System.Windows.Forms.Button();
@@ -105,9 +105,9 @@
             this.label4.Location = new System.Drawing.Point(160, 354);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 18);
+            this.label4.Size = new System.Drawing.Size(53, 18);
             this.label4.TabIndex = 5;
-            this.label4.Text = "Direcciòn:";
+            this.label4.Text = "Estatus";
             // 
             // label5
             // 
@@ -145,9 +145,9 @@
             this.label8.Location = new System.Drawing.Point(551, 203);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(105, 18);
+            this.label8.Size = new System.Drawing.Size(46, 18);
             this.label8.TabIndex = 9;
-            this.label8.Text = "Usuario y Carné:";
+            this.label8.Text = "Carné:";
             // 
             // label9
             // 
@@ -185,23 +185,23 @@
             this.txtApellido.Size = new System.Drawing.Size(304, 25);
             this.txtApellido.TabIndex = 13;
             // 
-            // txtDirección
+            // txtEstatus
             // 
-            this.txtDirección.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.txtDirección.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDirección.Location = new System.Drawing.Point(163, 386);
-            this.txtDirección.Name = "txtDirección";
-            this.txtDirección.Size = new System.Drawing.Size(304, 25);
-            this.txtDirección.TabIndex = 14;
+            this.txtEstatus.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtEstatus.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEstatus.Location = new System.Drawing.Point(163, 386);
+            this.txtEstatus.Name = "txtEstatus";
+            this.txtEstatus.Size = new System.Drawing.Size(304, 25);
+            this.txtEstatus.TabIndex = 14;
             // 
-            // txtUsuario
+            // txtNoCarne
             // 
-            this.txtUsuario.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.txtUsuario.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(554, 235);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(304, 25);
-            this.txtUsuario.TabIndex = 16;
+            this.txtNoCarne.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtNoCarne.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNoCarne.Location = new System.Drawing.Point(554, 235);
+            this.txtNoCarne.Name = "txtNoCarne";
+            this.txtNoCarne.Size = new System.Drawing.Size(304, 25);
+            this.txtNoCarne.TabIndex = 16;
             // 
             // txtContraseña
             // 
@@ -317,8 +317,8 @@
             this.Controls.Add(this.btnAgregarRegEstudiante);
             this.Controls.Add(this.txtGenero);
             this.Controls.Add(this.txtContraseña);
-            this.Controls.Add(this.txtUsuario);
-            this.Controls.Add(this.txtDirección);
+            this.Controls.Add(this.txtNoCarne);
+            this.Controls.Add(this.txtEstatus);
             this.Controls.Add(this.txtApellido);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.dgvRegEstudiante);
@@ -359,8 +359,8 @@
         private System.Windows.Forms.DataGridView dgvRegEstudiante;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtApellido;
-        private System.Windows.Forms.TextBox txtDirección;
-        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.TextBox txtEstatus;
+        private System.Windows.Forms.TextBox txtNoCarne;
         private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.TextBox txtGenero;
         private System.Windows.Forms.Button btnAgregarRegEstudiante;
