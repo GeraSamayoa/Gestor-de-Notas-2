@@ -6,54 +6,56 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using Backend;
-
 namespace DataAcces
 {
-    public class SeccionDAL
+    public class AsignacionDocenteDAL
     {
+
         string conexion = @"data source= ASOFIMP\asofimp; initial catalog= UITI; user id=sa; password=1908pass;";
-        public SeccionDAL()
+        public AsignacionDocenteDAL()
         {
 
         }
-        public List<Seccion> GetSeccion()
+        public List<AsignacionDocente> GetAsignacionDocente()
         {
-            List<Seccion> secciones = new List<Seccion>();
+            List<AsignacionDocente> asignacionesDocente = new List<AsignacionDocente>();
 
             using (SqlConnection conn = new SqlConnection(conexion))
             {
                 conn.Open();
 
-                using (SqlCommand comando = new SqlCommand("SELECT * FROM Seccion", conn))
+                using (SqlCommand comando = new SqlCommand("SELECT * FROM AsignacionDocente", conn))
                 {
                     comando.CommandType = CommandType.Text;
-                    DataTable dataSeccion = new DataTable();
+                    DataTable dataAsignacionDocente = new DataTable();
 
                     using (SqlDataReader reader = comando.ExecuteReader())
                     {
-                        dataSeccion.Load(reader);
+                        dataAsignacionDocente.Load(reader);
                     }
-                    foreach (DataRow item in dataSeccion.Rows)
+                    foreach (DataRow item in dataAsignacionDocente.Rows)
                     {
-                        secciones.Add( new Seccion
+                        asignacionesDocente.Add(new AsignacionDocente
                         {
-                            IdSeccion= Convert.ToInt32(item["IdSeccion"]),
-                            Tipo = Convert.ToChar(item["Tipo"])
+                            IdAsignacionDocente = Convert.ToInt32(item["IdAsignacionDocente"]),
+                            fecha = Convert.ToDateTime(item["fecha"])
+
+
                         }
                         );
 
                     }
                 }
             }
-            return secciones;
+            return asignacionesDocente;
 
         }
-        public bool InsertSeccion(Seccion secciones)
+        public bool InsertAsignacionDocente(AsignacionDocente asignacionesDocente)
         {
             using (SqlConnection conn = new SqlConnection(conexion))
             {
                 conn.Open();
-                string sql = $"INSERT INTO Seccion VALUES({secciones.IdSeccion},'{secciones.Tipo}')";
+                string sql = $"INSERT INTO AsignacionDocente VALUES({asignacionesDocente.IdAsignacionDocente},{asignacionesDocente.fecha}')";
                 using (SqlCommand comando = new SqlCommand(sql, conn))
                 {
                     comando.CommandType = CommandType.Text;
@@ -62,12 +64,12 @@ namespace DataAcces
             }
             return true;
         }
-        public bool UpdateSeccion(Seccion secciones)
+        public bool UpdateAsignacionDocente(AsignacionDocente asignacionesDocente)
         {
             using (SqlConnection conn = new SqlConnection(conexion))
             {
                 conn.Open();
-                string sql = $"UPDATE Seccion SET Tipo = '{secciones.Tipo}'WHERE IdUniversidad = {secciones.IdSeccion}";
+                string sql = $"UPDATE AsignacionDocente SET fecha = '{asignacionesDocente.fecha}'WHERE IdUniversidad = {asignacionesDocente.IdAsignacionDocente}";
                 using (SqlCommand comando = new SqlCommand(sql, conn))
                 {
                     comando.CommandType = CommandType.Text;
@@ -76,12 +78,12 @@ namespace DataAcces
             }
             return true;
         }
-        public bool DeleteSeccion(Seccion secciones)
+        public bool DeleteAsignacionDocente(AsignacionDocente asignacionesDocente)
         {
             using (SqlConnection conn = new SqlConnection(conexion))
             {
                 conn.Open();
-                string sql = $"DELETE FROM Seccion WHERE IdSeccion = {secciones.IdSeccion}";
+                string sql = $"DELETE FROM AsignacionDocente WHERE IdAsignacionDocente = {asignacionesDocente.IdAsignacionDocente}";
                 using (SqlCommand comando = new SqlCommand(sql, conn))
                 {
                     comando.CommandType = CommandType.Text;
@@ -92,3 +94,4 @@ namespace DataAcces
         }
     }
 }
+

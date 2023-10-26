@@ -9,36 +9,37 @@ using Backend;
 
 namespace DataAcces
 {
-    public class DocenteDAL
+    public class CarreraDAL
     {
         string conexion = @"data source= ASOFIMP\asofimp; initial catalog= UITI; user id=sa; password=1908pass;";
-        public DocenteDAL()
+        public CarreraDAL()
         {
 
         }
-        public List<Docente> GetDocente()
+        public List<Carrera> GetCarrera()
         {
-            List<Docente> docentes = new List<Docente>();
+            List<Carrera> carreras = new List<Carrera>();
 
             using (SqlConnection conn = new SqlConnection(conexion))
             {
                 conn.Open();
 
-                using (SqlCommand comando = new SqlCommand("SELECT * FROM Docente", conn))
+                using (SqlCommand comando = new SqlCommand("SELECT * FROM Carrera", conn))
                 {
                     comando.CommandType = CommandType.Text;
-                    DataTable dataDocente = new DataTable();
+                    DataTable dataCarrera = new DataTable();
 
                     using (SqlDataReader reader = comando.ExecuteReader())
                     {
-                        dataDocente.Load(reader);
+                        dataCarrera.Load(reader);
                     }
-                    foreach (DataRow item in dataDocente.Rows)
+                    foreach (DataRow item in dataCarrera.Rows)
                     {
-                        docentes.Add(new Docente
+                        carreras.Add(new Carrera
                         {
-                            IdDocente = Convert.ToInt32(item["IdDocente"]),
-                            Estatus = Convert.ToChar(item["Estatus"])
+                            IdCarrera = Convert.ToInt32(item["IdCarrera"]),
+                            NombreCarrera = item["NombreCarrera"].ToString(),
+                            Estatus = Convert.ToBoolean(item["Estatus"])
 
                         }
                         );
@@ -46,15 +47,15 @@ namespace DataAcces
                     }
                 }
             }
-            return docentes;
+            return carreras;
 
         }
-        public bool InsertDocente(Docente docentes)
+        public bool InsertCarrera(Carrera carreras)
         {
             using (SqlConnection conn = new SqlConnection(conexion))
             {
                 conn.Open();
-                string sql = $"INSERT INTO Docente VALUES({universidades.IdUniversidad},'{universidades.NombreUniversidad}','{universidades.Direccion}')";
+                string sql = $"INSERT INTO Carrera VALUES({carreras.IdCarrera},'{carreras.NombreCarrera}','{carreras.Estatus}')";
                 using (SqlCommand comando = new SqlCommand(sql, conn))
                 {
                     comando.CommandType = CommandType.Text;
@@ -63,12 +64,12 @@ namespace DataAcces
             }
             return true;
         }
-        public bool UpdateDocente(Docente docentes)
+        public bool UpdateCarrera(Carrera carreras)
         {
             using (SqlConnection conn = new SqlConnection(conexion))
             {
                 conn.Open();
-                string sql = $"UPDATE Docente SET Estatus = '{docentes.Estatus}'WHERE IdDocente = {docentes.IdDocente}";
+                string sql = $"UPDATE Carrera SET NombreCarrera = '{carreras.NombreCarrera}',Estatus= '{carreras.Estatus}'WHERE IdCarrera = {carreras.IdCarrera}";
                 using (SqlCommand comando = new SqlCommand(sql, conn))
                 {
                     comando.CommandType = CommandType.Text;
@@ -77,12 +78,12 @@ namespace DataAcces
             }
             return true;
         }
-        public bool DeleteDocente(Docente docentes)
+        public bool DeleteCarrera(Carrera carreras)
         {
             using (SqlConnection conn = new SqlConnection(conexion))
             {
                 conn.Open();
-                string sql = $"DELETE FROM Docente WHERE IdDocente = {docentes.IdDocente}";
+                string sql = $"DELETE FROM Carrera WHERE IdCarrera = {carreras.IdCarrera}";
                 using (SqlCommand comando = new SqlCommand(sql, conn))
                 {
                     comando.CommandType = CommandType.Text;

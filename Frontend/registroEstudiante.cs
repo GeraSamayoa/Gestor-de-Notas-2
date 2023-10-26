@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,15 +13,37 @@ namespace Frontend
 {
     public partial class registroEstudiante : Form
     {
+
         public registroEstudiante()
         {
             InitializeComponent();
+    
         }
 
         private void btnSiguienteDocente_Click(object sender, EventArgs e)
         {
             EstudianteMenu registroEstudiante = new EstudianteMenu();
             registroEstudiante.Show();
+        }
+
+        private void btnAgregarRegEstudiante_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void registroEstudiante_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

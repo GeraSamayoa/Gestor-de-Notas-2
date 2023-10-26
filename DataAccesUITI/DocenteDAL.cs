@@ -1,48 +1,44 @@
-﻿using Backend;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
-
+using Backend;
 
 namespace DataAcces
 {
-    public class CursoDAL
+    public class DocenteDAL
     {
         string conexion = @"data source= ASOFIMP\asofimp; initial catalog= UITI; user id=sa; password=1908pass;";
-        public CursoDAL()
+        public DocenteDAL()
         {
 
         }
-        public List<Curso> GetCurso()
+        public List<Docente> GetDocente()
         {
-            List<Curso> cursos = new List<Curso>();
+            List<Docente> docentes = new List<Docente>();
 
             using (SqlConnection conn = new SqlConnection(conexion))
             {
                 conn.Open();
 
-                using (SqlCommand comando = new SqlCommand("SELECT * FROM Curso", conn))
+                using (SqlCommand comando = new SqlCommand("SELECT * FROM Docente", conn))
                 {
                     comando.CommandType = CommandType.Text;
-                    DataTable dataCurso= new DataTable();
+                    DataTable dataDocente = new DataTable();
 
                     using (SqlDataReader reader = comando.ExecuteReader())
                     {
-                        dataCurso.Load(reader);
+                        dataDocente.Load(reader);
                     }
-                    foreach (DataRow item in dataCurso.Rows)
+                    foreach (DataRow item in dataDocente.Rows)
                     {
-                        cursos.Add(new Curso
+                        docentes.Add(new Docente
                         {
-                            IdCurso = Convert.ToInt32(item["IdCurso"]),
-                            NombreCurso = item["NombreCurso"].ToString(),
-                            HoraInicio = TimeSpan.Parse(item["HoraInicio"].ToString()),
-                            HoraFinal = TimeSpan.Parse(item["HoraFinal"].ToString()),
-                            Estatus = Convert.ToBoolean(item["IdCurso"])
+                            IdDocente = Convert.ToInt32(item["IdDocente"]),
+                            Estatus = Convert.ToChar(item["Estatus"])
 
                         }
                         );
@@ -50,15 +46,15 @@ namespace DataAcces
                     }
                 }
             }
-            return cursos;
+            return docentes;
 
         }
-        public bool InsertCurso(Curso cursos)
+        public bool InsertDocente(Docente docentes)
         {
             using (SqlConnection conn = new SqlConnection(conexion))
             {
                 conn.Open();
-                string sql = $"INSERT INTO Curso VALUES({cursos.IdCurso},'{cursos.NombreCurso}','{cursos.HoraInicio}','{cursos.HoraFinal}','{cursos.Estatus}')";
+                string sql = $"INSERT INTO Docente VALUES({docentes.IdDocente},'{docentes.Estatus}')";
                 using (SqlCommand comando = new SqlCommand(sql, conn))
                 {
                     comando.CommandType = CommandType.Text;
@@ -67,12 +63,12 @@ namespace DataAcces
             }
             return true;
         }
-        public bool UpdateCurso(Curso cursos)
+        public bool UpdateDocente(Docente docentes)
         {
             using (SqlConnection conn = new SqlConnection(conexion))
             {
                 conn.Open();
-                string sql = $"UPDATE Curso SET NombreCurso = '{cursos.NombreCurso}','{cursos.HoraInicio}','{cursos.HoraFinal}','{cursos.Estatus}'WHERE IdCurso = {cursos.IdCurso}";
+                string sql = $"UPDATE Docente SET Estatus = '{docentes.Estatus}'WHERE IdDocente = {docentes.IdDocente}";
                 using (SqlCommand comando = new SqlCommand(sql, conn))
                 {
                     comando.CommandType = CommandType.Text;
@@ -81,12 +77,12 @@ namespace DataAcces
             }
             return true;
         }
-        public bool DeleteCurso(Curso cursos)
+        public bool DeleteDocente(Docente docentes)
         {
             using (SqlConnection conn = new SqlConnection(conexion))
             {
                 conn.Open();
-                string sql = $"DELETE FROM Curso WHERE IdCurso = {cursos.IdCurso}";
+                string sql = $"DELETE FROM Docente WHERE IdDocente = {docentes.IdDocente}";
                 using (SqlCommand comando = new SqlCommand(sql, conn))
                 {
                     comando.CommandType = CommandType.Text;
@@ -97,3 +93,4 @@ namespace DataAcces
         }
     }
 }
+

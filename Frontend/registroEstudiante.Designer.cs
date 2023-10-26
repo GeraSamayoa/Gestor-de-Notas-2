@@ -238,6 +238,7 @@
             this.btnAgregarRegEstudiante.TabIndex = 19;
             this.btnAgregarRegEstudiante.Text = "Agregar";
             this.btnAgregarRegEstudiante.UseVisualStyleBackColor = false;
+            this.btnAgregarRegEstudiante.Click += new System.EventHandler(this.btnAgregarRegEstudiante_Click);
             // 
             // btnActualizar
             // 
@@ -256,6 +257,7 @@
             this.btnActualizar.TabIndex = 20;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnEliminar
             // 
@@ -274,6 +276,7 @@
             this.btnEliminar.TabIndex = 21;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnSiguienteDocente
             // 
@@ -333,6 +336,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "registroEstudiante";
             this.Text = "RegistroEstudiante";
+            this.Load += new System.EventHandler(this.registroEstudiante_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegEstudiante)).EndInit();
             this.ResumeLayout(false);

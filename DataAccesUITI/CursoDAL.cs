@@ -1,47 +1,48 @@
-﻿using System;
+﻿using Backend;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
-using Backend;
+
 
 namespace DataAcces
 {
-    public class AsignacionEstudianteDAL
+    public class CursoDAL
     {
-
         string conexion = @"data source= ASOFIMP\asofimp; initial catalog= UITI; user id=sa; password=1908pass;";
-        public AsignacionEstudianteDAL()
+        public CursoDAL()
         {
 
         }
-        public List<AsignacionEstudiante> GetAsignacionEstudiante()
+        public List<Curso> GetCurso()
         {
-            List<AsignacionEstudiante> asignacionesEstudiante = new List<AsignacionEstudiante>();
+            List<Curso> cursos = new List<Curso>();
 
             using (SqlConnection conn = new SqlConnection(conexion))
             {
                 conn.Open();
 
-                using (SqlCommand comando = new SqlCommand("SELECT * FROM AsignacionEstudiante", conn))
+                using (SqlCommand comando = new SqlCommand("SELECT * FROM Curso", conn))
                 {
                     comando.CommandType = CommandType.Text;
-                    DataTable dataAsignacionEstudiante = new DataTable();
+                    DataTable dataCurso = new DataTable();
 
                     using (SqlDataReader reader = comando.ExecuteReader())
                     {
-                        dataAsignacionEstudiante.Load(reader);
+                        dataCurso.Load(reader);
                     }
-                    foreach (DataRow item in dataAsignacionEstudiante.Rows)
+                    foreach (DataRow item in dataCurso.Rows)
                     {
-                        asignacionesEstudiante.Add(new AsignacionEstudiante
+                        cursos.Add(new Curso
                         {
-                            IdAsignacionEstudiante = Convert.ToInt32(item["IdAsignacionEstudiante"]),
-                            FechaAsignacion = Convert.ToDateTime(item["FechaAsignacion"]),
-                            Estado = item["Estado"].ToString()
-
+                            IdCurso = Convert.ToInt32(item["IdCurso"]),
+                            NombreCurso = item["NombreCurso"].ToString(),
+                            HoraInicio = TimeSpan.Parse(item["HoraInicio"].ToString()),
+                            HoraFinal = TimeSpan.Parse(item["HoraFinal"].ToString()),
+                            Estatus = Convert.ToBoolean(item["IdCurso"])
 
                         }
                         );
@@ -49,15 +50,15 @@ namespace DataAcces
                     }
                 }
             }
-            return Estudiante;
+            return cursos;
 
         }
-        public bool InsertAsignacionEstudiante(AsignacionEstudiante asignacionesEstudiante)
+        public bool InsertCurso(Curso cursos)
         {
             using (SqlConnection conn = new SqlConnection(conexion))
             {
                 conn.Open();
-                string sql = $"INSERT INTO AsignacionEstudiante VALUES({asignacionesEstudiante.IdAsignacionEstudiante},{asignacionesEstudiante.FechaAsignacion},{asignacionesEstudiante.Estado}')";
+                string sql = $"INSERT INTO Curso VALUES({cursos.IdCurso},'{cursos.NombreCurso}','{cursos.HoraInicio}','{cursos.HoraFinal}','{cursos.Estatus}')";
                 using (SqlCommand comando = new SqlCommand(sql, conn))
                 {
                     comando.CommandType = CommandType.Text;
@@ -66,12 +67,12 @@ namespace DataAcces
             }
             return true;
         }
-        public bool UpdateAsignacionEstudiante(AsignacionEstudiante asignacionesEstudiante)
+        public bool UpdateCurso(Curso cursos)
         {
             using (SqlConnection conn = new SqlConnection(conexion))
             {
                 conn.Open();
-                string sql = $"UPDATE AsignacionEstudiante SET FechaAsignacion = '{asignacionesEstudiante.FechaAsignacion},'{asignacionesEstudiante.Estado}'WHERE IdAsignacionEstudiante= {asignacionesEstudiante.IdAsignacionEstudiante}";
+                string sql = $"UPDATE Curso SET NombreCurso = '{cursos.NombreCurso}','{cursos.HoraInicio}','{cursos.HoraFinal}','{cursos.Estatus}'WHERE IdCurso = {cursos.IdCurso}";
                 using (SqlCommand comando = new SqlCommand(sql, conn))
                 {
                     comando.CommandType = CommandType.Text;
@@ -80,12 +81,12 @@ namespace DataAcces
             }
             return true;
         }
-        public bool DeleteAsignacionEstudiante(AsignacionEstudiante asignacionesEstudiante)
+        public bool DeleteCurso(Curso cursos)
         {
             using (SqlConnection conn = new SqlConnection(conexion))
             {
                 conn.Open();
-                string sql = $"DELETE FROM AsignacionEstudiante WHERE IdAsignacionDocente = {asignacionesEstudiante.IdAsignacionDocente}";
+                string sql = $"DELETE FROM Curso WHERE IdCurso = {cursos.IdCurso}";
                 using (SqlCommand comando = new SqlCommand(sql, conn))
                 {
                     comando.CommandType = CommandType.Text;

@@ -9,13 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DataAcces;
 using Backend;
-
-namespace Frontend
+namespace UITIGESTOR
 {
-    public partial class AsignacionEstudiante : Form
+    public partial class BienvenidaUITI : Form
     {
-        
-        public AsignacionEstudiante()
+        public BienvenidaUITI()
         {
             InitializeComponent();
         }

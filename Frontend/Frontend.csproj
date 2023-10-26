@@ -169,5 +169,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Backend\Entities.csproj">
+      <Project>{8df48378-6efd-44a9-a5e7-91d682ad1e27}</Project>
+      <Name>Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccesUITI\DataAccesUITI.csproj">
+      <Project>{666dde3c-0901-44ff-9cf7-4af0197dfe69}</Project>
+      <Name>DataAccesUITI</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
