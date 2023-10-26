@@ -15,13 +15,6 @@ namespace Backend
         public List<string> TipoDeNotas { get; set; }
         public List<RegistroNotas> Notas { get; set; }
 
-        public ReporteBoletaCalifaciones(int idBoletaCalificaciones, DateTime fechaBoleta)
-        {
-            IdBoletaCalificaciones = idBoletaCalificaciones;
-            FechaBoleta = fechaBoleta;
-            TipoDeNotas = new List<string>();
-            Notas = new List<RegistroNotas>();
-        }
 
         public static List<ReporteBoletaCalifaciones> ListaReporteBoletaCalifaciones = new List<ReporteBoletaCalifaciones>();
 

@@ -1,27 +1,34 @@
-﻿using System.Collections.Generic;
-using System;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Backend
 {
     public class RegistroNotas
     {
         public int IdNota { get; set; }
-        public string TipoDeNotas { get; set; }
-        public int NotaAlumno { get; set; }
-        public int Zona { get; set; }
-        public int NotaTotal { get; set; }
+        public int NotaPrimerParcial { get; set; }
+        public int NotaSegundoParcial { get; set; }
+        public int NotaActividades { get; set; }
+        public int NotaExamenFinal { get; set; }
+        public int Zona
+        {
+            get
+            {
+                return NotaPrimerParcial + NotaSegundoParcial + NotaActividades;
+            }
+        }
+        public int NotaTotal
+        {
+            get
+            {
+                return Zona + NotaExamenFinal;
+            }
+        }
         public string EstatusAprobacion
         {
             get
             {
-                if (NotaTotal >= 61)
-                {
-                    return "Aprobado";
-                }
-                else
-                {
-                    return "Reprobado";
-                }
+                return NotaTotal >= 61 ? "Aprobado" : "Reprobado";
             }
         }
         public Docente Docente { get; set; }
@@ -34,54 +41,23 @@ namespace Backend
         public Estudiante Estudiante { get; set; }
         public AsignacionEstudiante Asignacion { get; set; }
 
-        // Tipos de notas constantes
-        public static List<string> TiposDeNotas = new List<string>() { "Primer Parcial", "Segundo Parcial", "Actividades", "Examen Final" };
-
         // Lista de notas
         public static List<RegistroNotas> ListaRegistroNotas = new List<RegistroNotas>();
 
-        public RegistroNotas(int idNota, int notaAlumno, int zona, int notaTotal)
+        public RegistroNotas(int idNota, int notaPrimerParcial, int notaSegundoParcial, int notaActividades, int notaExamenFinal)
         {
             IdNota = idNota;
-            NotaAlumno = ValidarNotaAlumno(notaAlumno);
-            TipoDeNotas = ValidarTipoDeNotas(TipoDeNotas);
-            Zona = zona;
-            NotaTotal = notaTotal;
+            NotaPrimerParcial = ValidarNota(notaPrimerParcial);
+            NotaSegundoParcial = ValidarNota(notaSegundoParcial);
+            NotaActividades = ValidarNota(notaActividades);
+            NotaExamenFinal = ValidarNota(notaExamenFinal);
         }
 
-        private int ValidarNotaAlumno(int nota)
+        private int ValidarNota(int nota)
         {
             if (nota < 0 || nota > 100)
-                throw new ArgumentException("Nota de alumno no válida.");
+                throw new ArgumentException("Nota no válida.");
             return nota;
         }
-
-        private string ValidarTipoDeNotas(string tipo)
-        {
-            if (!TiposDeNotas.Contains(tipo))
-                throw new ArgumentException("Tipo de notas no válido.");
-            return tipo;
-        }
-
-        public void AgregarRegistroNotas(RegistroNotas registroNotas)
-        {
-            // Calcula Zona y acumula las notas
-            switch (registroNotas.TipoDeNotas)
-            {
-                case "Primer Parcial":
-                    registroNotas.Zona = registroNotas.NotaAlumno;
-                    break;
-                case "Segundo Parcial":
-                    registroNotas.Zona += registroNotas.NotaAlumno;
-                    break;
-                case "Actividades":
-                    registroNotas.Zona += registroNotas.NotaAlumno;
-                    break;
-                case "Examen Final":
-                    registroNotas.NotaTotal = registroNotas.Zona + registroNotas.NotaAlumno;
-                    break;
-            }
-        }
-
     }
-    }
+}

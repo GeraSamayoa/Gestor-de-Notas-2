@@ -8,38 +8,37 @@ using System.Data.SqlClient;
 using Backend;
 namespace DataAcces
 {
-    internal class ReporteBoletaDAL
+    public class ReporteBoletaDAL
     {
 
         string conexion = @"data source= ASOFIMP\asofimp; initial catalog= UITI; user id=sa; password=1908pass;";
-        public UniversidadDAL()
+        public ReporteBoletaDAL()
         {
 
         }
-        public List<Universidad> GetUniversidad()
+        public List<ReporteBoletaCalifaciones> GetReporteBoletaCalifaciones()
         {
-            List<Universidad> universidades = new List<Universidad>();
+            List<ReporteBoletaCalifaciones> reporteBoletaCalifaciones = new List<ReporteBoletaCalifaciones>();
 
             using (SqlConnection conn = new SqlConnection(conexion))
             {
                 conn.Open();
 
-                using (SqlCommand comando = new SqlCommand("SELECT * FROM Universidad", conn))
+                using (SqlCommand comando = new SqlCommand("SELECT * FROM ReporteBoletaCalifaciones", conn))
                 {
                     comando.CommandType = CommandType.Text;
-                    DataTable dataUniversidad = new DataTable();
+                    DataTable dataReporteBoletaCalifaciones = new DataTable();
 
                     using (SqlDataReader reader = comando.ExecuteReader())
                     {
-                        dataUniversidad.Load(reader);
+                        dataReporteBoletaCalifaciones.Load(reader);
                     }
-                    foreach (DataRow item in dataUniversidad.Rows)
+                    foreach (DataRow item in dataReporteBoletaCalifaciones.Rows)
                     {
-                        universidades.Add(new Universidad
+                        reporteBoletaCalifaciones.Add(new ReporteBoletaCalifaciones
                         {
-                            IdUniversidad = Convert.ToInt32(item["IdUniversidad"]),
-                            NombreUniversidad = item["NombreUniversidad"].ToString(),
-                            Direccion = item["Direccion"].ToString()
+                            IdBoletaCalificaciones = Convert.ToInt32(item["IdBoletaCalificaciones"]),
+                            FechaBoleta = Convert.ToDateTime(item["FechaBoleta"])
 
                         }
                         );
@@ -47,15 +46,15 @@ namespace DataAcces
                     }
                 }
             }
-            return universidades;
+            return reporteBoletaCalifaciones;
 
         }
-        public bool InsertUniversidad(Universidad universidades)
+        public bool InsertReporteBoletaCalifaciones(ReporteBoletaCalifaciones reporteBoletaCalifaciones)
         {
             using (SqlConnection conn = new SqlConnection(conexion))
             {
                 conn.Open();
-                string sql = $"INSERT INTO Universidad VALUES({universidades.IdUniversidad},'{universidades.NombreUniversidad}','{universidades.Direccion}')";
+                string sql = $"INSERT INTO ReporteBoletaCalifaciones VALUES({reporteBoletaCalifaciones.IdBoletaCalificaciones},'{reporteBoletaCalifaciones.FechaBoleta}')";
                 using (SqlCommand comando = new SqlCommand(sql, conn))
                 {
                     comando.CommandType = CommandType.Text;
@@ -64,12 +63,12 @@ namespace DataAcces
             }
             return true;
         }
-        public bool UpdateUniversidad(Universidad universidades)
+        public bool UpdateReporteBoletaCalifaciones(ReporteBoletaCalifaciones reporteBoletaCalifaciones)
         {
             using (SqlConnection conn = new SqlConnection(conexion))
             {
                 conn.Open();
-                string sql = $"UPDATE Universidad SET NombreCajero = '{universidades.NombreUniversidad}',Direccion= '{universidades.Direccion}'WHERE IdUniversidad = {universidades.IdUniversidad}";
+                string sql = $"UPDATE ReporteBoletaCalifaciones SET FechaBoleta = '{reporteBoletaCalifaciones.FechaBoleta}'WHERE IdBoletaCalificaciones= {reporteBoletaCalifaciones.IdBoletaCalificaciones}";
                 using (SqlCommand comando = new SqlCommand(sql, conn))
                 {
                     comando.CommandType = CommandType.Text;
@@ -78,12 +77,12 @@ namespace DataAcces
             }
             return true;
         }
-        public bool DeleteUniversidad(Universidad universidades)
+        public bool DeleteUniversidad(ReporteBoletaCalifaciones reporteBoletaCalifaciones)
         {
             using (SqlConnection conn = new SqlConnection(conexion))
             {
                 conn.Open();
-                string sql = $"DELETE FROM Universidad WHERE IdUniversidad = {universidades.IdUniversidad}";
+                string sql = $"DELETE FROM ReporteBoletaCalifaciones WHERE IdUniversidad = {reporteBoletaCalifaciones.IdBoletaCalificaciones}";
                 using (SqlCommand comando = new SqlCommand(sql, conn))
                 {
                     comando.CommandType = CommandType.Text;

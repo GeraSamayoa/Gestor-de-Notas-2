@@ -39,11 +39,12 @@ namespace DataAcces
                         registroNotas.Add(new RegistroNotas
                         {
                             IdNota = Convert.ToInt32(item["IdNota"]),
-                            TipoDeNotas = item["TipodeNotas"].ToString(),
-                            NotaAlumno = Convert.ToInt32(item["NotaAlumno"]),
-                            Zona = Convert.ToInt32(item["Zona"]),
-                            NotaTotal = Convert.ToInt32(item["NotaTotal"]),
-                          
+                            NotaPrimerParcial = Convert.ToInt32(item["NotaPrimerParcial"]),
+                            NotaSegundoParcial = Convert.ToInt32(item["NotaSegundoParcial"]),
+                            NotaActividades = Convert.ToInt32(item["NotaActividades"]),
+                            NotaExamenFinal = Convert.ToInt32(item["NotaExamenFinal"]),
+
+
 
                         }
                         );
@@ -59,7 +60,7 @@ namespace DataAcces
             using (SqlConnection conn = new SqlConnection(conexion))
             {
                 conn.Open();
-                string sql = $"INSERT INTO RegistroNotas VALUES({registroNotas.IdNota},'{registroNotas.TipoDeNotas}','{registroNotas.Zona},'{registroNotas.NotaTotal}')";
+                string sql = $"INSERT INTO RegistroNotas VALUES({registroNotas.IdNota},'{registroNotas.NotaPrimerParcial}','{registroNotas.NotaSegundoParcial},'{registroNotas.NotaActividades},'{registroNotas.NotaExamenFinal}')";
                 using (SqlCommand comando = new SqlCommand(sql, conn))
                 {
                     comando.CommandType = CommandType.Text;
@@ -73,7 +74,7 @@ namespace DataAcces
             using (SqlConnection conn = new SqlConnection(conexion))
             {
                 conn.Open();
-                string sql = $"UPDATE RegistroNotas SET TipoDeNotas = '{registroNotas.TipoDeNotas}','{registroNotas.Zona},'{registroNotas.NotaTotal}'WHERE IdNota = {registroNotas.IdNota}";
+                string sql = $"UPDATE RegistroNotas SET TipoDeNotas = '{registroNotas.NotaPrimerParcial}','{registroNotas.NotaSegundoParcial},'{registroNotas.NotaActividades},'{registroNotas.NotaExamenFinal}'WHERE IdNota = {registroNotas.IdNota}";
                 using (SqlCommand comando = new SqlCommand(sql, conn))
                 {
                     comando.CommandType = CommandType.Text;

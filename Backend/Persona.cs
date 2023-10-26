@@ -15,14 +15,7 @@ namespace Backend
         public DateTime FechaNacimiento {  get; set; } 
         public string Genero {  get; set; }
 
-        public Persona(int idPersona, string nombre, string apellido, DateTime fechaNacimiento, string genero)
-        {
-            IdPersona = idPersona;
-            Nombre = nombre;
-            Apellido = apellido;
-            FechaNacimiento = fechaNacimiento;
-            Genero = genero;
-        }
+ 
 
         public List <Universidad> Universidades { get; set; }
         

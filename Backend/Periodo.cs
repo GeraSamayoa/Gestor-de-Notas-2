@@ -12,11 +12,11 @@ namespace Backend
 
         public string NombrePeriodo { get; set; }
         
-        public Periodo(int idperiodo, string nombreperiodo)
-        { 
-            this.IdPeriodo = idperiodo;
-            this.NombrePeriodo = nombreperiodo;
-        }
+       // public Periodo(int idperiodo, string nombreperiodo)
+       // { 
+         //   this.IdPeriodo = idperiodo;
+           // this.NombrePeriodo = nombreperiodo;
+        //}
 
         public List<Periodo> PeriodoList;
 

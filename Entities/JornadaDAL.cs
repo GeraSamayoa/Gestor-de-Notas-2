@@ -10,8 +10,7 @@ namespace DataAcces
 {
     public class JornadaDAL
     {
-        public class JornadaDAL
-        {
+       
             string conexion = @"data source= ASOFIMP\asofimp; initial catalog= UITI; user id=sa; password=1908pass;";
             public JornadaDAL()
             {
@@ -95,4 +94,4 @@ namespace DataAcces
             }
         }
 }
-}
+

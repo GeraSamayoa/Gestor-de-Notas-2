@@ -10,8 +10,7 @@ namespace DataAcces
 {
     public  class PeriodoDAL
     {
-        public class PeriodoDAL
-        {
+        
             string conexion = @"data source= ASOFIMP\asofimp; initial catalog= UITI; user id=sa; password=1908pass;";
             public PeriodoDAL()
             {
@@ -94,4 +93,4 @@ namespace DataAcces
             }
         }
 }
-}
+

@@ -14,11 +14,6 @@ namespace Backend
         public Curso Curso { get; set; }
         public Carrera Carrera { get; set; }
 
-        public AsignacionDocente(int idAsignacionDocente)
-        {
-            IdAsignacionDocente = idAsignacionDocente;
-        }
-
         public static List<AsignacionDocente> ListaAsignacionesDocentes = new List<AsignacionDocente>();
 
         public List<AsignacionDocente> MostrarAsignaciones()

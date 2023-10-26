@@ -40,8 +40,8 @@ namespace DataAcces
                         {
                             IdCurso = Convert.ToInt32(item["IdCurso"]),
                             NombreCurso = item["NombreCurso"].ToString(),
-                            HoraInicio = Convert.ToDateTime(item["IdCurso"]),
-                            HoraFinal = Convert.ToInt32(item["IdCurso"]),
+                            HoraInicio = TimeSpan.Parse(item["HoraInicio"].ToString()),
+                            HoraFinal = TimeSpan.Parse(item["HoraFinal"].ToString()),
                             Estatus = Convert.ToBoolean(item["IdCurso"])
 
                         }
