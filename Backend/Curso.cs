@@ -15,22 +15,19 @@ namespace Backend
 
         public string NombreCurso { get; set; }
 
-        public int CantidadPorSemana { get; set; }
-
         public TimeSpan HoraInicio { get; set; }
 
         public TimeSpan HoraFinal { get; set; }
 
-        public bool status { get; set; }
+        public bool Estatus { get; set; }
 
-        public Curso(int idcurso, string nombrecurso, int cantidadAlaSemana , TimeSpan inicio,TimeSpan final) 
+        public Curso(int idcurso, string nombrecurso, TimeSpan inicio,TimeSpan final) 
         { 
             IdCurso = idcurso;
             NombreCurso = nombrecurso;
-            CantidadPorSemana = cantidadAlaSemana;
             HoraInicio = new TimeSpan();
             HoraFinal = new TimeSpan();
-            status = true;
+            Estatus = true;
             ciclo = new List<Ciclo>();
             seccion= new List<Seccion>();
         }

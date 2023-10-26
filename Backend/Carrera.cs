@@ -8,20 +8,20 @@ namespace Backend
 {
     public class Carrera
     {
-        public string IdCarrera { get; set; }
+        public int IdCarrera { get; set; }
         public string NombreCarrera { get; set; }
         public List<Ciclo> Ciclos { get; set; } = new List<Ciclo>();
         public List<Jornada> Jornadas { get; set; } = new List<Jornada>();
-        public bool Status { get; set; }
+        public bool Estatus { get; set; }
         public Universidad Universidad { get; set; }
 
         private List<Carrera> carreraList;
 
-        public Carrera(string idCarrera, string nombreCarrera,bool status, Ciclo ciclo)
+        public Carrera(int idCarrera, string nombreCarrera,bool estatus, Ciclo ciclo)
         {
             this.IdCarrera = idCarrera;
             this.NombreCarrera = nombreCarrera;
-            this.Status = true;
+            this.Estatus = true;
             this.carreraList = new List<Carrera>();
             Ciclos = new List<Ciclo>();
             this.Ciclos.Add(ciclo);

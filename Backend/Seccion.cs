@@ -10,8 +10,6 @@ namespace Backend
     {
         public int IdSeccion { get; set; }
         public char Tipo { get; set; }
-        public Curso idCurso { get; set; }
-        public Ciclo idCiclo { get; set; }
 
         public Seccion(int IdSeccion, char Tipo)
         {
@@ -19,7 +17,6 @@ namespace Backend
             this.Tipo = Tipo;
         }
         public List<Seccion> listaSeccion = new List<Seccion>();
-        //Metodo para agregar Seccion
 
     }
 }

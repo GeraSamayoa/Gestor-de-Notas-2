@@ -7,7 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Backend\Entitie
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frontend", "Frontend\Frontend.csproj", "{D5100B74-3523-4222-A8A5-78F20D42EB6F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAcces", "Entities\DataAcces.csproj", "{0F198755-A09F-4959-90DE-75EFC6EC15EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAcces", "Entities\DataAcces.csproj", "{0F198755-A09F-4959-90DE-75EFC6EC15EB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{70D71182-7936-40BC-8902-5F1AFB65936F}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

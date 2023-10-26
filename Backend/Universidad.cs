@@ -24,13 +24,6 @@ namespace Backend
             Carreras = new List<Carrera>();
 
         }
-
-        public bool Guardar (Persona persona)
-        {
-            Personas.Add(persona);
-            return true;
-        }
-
         public Persona Obtener (int idPersona)
         {
             var persona = Personas.Find(x => x.IdPersona == idPersona);
