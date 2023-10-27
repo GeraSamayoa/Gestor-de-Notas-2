@@ -53,7 +53,6 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.lbUsuario = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegEstudiante)).BeginInit();
             this.SuspendLayout();
@@ -329,23 +328,12 @@
             this.lbUsuario.TabIndex = 25;
             this.lbUsuario.Text = "Usuario";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(138, 101);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "Limpiar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // registroEstudiante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(1159, 701);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.lbUsuario);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.dateTimePicker1);
@@ -408,6 +396,5 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label lbUsuario;
-        private System.Windows.Forms.Button button1;
     }
 }
