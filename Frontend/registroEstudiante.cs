@@ -37,7 +37,7 @@ namespace Frontend
         {
             Estudiante estudiante = new Estudiante();
             Persona persona = new Persona();
-            //estudiante.NoCarne = int.Parse(txtNoCarne.Text);
+            estudiante.IdPersona = int.Parse(txtDPI.Text);
             //estudiante.Contrasenia = txtContraseña.Text;
             persona.Nombre = txtNombre.Text;
             persona.Apellido = txtApellido.Text;
@@ -56,7 +56,7 @@ namespace Frontend
         {
             Estudiante estudiante = new Estudiante();
             Persona persona = new Persona();
-            estudiante.NoCarne = int.Parse(txtNoCarne.Text);
+            estudiante.NoCarne = int.Parse(txtDPI.Text);
             //estudiante.Contrasenia = txtContraseña.Text;
             persona.Nombre = txtNombre.Text;
             persona.Apellido = txtApellido.Text;
@@ -73,7 +73,7 @@ namespace Frontend
         {
             Estudiante estudiante = new Estudiante();
             Persona persona = new Persona();
-            estudiante.NoCarne = int.Parse(txtNoCarne.Text);
+            estudiante.NoCarne = int.Parse(txtDPI.Text);
             //estudiante.Contrasenia = txtContraseña.Text;
             persona.Nombre = txtNombre.Text;
             persona.Apellido = txtApellido.Text;
