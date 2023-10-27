@@ -1,22 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using DataAcces;
 using Backend;
+using DataAcces;
 using DataAccesUITI;
 
 namespace Frontend
 {
-
     public partial class AsignacionEstudiante : Form
     {
         public Repositorio repositorio = new Repositorio();
+
         public AsignacionEstudiante()
         {
             InitializeComponent();
@@ -34,6 +28,7 @@ namespace Frontend
             comboBoxNCarneEst.DisplayMember = "Nombre";
             comboBoxNCarneEst.ValueMember = "Carne";
         }
+
         private void CargarCursos()
         {
             List<Curso> cursos = repositorio.ObtenerCursos();
@@ -41,6 +36,7 @@ namespace Frontend
             comboBoxCursoEstudiante.DisplayMember = "NombreCurso";
             comboBoxCursoEstudiante.ValueMember = "IdCurso";
         }
+
         private void CargarCarreras()
         {
             List<Carrera> carreras = repositorio.ObtenerCarreras();
@@ -48,6 +44,7 @@ namespace Frontend
             comboBoxCarreraEstudiante.DisplayMember = "NombreCarrera";
             comboBoxCarreraEstudiante.ValueMember = "IdCarrera";
         }
+
         private void CargarJornadas()
         {
             List<Jornada> jornadas = repositorio.ObtenerJornadas();
@@ -55,6 +52,7 @@ namespace Frontend
             comboBoxJornadaEstudiante.DisplayMember = "NombreJornada";
             comboBoxJornadaEstudiante.ValueMember = "IdJornada";
         }
+
         private void CargarSecciones()
         {
             List<Seccion> secciones = repositorio.ObtenerSecciones();
@@ -62,36 +60,33 @@ namespace Frontend
             comboBoxSeccionEstudiante.DisplayMember = "NombreSeccion";
             comboBoxSeccionEstudiante.ValueMember = "IdSeccion";
         }
+
         private void btnAgregarAsigEstudiante_Click(object sender, EventArgs e)
         {
-            
+            int noCarneSeleccionado = (int)comboBoxNCarneEst.SelectedValue;
+            int idJornadaSeleccionada = (int)comboBoxJornadaEstudiante.SelectedValue;
+            int idCarreraSeleccionada = (int)comboBoxCarreraEstudiante.SelectedValue;
+            int idCursoSeleccionado = (int)comboBoxCursoEstudiante.SelectedValue;
+            int idSeccionSeleccionada = (int)comboBoxSeccionEstudiante.SelectedValue;
 
-        }
+            Backend.AsignacionEstudiante asignacion = new Backend.AsignacionEstudiante
+            {
+                Estudiante = new Estudiante { NoCarne = noCarneSeleccionado },
+                Jornada = new Jornada { IdJornada = idJornadaSeleccionada },
+                Carrera = new Carrera { IdCarrera = idCarreraSeleccionada },
+                Curso = new Curso { IdCurso = idCursoSeleccionado },
+                Seccion = new Seccion { IdSeccion = idSeccionSeleccionada }
+            };
 
-        private void btnActualizarAsigEst_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnEliminarAsigEstudiante_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AsignacionEstudiante_Load(object sender, EventArgs e)
-        {
-            /*
-            // TODO: esta línea de código carga datos en la tabla 'uITIDataSet.Seccion' Puede moverla o quitarla según sea necesario.
-            this.seccionTableAdapter.Fill(this.uITIDataSet.Seccion);
-            // TODO: esta línea de código carga datos en la tabla 'uITIDataSet.Jornada' Puede moverla o quitarla según sea necesario.
-            this.jornadaTableAdapter.Fill(this.uITIDataSet.Jornada);
-            // TODO: esta línea de código carga datos en la tabla 'uITIDataSet.Carrera' Puede moverla o quitarla según sea necesario.
-            this.carreraTableAdapter.Fill(this.uITIDataSet.Carrera);
-            // TODO: esta línea de código carga datos en la tabla 'uITIDataSet.Curso' Puede moverla o quitarla según sea necesario.
-            this.cursoTableAdapter.Fill(this.uITIDataSet.Curso);
-            // TODO: esta línea de código carga datos en la tabla 'uITIDataSet.Estudiante' Puede moverla o quitarla según sea necesario.
-            this.estudianteTableAdapter.Fill(this.uITIDataSet.Estudiante);*/
-
+            AsignacionEstudianteDAL dal = new AsignacionEstudianteDAL();
+            if (dal.GuardarAsignacionEstudiante(asignacion))
+            {
+                MessageBox.Show("Asignación guardada correctamente");
+            }
+            else
+            {
+                MessageBox.Show("Hubo un error al guardar la asignación");
+            }
         }
     }
 }
