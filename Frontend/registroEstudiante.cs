@@ -1,6 +1,7 @@
 ﻿
 using Backend;
 using DataAcces;
+using DataAccesUITI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,14 +18,18 @@ namespace Frontend
     {
         EstudianteDAL estudianteDAL;
         PersonaDAL personaDAL;
+        UsuarioDAL usuarioDAL;
         public registroEstudiante()
         {
             InitializeComponent();
             estudianteDAL = new EstudianteDAL();
             personaDAL = new PersonaDAL();
+            usuarioDAL = new UsuarioDAL();
 
             dgvRegEstudiante.DataSource = estudianteDAL.GetEstudiante();
             dgvRegEstudiante.DataSource = personaDAL.GetPersona();
+           // dvgRegEstudiante.DataSource = usuarioDAL.GetUsuario();
+
         }
 
         private void btnSiguienteDocente_Click(object sender, EventArgs e)
@@ -37,11 +42,12 @@ namespace Frontend
         {
             Estudiante estudiante = new Estudiante();
             Persona persona = new Persona();
+            Usuario usuario = new Usuario();
             estudiante.IdPersona = int.Parse(txtDPI.Text);
             estudiante.Contrasenia = txtContraseña.Text;
             persona.Nombre = txtNombre.Text;
             persona.Apellido = txtApellido.Text;
-            lbUsuario.Text = txtUsuario.Text;
+            usuario.NombreUsuario = txtUsuario.Text;
             persona.Genero = txtGenero.Text;
             persona.IdPersona = int.Parse(txtDPI.Text);
             persona.FechaNacimiento = dateTimePicker1.Value;
@@ -49,6 +55,7 @@ namespace Frontend
 
             personaDAL.InsertPersona(persona);
             estudianteDAL.InsertEstudiante(estudiante);
+            usuarioDAL.InsertUsuario(usuario);
             dgvRegEstudiante.DataSource = personaDAL.GetPersona();
             //dgvRegEstudiante.DataSource = estudianteDAL.GetEstudiante();
             

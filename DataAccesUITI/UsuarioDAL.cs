@@ -5,17 +5,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace DataAccesUITI
 {
+    public class Usuario
+    {
+        public int IdUsuario { get; set; }
+        public string NombreUsuario { get; set; }
+        public string Contrasena { get; set; }
+    }
     public class UsuarioDAL
     {
-        public class Usuario
-        {
-            public int IdUsuario { get; set; }
-            public string NombreUsuario { get; set; }
-            public string Contrasena { get; set; } 
-        }
-
         string conexion = @"data source= ASOFIMP; initial catalog= UITI; user id=sa; password=1908pass;";
 
         public UsuarioDAL() { }
@@ -48,7 +48,57 @@ namespace DataAccesUITI
             }
             return usuarios;
         }
-
+        public bool InsertUsuario(Usuario usuarios)
+        {
+            using (SqlConnection conn = new SqlConnection(conexion))
+            {
+                conn.Open();
+                string sql = $"INSERT INTO Usuario VALUES({usuarios.IdUsuario},'{usuarios.NombreUsuario}','{usuarios.Contrasena}')";
+                using (SqlCommand comando = new SqlCommand(sql, conn))
+                {
+                    int filasAfectadas = comando.ExecuteNonQuery();
+                    if (filasAfectadas > 0)
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+        public bool UpdateUsuario(Usuario usuarios)
+        {
+            using (SqlConnection conn = new SqlConnection(conexion))
+            {
+                conn.Open();
+                string sql = $"UPDATE Usuario SET NombreUsuario='{usuarios.NombreUsuario}', Contrasena='{usuarios.Contrasena}' WHERE IdUsuario={usuarios.IdUsuario}";
+                using (SqlCommand comando = new SqlCommand(sql, conn))
+                {
+                    int filasAfectadas = comando.ExecuteNonQuery();
+                    if (filasAfectadas > 0)
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+        public bool DeleteUsuario(int idUsuario)
+        {
+            using (SqlConnection conn = new SqlConnection(conexion))
+            {
+                conn.Open();
+                string sql = $"DELETE FROM Usuario WHERE IdUsuario={idUsuario}";
+                using (SqlCommand comando = new SqlCommand(sql, conn))
+                {
+                    int filasAfectadas = comando.ExecuteNonQuery();
+                    if (filasAfectadas > 0)
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
         public bool ValidarLogin(string nombreUsuario, string contrasena)
         {
 
