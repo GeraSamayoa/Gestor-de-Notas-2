@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAccesUITI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,13 @@ namespace Frontend
 {
     public partial class login : Form
     {
+        UsuarioDAL usuarioDAL;
+        UsuarioDocenteDAL usuarioDocenteDAL;
         public login()
         {
             InitializeComponent();
+            usuarioDAL = new UsuarioDAL();
+            usuarioDocenteDAL = new UsuarioDocenteDAL();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -24,7 +29,39 @@ namespace Frontend
 
         private void button4_Click(object sender, EventArgs e)
         {
+            string usuario = txtUsuarioLogin.Text;
+            string contrasena = txtContrasenaLogin.Text; 
 
+            if (cmbTipoUsuario.SelectedItem.ToString() == "Estudiante")
+            {
+                if (usuarioDAL.ValidarLogin(usuario, contrasena)) 
+                {
+                    EstudianteMenu estudianteMenu = new EstudianteMenu();
+                    MessageBox.Show("Inicio de sesión exitoso.");
+                    estudianteMenu.Show();
+                    MessageBox.Show("Bienvenido " + usuario);
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Usuario o contraseña incorrectos.");
+                }
+            }
+            else if (cmbTipoUsuario.SelectedItem.ToString() == "Docente")
+            {
+                if (usuarioDocenteDAL.ValidarLoginDocente(usuario, contrasena))
+                {
+                    DocenteMenu docenteMenu = new DocenteMenu();
+                    MessageBox.Show("Inicio de sesión exitoso.");
+                    docenteMenu.Show();
+                    MessageBox.Show("Bienvenido " + usuario);
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Usuario o contraseña incorrectos.");
+                }
+            }
         }
 
         private void buttonRegDocente_Click(object sender, EventArgs e)
@@ -43,6 +80,11 @@ namespace Frontend
         {
             Administrador login = new Administrador();
             login.Show();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

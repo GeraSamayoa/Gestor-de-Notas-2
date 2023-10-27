@@ -96,5 +96,15 @@ namespace DataAccesUITI
                 }
             }
         }
+        public bool ValidarLoginDocente (string nombreUsuario, string contrasena)
+        {
+            UsuarioDocente usuarioDocente = GetUsuarioDocentes().FirstOrDefault(u => u.NombreUsuario == nombreUsuario);
+
+            if (usuarioDocente != null && usuarioDocente.Contrasena == contrasena)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }
