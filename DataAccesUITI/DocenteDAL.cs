@@ -54,7 +54,7 @@ namespace DataAcces
             using (SqlConnection conn = new SqlConnection(conexion))
             {
                 conn.Open();
-                string sql = $"INSERT INTO Docente VALUES({docentes.IdDocente},'{docentes.Estatus}')";
+                string sql = $"INSERT INTO Docente VALUES({docentes.Estatus},'{docentes.IdPersona}','{docentes.Nombre})'+' '+'{docentes.Apellido}')";
                 using (SqlCommand comando = new SqlCommand(sql, conn))
                 {
                     comando.CommandType = CommandType.Text;

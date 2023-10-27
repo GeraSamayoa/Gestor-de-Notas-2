@@ -60,6 +60,7 @@
     <Compile Include="SeccionDAL.cs" />
     <Compile Include="UniversidadDAL.cs" />
     <Compile Include="UsuarioDAL.cs" />
+    <Compile Include="UsuarioDocenteDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Backend\Entities.csproj">

@@ -34,8 +34,11 @@ namespace Frontend
 
         private void btnSiguienteDocente_Click(object sender, EventArgs e)
         {
-            EstudianteMenu registroEstudiante = new EstudianteMenu();
-            registroEstudiante.Show();
+            login loginShow = new login();
+            loginShow.Show();
+            MessageBox.Show("Registro Exitoso");
+            MessageBox.Show("Por favor inicie sesion a continuacion");
+            this.Hide();    
         }
 
         private void btnAgregarRegEstudiante_Click(object sender, EventArgs e)
