@@ -38,7 +38,7 @@ namespace DataAcces
                         jornadas.Add(new Jornada
                         {
                             IdJornada = Convert.ToInt32(item["IdJornada"]),
-                            Tipo = item["Tipo"].ToString(),
+                            TipoJornada = item["Tipo"].ToString(),
                             Estatus = Convert.ToBoolean(item["Estatus"]),
 
                         }
@@ -55,7 +55,7 @@ namespace DataAcces
             using (SqlConnection conn = new SqlConnection(conexion))
             {
                 conn.Open();
-                string sql = $"INSERT INTO Jornada VALUES({jornadas.IdJornada},'{jornadas.IdJornada}','{jornadas.Tipo}','{jornadas.Estatus}')";
+                string sql = $"INSERT INTO Jornada VALUES({jornadas.IdJornada},'{jornadas.IdJornada}','{jornadas.TipoJornada}','{jornadas.Estatus}')";
                 using (SqlCommand comando = new SqlCommand(sql, conn))
                 {
                     comando.CommandType = CommandType.Text;
@@ -69,7 +69,7 @@ namespace DataAcces
             using (SqlConnection conn = new SqlConnection(conexion))
             {
                 conn.Open();
-                string sql = $"UPDATE Jornada SET Tipo = '{jornadas.Tipo}',Estatus= '{jornadas.Estatus}'WHERE IdJornada = {jornadas.IdJornada}";
+                string sql = $"UPDATE Jornada SET Tipo = '{jornadas.TipoJornada}',Estatus= '{jornadas.Estatus}'WHERE IdJornada = {jornadas.IdJornada}";
                 using (SqlCommand comando = new SqlCommand(sql, conn))
                 {
                     comando.CommandType = CommandType.Text;

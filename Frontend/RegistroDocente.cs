@@ -50,7 +50,7 @@ namespace Frontend
             usuarioDocente.DPI = int.Parse(txtDPIDocente.Text);
             persona.Genero = txtGeneroDocente.Text;
             persona.IdPersona = int.Parse(txtDPIDocente.Text);
-            persona.FechaNacimiento = dateTimePicker1.Value;
+            //persona.FechaNacimiento = dateTimePicker1.Value;
             docente.Nombre = txtNombreDocente.Text;
             docente.Apellido = txtApellidoDocente.Text;
             docente.Estatus = char.Parse(txtEstatusDocente.Text);

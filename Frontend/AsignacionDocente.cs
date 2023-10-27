@@ -100,5 +100,20 @@ namespace Frontend
 
 
         }
+
+        private void AsignacionDocente_Load(object sender, EventArgs e)
+        {
+            /*// TODO: esta línea de código carga datos en la tabla 'uITIDataSet.Seccion' Puede moverla o quitarla según sea necesario.
+            this.seccionTableAdapter.Fill(this.uITIDataSet.Seccion);
+            // TODO: esta línea de código carga datos en la tabla 'uITIDataSet.Jornada' Puede moverla o quitarla según sea necesario.
+            this.jornadaTableAdapter.Fill(this.uITIDataSet.Jornada);
+            // TODO: esta línea de código carga datos en la tabla 'uITIDataSet.Carrera' Puede moverla o quitarla según sea necesario.
+            this.carreraTableAdapter.Fill(this.uITIDataSet.Carrera);
+            // TODO: esta línea de código carga datos en la tabla 'uITIDataSet.Curso' Puede moverla o quitarla según sea necesario.
+            this.cursoTableAdapter.Fill(this.uITIDataSet.Curso);
+            // TODO: esta línea de código carga datos en la tabla 'uITIDataSet.Docente' Puede moverla o quitarla según sea necesario.
+            this.docenteTableAdapter.Fill(this.uITIDataSet.Docente);*/
+
+        }
     }
 }

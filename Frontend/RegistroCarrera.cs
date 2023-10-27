@@ -83,5 +83,10 @@ namespace Frontend
             //datagrid
             dgvCarrera.DataSource = carreraDAL.GetCarrera();
         }
+
+        private void dgvCarrera_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

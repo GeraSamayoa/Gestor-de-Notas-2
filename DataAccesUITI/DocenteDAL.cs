@@ -37,7 +37,7 @@ namespace DataAcces
                     {
                         docentes.Add(new Docente
                         {
-                            IdDocente = Convert.ToInt32(item["IdDocente"]),
+                            //IdDocente = Convert.ToInt32(item["IdDocente"]),
                             Estatus = Convert.ToChar(item["Estatus"])
 
                         }
@@ -54,7 +54,7 @@ namespace DataAcces
             using (SqlConnection conn = new SqlConnection(conexion))
             {
                 conn.Open();
-                string sql = $"INSERT INTO Docente VALUES({docentes.Estatus},'{docentes.IdPersona}','{docentes.Nombre})'+' '+'{docentes.Apellido}')";
+                string sql = $"INSERT INTO Docente VALUES('{docentes.Estatus}','{docentes.IdPersona}','{docentes.Nombre})'+' '+'{docentes.Apellido}')";
                 using (SqlCommand comando = new SqlCommand(sql, conn))
                 {
                     comando.CommandType = CommandType.Text;

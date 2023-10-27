@@ -39,7 +39,7 @@ namespace DataAccesUITI
                         usuarioDocentes.Add(new UsuarioDocente
                         {
                             IdUsuarioDocente = Convert.ToInt32(item["IdUsuarioDocente"]),
-                            NombreUsuario = item["NombreUsuario"].ToString(),
+                            NombreUsuario = item["Usuario"].ToString(),
                             
                             Contrasena = item["Contrasena"].ToString() 
                         });

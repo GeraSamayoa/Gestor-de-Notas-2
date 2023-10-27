@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroCurso));
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -38,7 +39,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBoxSede = new System.Windows.Forms.ComboBox();
+            this.comboBoxCarrera = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.comboBoxUniversidad = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -53,8 +54,18 @@
             this.label8 = new System.Windows.Forms.Label();
             this.textBoxFechaFinal = new System.Windows.Forms.TextBox();
             this.textBoxFechaInicio = new System.Windows.Forms.TextBox();
+            this.uITIDataSet = new Frontend.UITIDataSet();
+            this.uITIDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.carreraBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.carreraTableAdapter = new Frontend.UITIDataSetTableAdapters.CarreraTableAdapter();
+            this.cicloBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cicloTableAdapter = new Frontend.UITIDataSetTableAdapters.CicloTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uITIDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uITIDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carreraBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cicloBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -184,17 +195,18 @@
             this.label3.TabIndex = 77;
             this.label3.Text = "Sección:";
             // 
-            // comboBoxSede
+            // comboBoxCarrera
             // 
-            this.comboBoxSede.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.comboBoxSede.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.comboBoxSede.FormattingEnabled = true;
-            this.comboBoxSede.Items.AddRange(new object[] {
-            "Central"});
-            this.comboBoxSede.Location = new System.Drawing.Point(41, 102);
-            this.comboBoxSede.Name = "comboBoxSede";
-            this.comboBoxSede.Size = new System.Drawing.Size(365, 21);
-            this.comboBoxSede.TabIndex = 76;
+            this.comboBoxCarrera.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.comboBoxCarrera.DataSource = this.carreraBindingSource;
+            this.comboBoxCarrera.DisplayMember = "NombreCarrera";
+            this.comboBoxCarrera.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.comboBoxCarrera.FormattingEnabled = true;
+            this.comboBoxCarrera.Location = new System.Drawing.Point(41, 102);
+            this.comboBoxCarrera.Name = "comboBoxCarrera";
+            this.comboBoxCarrera.Size = new System.Drawing.Size(365, 21);
+            this.comboBoxCarrera.TabIndex = 76;
+            this.comboBoxCarrera.ValueMember = "IdCarrera";
             // 
             // label7
             // 
@@ -282,15 +294,15 @@
             // comboboxCiclo
             // 
             this.comboboxCiclo.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.comboboxCiclo.DataSource = this.cicloBindingSource;
+            this.comboboxCiclo.DisplayMember = "Tipo";
             this.comboboxCiclo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.comboboxCiclo.FormattingEnabled = true;
-            this.comboboxCiclo.Items.AddRange(new object[] {
-            "A",
-            "B"});
             this.comboboxCiclo.Location = new System.Drawing.Point(41, 152);
             this.comboboxCiclo.Name = "comboboxCiclo";
             this.comboboxCiclo.Size = new System.Drawing.Size(166, 21);
             this.comboboxCiclo.TabIndex = 68;
+            this.comboboxCiclo.ValueMember = "IdCiclo";
             // 
             // label2
             // 
@@ -357,6 +369,34 @@
             this.textBoxFechaInicio.Size = new System.Drawing.Size(166, 25);
             this.textBoxFechaInicio.TabIndex = 90;
             // 
+            // uITIDataSet
+            // 
+            this.uITIDataSet.DataSetName = "UITIDataSet";
+            this.uITIDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // uITIDataSetBindingSource
+            // 
+            this.uITIDataSetBindingSource.DataSource = this.uITIDataSet;
+            this.uITIDataSetBindingSource.Position = 0;
+            // 
+            // carreraBindingSource
+            // 
+            this.carreraBindingSource.DataMember = "Carrera";
+            this.carreraBindingSource.DataSource = this.uITIDataSetBindingSource;
+            // 
+            // carreraTableAdapter
+            // 
+            this.carreraTableAdapter.ClearBeforeFill = true;
+            // 
+            // cicloBindingSource
+            // 
+            this.cicloBindingSource.DataMember = "Ciclo";
+            this.cicloBindingSource.DataSource = this.uITIDataSetBindingSource;
+            // 
+            // cicloTableAdapter
+            // 
+            this.cicloTableAdapter.ClearBeforeFill = true;
+            // 
             // RegistroCurso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -376,7 +416,7 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBoxSede);
+            this.Controls.Add(this.comboBoxCarrera);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.comboBoxUniversidad);
             this.Controls.Add(this.label6);
@@ -392,6 +432,10 @@
             this.Load += new System.EventHandler(this.RegistroCurso_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uITIDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uITIDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carreraBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cicloBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -408,7 +452,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBoxSede;
+        private System.Windows.Forms.ComboBox comboBoxCarrera;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox comboBoxUniversidad;
         private System.Windows.Forms.Label label6;
@@ -423,5 +467,11 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBoxFechaFinal;
         private System.Windows.Forms.TextBox textBoxFechaInicio;
+        private System.Windows.Forms.BindingSource uITIDataSetBindingSource;
+        private UITIDataSet uITIDataSet;
+        private System.Windows.Forms.BindingSource carreraBindingSource;
+        private UITIDataSetTableAdapters.CarreraTableAdapter carreraTableAdapter;
+        private System.Windows.Forms.BindingSource cicloBindingSource;
+        private UITIDataSetTableAdapters.CicloTableAdapter cicloTableAdapter;
     }
 }

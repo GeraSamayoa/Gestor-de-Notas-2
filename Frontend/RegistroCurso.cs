@@ -32,6 +32,10 @@ namespace Frontend
 
         private void RegistroCurso_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'uITIDataSet.Ciclo' Puede moverla o quitarla según sea necesario.
+            this.cicloTableAdapter.Fill(this.uITIDataSet.Ciclo);
+            // TODO: esta línea de código carga datos en la tabla 'uITIDataSet.Carrera' Puede moverla o quitarla según sea necesario.
+            this.carreraTableAdapter.Fill(this.uITIDataSet.Carrera);
 
         }
 

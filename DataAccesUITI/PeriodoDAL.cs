@@ -38,7 +38,7 @@ namespace DataAcces
                         periodos.Add(new Periodo
                         {
                             IdPeriodo = Convert.ToInt32(item["IdPeriodo"]),
-                            NombrePeriodo = item["NombrePeriodo"].ToString()
+                            TipoPeriodo = item["NombrePeriodo"].ToString()
 
                         }
                         );
@@ -54,7 +54,7 @@ namespace DataAcces
             using (SqlConnection conn = new SqlConnection(conexion))
             {
                 conn.Open();
-                string sql = $"INSERT INTO Periodo VALUES({periodos.IdPeriodo},'{periodos.NombrePeriodo}')";
+                string sql = $"INSERT INTO Periodo VALUES({periodos.IdPeriodo},'{periodos.TipoPeriodo}')";
                 using (SqlCommand comando = new SqlCommand(sql, conn))
                 {
                     comando.CommandType = CommandType.Text;
@@ -68,7 +68,7 @@ namespace DataAcces
             using (SqlConnection conn = new SqlConnection(conexion))
             {
                 conn.Open();
-                string sql = $"UPDATE Periodo SET NombrePeriodo = '{periodos.NombrePeriodo}'WHERE IdPeriodo = {periodos.IdPeriodo}";
+                string sql = $"UPDATE Periodo SET NombrePeriodo = '{periodos.TipoPeriodo}'WHERE IdPeriodo = {periodos.IdPeriodo}";
                 using (SqlCommand comando = new SqlCommand(sql, conn))
                 {
                     comando.CommandType = CommandType.Text;

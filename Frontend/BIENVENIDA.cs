@@ -26,6 +26,7 @@ namespace Frontend
         {
             login BIENVENIDA = new login();
             BIENVENIDA.Show();
+
         }
 
         private void BIENVENIDA_Load(object sender, EventArgs e)

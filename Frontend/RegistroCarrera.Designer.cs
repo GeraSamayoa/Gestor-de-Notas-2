@@ -175,6 +175,7 @@
             this.dgvCarrera.Name = "dgvCarrera";
             this.dgvCarrera.Size = new System.Drawing.Size(707, 171);
             this.dgvCarrera.TabIndex = 59;
+            this.dgvCarrera.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCarrera_CellContentClick);
             // 
             // btnEliminar
             // 

@@ -30,7 +30,7 @@ namespace DataAccesUITI
                             {
                                 IdDocente = Convert.ToInt32(reader["IdDocente"]),
                                 Estatus = Convert.ToChar(reader["Estatus"]),
-                                Nombre = reader["Nombre"].ToString(),
+                                Nombre = reader["NombreCompleto"].ToString(),
                             };
                             listaDocentes.Add(docente);
                         }
@@ -104,7 +104,7 @@ namespace DataAccesUITI
                             Jornada jornada = new Jornada
                             {
                                 IdJornada = Convert.ToInt32(reader["IdJornada"]),
-                                Tipo = reader["Tipo"].ToString(),
+                                TipoJornada = reader["Tipo"].ToString(),
                                 //Estatus = Convert.ToChar(reader["Estatus"]),
                             };
                             listaJornadas.Add(jornada);

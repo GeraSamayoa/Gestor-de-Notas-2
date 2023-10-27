@@ -28,7 +28,7 @@ namespace DataAccesUITI
             using (SqlConnection conn = new SqlConnection(conexion))
             {
                 conn.Open();
-                using (SqlCommand comando = new SqlCommand("SELECT * FROM Usuario", conn))
+                using (SqlCommand comando = new SqlCommand("SELECT * FROM UsuarioEstudiante", conn))
                 {
                     comando.CommandType = System.Data.CommandType.Text;
                     System.Data.DataTable dataUsuario = new System.Data.DataTable();
@@ -40,8 +40,8 @@ namespace DataAccesUITI
                     {
                         usuarios.Add(new Usuario
                         {
-                            IdUsuario = Convert.ToInt32(item["IdUsuario"]),
-                            NombreUsuario = item["NombreUsuario"].ToString(),
+                            IdUsuario = Convert.ToInt32(item["IdUsuarioEstudiante"]),
+                            NombreUsuario = item["Usuario"].ToString(),
                             Contrasena = item["Contrasena"].ToString() 
                             
                         });
