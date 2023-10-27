@@ -11,7 +11,7 @@ namespace Backend
         //Atributos
         public int IdJornada { get; set; }
 
-        public string Tipo { get; set; }
+        public string TipoJornada { get; set; }
 
         public bool Estatus { get; set;}
 

@@ -12,9 +12,12 @@ namespace Frontend
 {
     public partial class RegistroCurso : Form
     {
+        Administrador admin;
+
         public RegistroCurso()
         {
             InitializeComponent();
+            admin = new Administrador();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -35,6 +38,12 @@ namespace Frontend
         private void btnAgregarCurso_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            admin.Show();
+            Close();
         }
     }
 }

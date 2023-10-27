@@ -39,7 +39,7 @@ namespace DataAcces
                         {
                             IdCarrera = Convert.ToInt32(item["IdCarrera"]),
                             NombreCarrera = item["NombreCarrera"].ToString(),
-                            Estatus = Convert.ToBoolean(item["Estatus"])
+                            Estatus = Convert.ToChar(item["Estatus"])
 
                         }
                         );

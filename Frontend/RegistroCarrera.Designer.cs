@@ -39,7 +39,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.comboBoxUniversidad = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvCarrera = new System.Windows.Forms.DataGridView();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnAgregarCarrera = new System.Windows.Forms.Button();
@@ -49,7 +49,7 @@
             this.textBoxCiclo = new System.Windows.Forms.TextBox();
             this.textBoxJornada = new System.Windows.Forms.TextBox();
             this.textBoxPeriodo = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCarrera)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,7 +59,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(266, 20);
+            this.label1.Location = new System.Drawing.Point(266, 33);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(276, 40);
@@ -71,7 +71,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(48, 85);
+            this.label2.Location = new System.Drawing.Point(35, 100);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(135, 18);
             this.label2.TabIndex = 46;
@@ -82,7 +82,7 @@
             // 
             this.txtNombreCarrera.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.txtNombreCarrera.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreCarrera.Location = new System.Drawing.Point(48, 106);
+            this.txtNombreCarrera.Location = new System.Drawing.Point(35, 121);
             this.txtNombreCarrera.Name = "txtNombreCarrera";
             this.txtNombreCarrera.Size = new System.Drawing.Size(368, 25);
             this.txtNombreCarrera.TabIndex = 44;
@@ -92,7 +92,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(48, 149);
+            this.label4.Location = new System.Drawing.Point(35, 164);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 18);
             this.label4.TabIndex = 50;
@@ -103,7 +103,7 @@
             this.Jornada.AutoSize = true;
             this.Jornada.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Jornada.ForeColor = System.Drawing.Color.Black;
-            this.Jornada.Location = new System.Drawing.Point(247, 149);
+            this.Jornada.Location = new System.Drawing.Point(234, 164);
             this.Jornada.Name = "Jornada";
             this.Jornada.Size = new System.Drawing.Size(58, 18);
             this.Jornada.TabIndex = 51;
@@ -114,7 +114,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(48, 202);
+            this.label6.Location = new System.Drawing.Point(422, 103);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(50, 18);
             this.label6.TabIndex = 54;
@@ -129,7 +129,7 @@
             this.comboBoxEstatus.Items.AddRange(new object[] {
             "1",
             "0"});
-            this.comboBoxEstatus.Location = new System.Drawing.Point(51, 223);
+            this.comboBoxEstatus.Location = new System.Drawing.Point(425, 124);
             this.comboBoxEstatus.Name = "comboBoxEstatus";
             this.comboBoxEstatus.Size = new System.Drawing.Size(166, 21);
             this.comboBoxEstatus.TabIndex = 53;
@@ -139,7 +139,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(247, 202);
+            this.label7.Location = new System.Drawing.Point(606, 103);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(42, 18);
             this.label7.TabIndex = 56;
@@ -152,7 +152,7 @@
             this.comboBoxUniversidad.FormattingEnabled = true;
             this.comboBoxUniversidad.Items.AddRange(new object[] {
             "Central"});
-            this.comboBoxUniversidad.Location = new System.Drawing.Point(250, 223);
+            this.comboBoxUniversidad.Location = new System.Drawing.Point(609, 124);
             this.comboBoxUniversidad.Name = "comboBoxUniversidad";
             this.comboBoxUniversidad.Size = new System.Drawing.Size(166, 21);
             this.comboBoxUniversidad.TabIndex = 55;
@@ -162,19 +162,19 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(453, 85);
+            this.label3.Location = new System.Drawing.Point(422, 163);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 18);
             this.label3.TabIndex = 58;
             this.label3.Text = "Periodo:";
             // 
-            // dataGridView1
+            // dgvCarrera
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(48, 260);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(707, 150);
-            this.dataGridView1.TabIndex = 59;
+            this.dgvCarrera.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCarrera.Location = new System.Drawing.Point(48, 239);
+            this.dgvCarrera.Name = "dgvCarrera";
+            this.dgvCarrera.Size = new System.Drawing.Size(707, 171);
+            this.dgvCarrera.TabIndex = 59;
             // 
             // btnEliminar
             // 
@@ -229,11 +229,12 @@
             this.btnAgregarCarrera.TabIndex = 61;
             this.btnAgregarCarrera.Text = "Agregar";
             this.btnAgregarCarrera.UseVisualStyleBackColor = false;
+            this.btnAgregarCarrera.Click += new System.EventHandler(this.btnAgregarCarrera_Click);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(192, 189);
+            this.label9.Location = new System.Drawing.Point(179, 204);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(0, 13);
@@ -256,14 +257,15 @@
             this.btnSalir.TabIndex = 64;
             this.btnSalir.Text = "Siguiente";
             this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(667, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(686, 9);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(121, 118);
+            this.pictureBox1.Size = new System.Drawing.Size(102, 74);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 65;
             this.pictureBox1.TabStop = false;
@@ -272,7 +274,7 @@
             // 
             this.textBoxCiclo.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.textBoxCiclo.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCiclo.Location = new System.Drawing.Point(51, 169);
+            this.textBoxCiclo.Location = new System.Drawing.Point(38, 184);
             this.textBoxCiclo.Name = "textBoxCiclo";
             this.textBoxCiclo.Size = new System.Drawing.Size(166, 25);
             this.textBoxCiclo.TabIndex = 66;
@@ -281,7 +283,7 @@
             // 
             this.textBoxJornada.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.textBoxJornada.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxJornada.Location = new System.Drawing.Point(250, 169);
+            this.textBoxJornada.Location = new System.Drawing.Point(237, 184);
             this.textBoxJornada.Name = "textBoxJornada";
             this.textBoxJornada.Size = new System.Drawing.Size(166, 25);
             this.textBoxJornada.TabIndex = 67;
@@ -290,7 +292,7 @@
             // 
             this.textBoxPeriodo.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.textBoxPeriodo.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPeriodo.Location = new System.Drawing.Point(456, 106);
+            this.textBoxPeriodo.Location = new System.Drawing.Point(425, 184);
             this.textBoxPeriodo.Name = "textBoxPeriodo";
             this.textBoxPeriodo.Size = new System.Drawing.Size(166, 25);
             this.textBoxPeriodo.TabIndex = 68;
@@ -310,7 +312,7 @@
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnAgregarCarrera);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvCarrera);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.comboBoxUniversidad);
@@ -324,7 +326,7 @@
             this.Name = "RegistroCarrera";
             this.Text = "RegistroCarrera";
             this.Load += new System.EventHandler(this.RegistroCarrera_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCarrera)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -343,7 +345,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox comboBoxUniversidad;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvCarrera;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnAgregarCarrera;
