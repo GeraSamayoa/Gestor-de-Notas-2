@@ -38,8 +38,9 @@ namespace DataAcces
                         estudiantes.Add(new Estudiante
                         {
                             NoCarne = Convert.ToInt32(item["NoCarne"]),
-                            Estatus = Convert.ToChar(item["Estatus"]),
-                            FechaIngreso = Convert.ToDateTime(item["FechaIngreso"])
+                            Estatus = item["Estatus"].ToString(),
+                            //FechaIngreso = Convert.ToDateTime(item["FechaIngreso"]),
+                            Contrasenia = item["Contrasenia"].ToString()
                         }
                         );
 
