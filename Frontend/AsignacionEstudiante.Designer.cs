@@ -40,10 +40,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBoxCurso = new System.Windows.Forms.ComboBox();
-            this.comboBoxJornada = new System.Windows.Forms.ComboBox();
-            this.comboBoxCarrera = new System.Windows.Forms.ComboBox();
-            this.comboBoxSeccion = new System.Windows.Forms.ComboBox();
+            this.comboBoxCursoEstudiante = new System.Windows.Forms.ComboBox();
+            this.comboBoxJornadaEstudiante = new System.Windows.Forms.ComboBox();
+            this.comboBoxCarreraEstudiante = new System.Windows.Forms.ComboBox();
+            this.comboBoxSeccionEstudiante = new System.Windows.Forms.ComboBox();
             this.btnSalirAsigEstudiante = new System.Windows.Forms.Button();
             this.btnEliminarAsigEstudiante = new System.Windows.Forms.Button();
             this.comboBoxNCarneEst = new System.Windows.Forms.ComboBox();
@@ -60,7 +60,7 @@
             this.label1.Location = new System.Drawing.Point(281, 104);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(386, 40);
+            this.label1.Size = new System.Drawing.Size(489, 50);
             this.label1.TabIndex = 2;
             this.label1.Text = "\"Asignación de Clases\"";
             // 
@@ -119,6 +119,7 @@
             this.dgvAsigEstudiante.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAsigEstudiante.Location = new System.Drawing.Point(104, 510);
             this.dgvAsigEstudiante.Name = "dgvAsigEstudiante";
+            this.dgvAsigEstudiante.RowHeadersWidth = 51;
             this.dgvAsigEstudiante.Size = new System.Drawing.Size(746, 182);
             this.dgvAsigEstudiante.TabIndex = 30;
             // 
@@ -128,7 +129,7 @@
             this.label9.Location = new System.Drawing.Point(492, 426);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(0, 18);
+            this.label9.Size = new System.Drawing.Size(0, 23);
             this.label9.TabIndex = 29;
             // 
             // label8
@@ -137,7 +138,7 @@
             this.label8.Location = new System.Drawing.Point(517, 195);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(59, 18);
+            this.label8.Size = new System.Drawing.Size(74, 23);
             this.label8.TabIndex = 28;
             this.label8.Text = "Sección:";
             // 
@@ -147,7 +148,7 @@
             this.label5.Location = new System.Drawing.Point(135, 273);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(124, 18);
+            this.label5.Size = new System.Drawing.Size(158, 23);
             this.label5.TabIndex = 25;
             this.label5.Text = "Cursos Disponibles:";
             // 
@@ -157,7 +158,7 @@
             this.label4.Location = new System.Drawing.Point(135, 352);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 18);
+            this.label4.Size = new System.Drawing.Size(72, 23);
             this.label4.TabIndex = 24;
             this.label4.Text = "Carrera:";
             // 
@@ -167,7 +168,7 @@
             this.label3.Location = new System.Drawing.Point(135, 426);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 18);
+            this.label3.Size = new System.Drawing.Size(75, 23);
             this.label3.TabIndex = 23;
             this.label3.Text = "Jornada:";
             // 
@@ -177,45 +178,45 @@
             this.label2.Location = new System.Drawing.Point(135, 201);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 18);
+            this.label2.Size = new System.Drawing.Size(100, 23);
             this.label2.TabIndex = 22;
             this.label2.Text = "N. de Carné";
             // 
-            // comboBoxCurso
+            // comboBoxCursoEstudiante
             // 
-            this.comboBoxCurso.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.comboBoxCurso.FormattingEnabled = true;
-            this.comboBoxCurso.Location = new System.Drawing.Point(138, 310);
-            this.comboBoxCurso.Name = "comboBoxCurso";
-            this.comboBoxCurso.Size = new System.Drawing.Size(304, 26);
-            this.comboBoxCurso.TabIndex = 40;
+            this.comboBoxCursoEstudiante.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.comboBoxCursoEstudiante.FormattingEnabled = true;
+            this.comboBoxCursoEstudiante.Location = new System.Drawing.Point(138, 310);
+            this.comboBoxCursoEstudiante.Name = "comboBoxCursoEstudiante";
+            this.comboBoxCursoEstudiante.Size = new System.Drawing.Size(304, 29);
+            this.comboBoxCursoEstudiante.TabIndex = 40;
             // 
-            // comboBoxJornada
+            // comboBoxJornadaEstudiante
             // 
-            this.comboBoxJornada.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.comboBoxJornada.FormattingEnabled = true;
-            this.comboBoxJornada.Location = new System.Drawing.Point(138, 455);
-            this.comboBoxJornada.Name = "comboBoxJornada";
-            this.comboBoxJornada.Size = new System.Drawing.Size(304, 26);
-            this.comboBoxJornada.TabIndex = 41;
+            this.comboBoxJornadaEstudiante.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.comboBoxJornadaEstudiante.FormattingEnabled = true;
+            this.comboBoxJornadaEstudiante.Location = new System.Drawing.Point(138, 455);
+            this.comboBoxJornadaEstudiante.Name = "comboBoxJornadaEstudiante";
+            this.comboBoxJornadaEstudiante.Size = new System.Drawing.Size(304, 29);
+            this.comboBoxJornadaEstudiante.TabIndex = 41;
             // 
-            // comboBoxCarrera
+            // comboBoxCarreraEstudiante
             // 
-            this.comboBoxCarrera.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.comboBoxCarrera.FormattingEnabled = true;
-            this.comboBoxCarrera.Location = new System.Drawing.Point(138, 386);
-            this.comboBoxCarrera.Name = "comboBoxCarrera";
-            this.comboBoxCarrera.Size = new System.Drawing.Size(304, 26);
-            this.comboBoxCarrera.TabIndex = 42;
+            this.comboBoxCarreraEstudiante.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.comboBoxCarreraEstudiante.FormattingEnabled = true;
+            this.comboBoxCarreraEstudiante.Location = new System.Drawing.Point(138, 386);
+            this.comboBoxCarreraEstudiante.Name = "comboBoxCarreraEstudiante";
+            this.comboBoxCarreraEstudiante.Size = new System.Drawing.Size(304, 29);
+            this.comboBoxCarreraEstudiante.TabIndex = 42;
             // 
-            // comboBoxSeccion
+            // comboBoxSeccionEstudiante
             // 
-            this.comboBoxSeccion.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.comboBoxSeccion.FormattingEnabled = true;
-            this.comboBoxSeccion.Location = new System.Drawing.Point(520, 232);
-            this.comboBoxSeccion.Name = "comboBoxSeccion";
-            this.comboBoxSeccion.Size = new System.Drawing.Size(215, 26);
-            this.comboBoxSeccion.TabIndex = 43;
+            this.comboBoxSeccionEstudiante.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.comboBoxSeccionEstudiante.FormattingEnabled = true;
+            this.comboBoxSeccionEstudiante.Location = new System.Drawing.Point(520, 232);
+            this.comboBoxSeccionEstudiante.Name = "comboBoxSeccionEstudiante";
+            this.comboBoxSeccionEstudiante.Size = new System.Drawing.Size(215, 29);
+            this.comboBoxSeccionEstudiante.TabIndex = 43;
             // 
             // btnSalirAsigEstudiante
             // 
@@ -260,22 +261,22 @@
             this.comboBoxNCarneEst.FormattingEnabled = true;
             this.comboBoxNCarneEst.Location = new System.Drawing.Point(138, 232);
             this.comboBoxNCarneEst.Name = "comboBoxNCarneEst";
-            this.comboBoxNCarneEst.Size = new System.Drawing.Size(304, 26);
+            this.comboBoxNCarneEst.Size = new System.Drawing.Size(304, 29);
             this.comboBoxNCarneEst.TabIndex = 46;
             // 
             // AsignacionEstudiante
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(1043, 735);
             this.Controls.Add(this.comboBoxNCarneEst);
             this.Controls.Add(this.btnSalirAsigEstudiante);
             this.Controls.Add(this.btnEliminarAsigEstudiante);
-            this.Controls.Add(this.comboBoxSeccion);
-            this.Controls.Add(this.comboBoxCarrera);
-            this.Controls.Add(this.comboBoxJornada);
-            this.Controls.Add(this.comboBoxCurso);
+            this.Controls.Add(this.comboBoxSeccionEstudiante);
+            this.Controls.Add(this.comboBoxCarreraEstudiante);
+            this.Controls.Add(this.comboBoxJornadaEstudiante);
+            this.Controls.Add(this.comboBoxCursoEstudiante);
             this.Controls.Add(this.btnActualizarAsigEst);
             this.Controls.Add(this.btnAgregarAsigEstudiante);
             this.Controls.Add(this.dgvAsigEstudiante);
@@ -311,10 +312,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBoxCurso;
-        private System.Windows.Forms.ComboBox comboBoxJornada;
-        private System.Windows.Forms.ComboBox comboBoxCarrera;
-        private System.Windows.Forms.ComboBox comboBoxSeccion;
+        private System.Windows.Forms.ComboBox comboBoxCursoEstudiante;
+        private System.Windows.Forms.ComboBox comboBoxJornadaEstudiante;
+        private System.Windows.Forms.ComboBox comboBoxCarreraEstudiante;
+        private System.Windows.Forms.ComboBox comboBoxSeccionEstudiante;
         private System.Windows.Forms.Button btnSalirAsigEstudiante;
         private System.Windows.Forms.Button btnEliminarAsigEstudiante;
         private System.Windows.Forms.ComboBox comboBoxNCarneEst;

@@ -52,20 +52,20 @@ namespace DataAcces
             return asignacionesEstudiante;
 
         }
-        public bool InsertAsignacionEstudiante(AsignacionEstudiante asignacionesEstudiante)
-        {
-            using (SqlConnection conn = new SqlConnection(conexion))
-            {
-                conn.Open();
-                string sql = $"INSERT INTO AsignacionEstudiante VALUES({asignacionesEstudiante.IdAsignacionEstudiante},{asignacionesEstudiante.FechaAsignacion},{asignacionesEstudiante.Estado}')";
-                using (SqlCommand comando = new SqlCommand(sql, conn))
-                {
-                    comando.CommandType = CommandType.Text;
-                    comando.ExecuteNonQuery();
-                }
-            }
-            return true;
-        }
+        //public bool InsertAsignacionEstudiante(AsignacionEstudiante asignacionesEstudiante)
+        //{
+        //    using (SqlConnection conn = new SqlConnection(conexion))
+        //    {
+        //        conn.Open();
+        //        string sql = $"INSERT INTO AsignacionEstudiante VALUES({asignacionesEstudiante.IdAsignacionEstudiante},{asignacionesEstudiante.FechaAsignacion},{asignacionesEstudiante.Estado}')";
+        //        using (SqlCommand comando = new SqlCommand(sql, conn))
+        //        {
+        //            comando.CommandType = CommandType.Text;
+        //            comando.ExecuteNonQuery();
+        //        }
+        //    }
+        //    return true;
+        //}
         public bool UpdateAsignacionEstudiante(AsignacionEstudiante asignacionesEstudiante)
         {
             using (SqlConnection conn = new SqlConnection(conexion))
@@ -94,5 +94,24 @@ namespace DataAcces
             }
             return true;
         }
+        public bool GuardarAsignacionEstudiante(AsignacionEstudiante asignacionEstudiante)
+        {
+            using (SqlConnection conn = new SqlConnection(conexion))
+            {
+                conn.Open();
+                string sql = "INSERT INTO AsignacionEstudiante (NoCarne, IdJornada, IdCarrera, IdCurso, IdSeccion) VALUES (@NoCarne, @IdJornada, @IdCarrera, @IdCurso, @IdSeccion)";
+                using (SqlCommand comando = new SqlCommand(sql, conn))
+                {
+                    comando.Parameters.AddWithValue("@NoCarne", asignacionEstudiante.Estudiante.NoCarne);
+                    comando.Parameters.AddWithValue("@IdJornada", asignacionEstudiante.Jornada.IdJornada);
+                    comando.Parameters.AddWithValue("@IdCarrera", asignacionEstudiante.Carrera.IdCarrera);
+                    comando.Parameters.AddWithValue("@IdCurso", asignacionEstudiante.Curso.IdCurso);
+                    comando.Parameters.AddWithValue("@IdSeccion", asignacionEstudiante.Seccion.IdSeccion);
+                    comando.ExecuteNonQuery();
+                }
+            }
+            return true;
+        }
     }
 }
+
