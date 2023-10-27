@@ -50,8 +50,6 @@
             this.btnSalirAsigDocente = new System.Windows.Forms.Button();
             this.btnEliminarAsigDocente = new System.Windows.Forms.Button();
             this.comboBoxIDdocente = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsigEstudiante)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -301,30 +299,12 @@
             this.comboBoxIDdocente.Size = new System.Drawing.Size(304, 29);
             this.comboBoxIDdocente.TabIndex = 67;
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(481, 241);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(61, 23);
-            this.label11.TabIndex = 68;
-            this.label11.Text = "label11";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(485, 270);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 29);
-            this.textBox1.TabIndex = 69;
-            // 
             // AsignacionDocente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(1067, 658);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label11);
             this.Controls.Add(this.comboBoxIDdocente);
             this.Controls.Add(this.btnSalirAsigDocente);
             this.Controls.Add(this.btnEliminarAsigDocente);
@@ -379,7 +359,5 @@
         private System.Windows.Forms.Button btnSalirAsigDocente;
         private System.Windows.Forms.Button btnEliminarAsigDocente;
         private System.Windows.Forms.ComboBox comboBoxIDdocente;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox1;
     }
 }
