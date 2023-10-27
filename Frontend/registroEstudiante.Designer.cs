@@ -53,6 +53,7 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.lbUsuario = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegEstudiante)).BeginInit();
             this.SuspendLayout();
@@ -66,7 +67,7 @@
             this.label1.Location = new System.Drawing.Point(324, 101);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(453, 50);
+            this.label1.Size = new System.Drawing.Size(358, 40);
             this.label1.TabIndex = 1;
             this.label1.Text = "\"Registro Estudiante\"";
             // 
@@ -87,7 +88,7 @@
             this.label2.Location = new System.Drawing.Point(160, 203);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 23);
+            this.label2.Size = new System.Drawing.Size(57, 18);
             this.label2.TabIndex = 3;
             this.label2.Text = "Nombre:";
             // 
@@ -97,7 +98,7 @@
             this.label3.Location = new System.Drawing.Point(160, 428);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(148, 23);
+            this.label3.Size = new System.Drawing.Size(117, 18);
             this.label3.TabIndex = 4;
             this.label3.Text = "Fecha Nacimiento:";
             // 
@@ -107,7 +108,7 @@
             this.label4.Location = new System.Drawing.Point(160, 354);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 23);
+            this.label4.Size = new System.Drawing.Size(53, 18);
             this.label4.TabIndex = 5;
             this.label4.Text = "Estatus";
             // 
@@ -117,7 +118,7 @@
             this.label5.Location = new System.Drawing.Point(160, 275);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 23);
+            this.label5.Size = new System.Drawing.Size(58, 18);
             this.label5.TabIndex = 6;
             this.label5.Text = "Apellido:";
             // 
@@ -127,7 +128,7 @@
             this.label6.Location = new System.Drawing.Point(341, 354);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 23);
+            this.label6.Size = new System.Drawing.Size(54, 18);
             this.label6.TabIndex = 7;
             this.label6.Text = "Genero:";
             // 
@@ -137,7 +138,7 @@
             this.label7.Location = new System.Drawing.Point(550, 354);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(167, 23);
+            this.label7.Size = new System.Drawing.Size(128, 18);
             this.label7.TabIndex = 8;
             this.label7.Text = "Ingresar Contraseña:";
             // 
@@ -147,7 +148,7 @@
             this.lbDPI.Location = new System.Drawing.Point(551, 203);
             this.lbDPI.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbDPI.Name = "lbDPI";
-            this.lbDPI.Size = new System.Drawing.Size(37, 23);
+            this.lbDPI.Size = new System.Drawing.Size(29, 18);
             this.lbDPI.TabIndex = 9;
             this.lbDPI.Text = "DPI";
             // 
@@ -157,7 +158,7 @@
             this.label9.Location = new System.Drawing.Point(551, 428);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(0, 23);
+            this.label9.Size = new System.Drawing.Size(0, 18);
             this.label9.TabIndex = 10;
             // 
             // dgvRegEstudiante
@@ -176,7 +177,7 @@
             this.txtNombre.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(163, 235);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(304, 29);
+            this.txtNombre.Size = new System.Drawing.Size(304, 25);
             this.txtNombre.TabIndex = 12;
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
@@ -186,7 +187,7 @@
             this.txtApellido.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellido.Location = new System.Drawing.Point(163, 308);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(304, 29);
+            this.txtApellido.Size = new System.Drawing.Size(304, 25);
             this.txtApellido.TabIndex = 13;
             // 
             // txtEstatus
@@ -195,7 +196,7 @@
             this.txtEstatus.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEstatus.Location = new System.Drawing.Point(163, 386);
             this.txtEstatus.Name = "txtEstatus";
-            this.txtEstatus.Size = new System.Drawing.Size(127, 29);
+            this.txtEstatus.Size = new System.Drawing.Size(127, 25);
             this.txtEstatus.TabIndex = 14;
             // 
             // txtDPI
@@ -204,7 +205,7 @@
             this.txtDPI.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDPI.Location = new System.Drawing.Point(554, 235);
             this.txtDPI.Name = "txtDPI";
-            this.txtDPI.Size = new System.Drawing.Size(304, 29);
+            this.txtDPI.Size = new System.Drawing.Size(304, 25);
             this.txtDPI.TabIndex = 16;
             this.txtDPI.TextChanged += new System.EventHandler(this.txtDPI_TextChanged);
             // 
@@ -214,7 +215,7 @@
             this.txtContraseña.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseña.Location = new System.Drawing.Point(554, 386);
             this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(304, 29);
+            this.txtContraseña.Size = new System.Drawing.Size(304, 25);
             this.txtContraseña.TabIndex = 17;
             // 
             // txtGenero
@@ -223,7 +224,7 @@
             this.txtGenero.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGenero.Location = new System.Drawing.Point(345, 386);
             this.txtGenero.Name = "txtGenero";
-            this.txtGenero.Size = new System.Drawing.Size(122, 29);
+            this.txtGenero.Size = new System.Drawing.Size(122, 25);
             this.txtGenero.TabIndex = 18;
             // 
             // btnAgregarRegEstudiante
@@ -306,7 +307,7 @@
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(163, 458);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(304, 29);
+            this.dateTimePicker1.Size = new System.Drawing.Size(304, 25);
             this.dateTimePicker1.TabIndex = 23;
             // 
             // txtUsuario
@@ -315,7 +316,7 @@
             this.txtUsuario.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.Location = new System.Drawing.Point(554, 308);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(304, 29);
+            this.txtUsuario.Size = new System.Drawing.Size(304, 25);
             this.txtUsuario.TabIndex = 24;
             // 
             // lbUsuario
@@ -324,16 +325,27 @@
             this.lbUsuario.Location = new System.Drawing.Point(550, 275);
             this.lbUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbUsuario.Name = "lbUsuario";
-            this.lbUsuario.Size = new System.Drawing.Size(67, 23);
+            this.lbUsuario.Size = new System.Drawing.Size(52, 18);
             this.lbUsuario.TabIndex = 25;
             this.lbUsuario.Text = "Usuario";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(138, 101);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 26;
+            this.button1.Text = "Limpiar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // registroEstudiante
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(1159, 701);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lbUsuario);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.dateTimePicker1);
@@ -396,5 +408,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label lbUsuario;
+        private System.Windows.Forms.Button button1;
     }
 }
