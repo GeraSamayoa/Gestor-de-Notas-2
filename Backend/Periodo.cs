@@ -10,7 +10,7 @@ namespace Backend
     {
         public int IdPeriodo { get; set; }
 
-        public string NombrePeriodo { get; set; }
+        public string TipoPeriodo { get; set; }
         
        // public Periodo(int idperiodo, string nombreperiodo)
        // { 

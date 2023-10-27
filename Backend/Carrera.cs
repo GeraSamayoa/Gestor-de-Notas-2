@@ -12,7 +12,7 @@ namespace Backend
         public string NombreCarrera { get; set; }
         public List<Ciclo> Ciclos { get; set; } = new List<Ciclo>();
         public List<Jornada> Jornadas { get; set; } = new List<Jornada>();
-        public bool Estatus { get; set; }
+        public char Estatus { get; set; }
         public Universidad Universidad { get; set; }
 
 

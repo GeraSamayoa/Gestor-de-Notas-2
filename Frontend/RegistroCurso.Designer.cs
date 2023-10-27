@@ -74,10 +74,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(702, 6);
+            this.pictureBox1.Location = new System.Drawing.Point(667, -2);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(81, 72);
+            this.pictureBox1.Size = new System.Drawing.Size(121, 79);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 84;
             this.pictureBox1.TabStop = false;
@@ -93,12 +93,13 @@
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSalir.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.Color.White;
-            this.btnSalir.Location = new System.Drawing.Point(265, 429);
+            this.btnSalir.Location = new System.Drawing.Point(260, 427);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(121, 31);
             this.btnSalir.TabIndex = 83;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnEliminar
             // 
@@ -111,7 +112,7 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminar.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(519, 429);
+            this.btnEliminar.Location = new System.Drawing.Point(514, 427);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(121, 31);
             this.btnEliminar.TabIndex = 82;
@@ -129,7 +130,7 @@
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnActualizar.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizar.ForeColor = System.Drawing.Color.White;
-            this.btnActualizar.Location = new System.Drawing.Point(392, 429);
+            this.btnActualizar.Location = new System.Drawing.Point(387, 427);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(121, 31);
             this.btnActualizar.TabIndex = 81;
@@ -147,7 +148,7 @@
             this.btnAgregarCurso.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregarCurso.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarCurso.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarCurso.Location = new System.Drawing.Point(667, 415);
+            this.btnAgregarCurso.Location = new System.Drawing.Point(662, 413);
             this.btnAgregarCurso.Name = "btnAgregarCurso";
             this.btnAgregarCurso.Size = new System.Drawing.Size(121, 45);
             this.btnAgregarCurso.TabIndex = 80;
@@ -158,7 +159,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(178, 169);
+            this.label9.Location = new System.Drawing.Point(182, 171);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(0, 13);
@@ -167,9 +168,9 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(43, 257);
+            this.dataGridView1.Location = new System.Drawing.Point(43, 252);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(707, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(707, 155);
             this.dataGridView1.TabIndex = 78;
             // 
             // label3
@@ -177,7 +178,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(442, 108);
+            this.label3.Location = new System.Drawing.Point(428, 136);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 18);
             this.label3.TabIndex = 77;
@@ -190,7 +191,7 @@
             this.comboBoxSede.FormattingEnabled = true;
             this.comboBoxSede.Items.AddRange(new object[] {
             "Central"});
-            this.comboBoxSede.Location = new System.Drawing.Point(37, 100);
+            this.comboBoxSede.Location = new System.Drawing.Point(41, 102);
             this.comboBoxSede.Name = "comboBoxSede";
             this.comboBoxSede.Size = new System.Drawing.Size(365, 21);
             this.comboBoxSede.TabIndex = 76;
@@ -200,7 +201,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(233, 182);
+            this.label7.Location = new System.Drawing.Point(237, 184);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(42, 18);
             this.label7.TabIndex = 75;
@@ -213,7 +214,7 @@
             this.comboBoxUniversidad.FormattingEnabled = true;
             this.comboBoxUniversidad.Items.AddRange(new object[] {
             "Central"});
-            this.comboBoxUniversidad.Location = new System.Drawing.Point(236, 203);
+            this.comboBoxUniversidad.Location = new System.Drawing.Point(240, 205);
             this.comboBoxUniversidad.Name = "comboBoxUniversidad";
             this.comboBoxUniversidad.Size = new System.Drawing.Size(166, 21);
             this.comboBoxUniversidad.TabIndex = 74;
@@ -223,7 +224,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(34, 182);
+            this.label6.Location = new System.Drawing.Point(38, 184);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(50, 18);
             this.label6.TabIndex = 73;
@@ -237,7 +238,7 @@
             this.comboBoxEstatus.Items.AddRange(new object[] {
             "1",
             "0"});
-            this.comboBoxEstatus.Location = new System.Drawing.Point(37, 203);
+            this.comboBoxEstatus.Location = new System.Drawing.Point(41, 205);
             this.comboBoxEstatus.Name = "comboBoxEstatus";
             this.comboBoxEstatus.Size = new System.Drawing.Size(166, 21);
             this.comboBoxEstatus.TabIndex = 72;
@@ -251,7 +252,7 @@
             "Lunes a Viernes",
             "Sabado",
             "Domingo"});
-            this.comboBoxJornada.Location = new System.Drawing.Point(236, 150);
+            this.comboBoxJornada.Location = new System.Drawing.Point(240, 152);
             this.comboBoxJornada.Name = "comboBoxJornada";
             this.comboBoxJornada.Size = new System.Drawing.Size(166, 21);
             this.comboBoxJornada.TabIndex = 71;
@@ -261,7 +262,7 @@
             this.Jornada.AutoSize = true;
             this.Jornada.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Jornada.ForeColor = System.Drawing.Color.Black;
-            this.Jornada.Location = new System.Drawing.Point(233, 129);
+            this.Jornada.Location = new System.Drawing.Point(237, 131);
             this.Jornada.Name = "Jornada";
             this.Jornada.Size = new System.Drawing.Size(58, 18);
             this.Jornada.TabIndex = 70;
@@ -272,7 +273,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(34, 129);
+            this.label4.Location = new System.Drawing.Point(38, 131);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 18);
             this.label4.TabIndex = 69;
@@ -286,7 +287,7 @@
             this.comboboxCiclo.Items.AddRange(new object[] {
             "A",
             "B"});
-            this.comboboxCiclo.Location = new System.Drawing.Point(37, 150);
+            this.comboboxCiclo.Location = new System.Drawing.Point(41, 152);
             this.comboboxCiclo.Name = "comboboxCiclo";
             this.comboboxCiclo.Size = new System.Drawing.Size(166, 21);
             this.comboboxCiclo.TabIndex = 68;
@@ -296,7 +297,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(34, 79);
+            this.label2.Location = new System.Drawing.Point(38, 81);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 18);
             this.label2.TabIndex = 67;
@@ -311,7 +312,7 @@
             this.comboBoxSeccion.Items.AddRange(new object[] {
             "A",
             "B"});
-            this.comboBoxSeccion.Location = new System.Drawing.Point(445, 129);
+            this.comboBoxSeccion.Location = new System.Drawing.Point(431, 157);
             this.comboBoxSeccion.Name = "comboBoxSeccion";
             this.comboBoxSeccion.Size = new System.Drawing.Size(166, 21);
             this.comboBoxSeccion.TabIndex = 85;
@@ -321,7 +322,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(614, 154);
+            this.label5.Location = new System.Drawing.Point(609, 81);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(89, 18);
             this.label5.TabIndex = 86;
@@ -332,7 +333,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(442, 158);
+            this.label8.Location = new System.Drawing.Point(428, 85);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(91, 18);
             this.label8.TabIndex = 88;
@@ -342,7 +343,7 @@
             // 
             this.textBoxFechaFinal.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.textBoxFechaFinal.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxFechaFinal.Location = new System.Drawing.Point(617, 175);
+            this.textBoxFechaFinal.Location = new System.Drawing.Point(612, 102);
             this.textBoxFechaFinal.Name = "textBoxFechaFinal";
             this.textBoxFechaFinal.Size = new System.Drawing.Size(166, 25);
             this.textBoxFechaFinal.TabIndex = 89;
@@ -351,7 +352,7 @@
             // 
             this.textBoxFechaInicio.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.textBoxFechaInicio.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxFechaInicio.Location = new System.Drawing.Point(445, 176);
+            this.textBoxFechaInicio.Location = new System.Drawing.Point(431, 103);
             this.textBoxFechaInicio.Name = "textBoxFechaInicio";
             this.textBoxFechaInicio.Size = new System.Drawing.Size(166, 25);
             this.textBoxFechaInicio.TabIndex = 90;
