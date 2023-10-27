@@ -42,13 +42,15 @@ namespace Frontend
             persona.Nombre = txtNombre.Text;
             persona.Apellido = txtApellido.Text;
             persona.Genero = txtGenero.Text;
+            persona.IdPersona = int.Parse(txtDPI.Text);
             persona.FechaNacimiento = dateTimePicker1.Value;
             estudiante.Estatus = char.Parse(txtEstatus.Text);
 
-            estudianteDAL.InsertEstudiante(estudiante);
             personaDAL.InsertPersona(persona);
-            dgvRegEstudiante.DataSource = estudianteDAL.GetEstudiante();
+            estudianteDAL.InsertEstudiante(estudiante);
             dgvRegEstudiante.DataSource = personaDAL.GetPersona();
+            //dgvRegEstudiante.DataSource = estudianteDAL.GetEstudiante();
+            
 
         }
 
@@ -81,12 +83,17 @@ namespace Frontend
 
             estudianteDAL.DeleteEstudiante(estudiante);
             personaDAL.DeletePersona(persona);
-            dgvRegEstudiante.DataSource = estudianteDAL.GetEstudiante();
-            dgvRegEstudiante.DataSource = personaDAL.GetPersona();
+            //dgvRegEstudiante.DataSource = estudianteDAL.GetEstudiante();
+            //dgvRegEstudiante.DataSource = personaDAL.GetPersona();
 
         }
 
         private void registroEstudiante_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDPI_TextChanged(object sender, EventArgs e)
         {
 
         }

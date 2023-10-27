@@ -39,7 +39,7 @@ namespace DataAcces
                         {
                             //NoCarne = Convert.ToInt32(item["NoCarne"]),
                             Estatus = Convert.ToChar(item["Estatus"]),
-                            FechaIngreso = Convert.ToDateTime(item["FechaIngreso"]),
+                            //FechaIngreso = Convert.ToDateTime(item["FechaIngreso"]),
                             //Contrasenia = item["Contrasenia"].ToString()
                         }
                         );
@@ -56,7 +56,7 @@ namespace DataAcces
             {
                 conn.Open();
                 //insert into Estudiante values('1','2023-10-03',457856);
-                string sql = $"INSERT INTO Estudiante VALUES('{estudiantes.Estatus}','{estudiantes.FechaIngreso}',{estudiantes.IdPersona})";
+                string sql = $"INSERT INTO Estudiante VALUES('{estudiantes.Estatus}','2023-10-27',{estudiantes.IdPersona})";
                 using (SqlCommand comando = new SqlCommand(sql, conn))
                 {
                     comando.CommandType = CommandType.Text;
