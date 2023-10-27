@@ -140,5 +140,31 @@ namespace DataAccesUITI
             }
             return listaSecciones;
         }
+        public List<Estudiante> ObtenerEstudiantes()
+        {
+            List<Estudiante> listaEstudiantes = new List<Estudiante>();
+            using (SqlConnection conn = new SqlConnection(conexion))
+            {
+                conn.Open();
+                using (SqlCommand comando = new SqlCommand("SELECT * FROM Estudiante", conn))
+                {
+                    using (SqlDataReader reader = comando.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Estudiante estudiante= new Estudiante
+                            {
+                                NoCarne = Convert.ToInt32(reader["NoCarne"]),
+                                Nombre = reader["Nombre"].ToString(),
+                                Estatus = Convert.ToChar(reader["Estatus"]),
+                            };
+                            listaEstudiantes.Add(estudiante);
+                        }
+                    }
+                }
+            }
+            return listaEstudiantes;
+        }
+
     }
 }
