@@ -11,7 +11,7 @@ namespace DataAcces
 {
     public class PersonaDAL
     {
-        string conexion = @"data source= ASOFIMP\asofi; initial catalog= UITI; user id=sa; password=1908pass;";
+        string conexion = @"data source= ASOFIMP; initial catalog= UITI; user id=sa; password=1908pass;";
         public PersonaDAL()
         {
 
@@ -37,7 +37,7 @@ namespace DataAcces
                     {
                         personas.Add(new Persona
                         {
-                            IdPersona = Convert.ToInt32(item["IdPersona"]),
+                            IdPersona = Convert.ToInt32(item["DPI"]),
                             Nombre = item["Nombre"].ToString(),
                             Apellido = item["Apellido"].ToString(),
                             FechaNacimiento = Convert.ToDateTime(item["FechaNacimiento"]),
@@ -57,7 +57,7 @@ namespace DataAcces
             using (SqlConnection conn = new SqlConnection(conexion))
             {
                 conn.Open();
-                string sql = $"INSERT INTO Persona VALUES({personas.IdPersona},'{personas.Nombre}','{personas.Apellido}','{personas.FechaNacimiento}','{personas.Genero}')";
+                string sql = $"INSERT INTO Persona VALUES({personas.IdPersona},'{personas.Nombre}','{personas.Apellido}','{personas.FechaNacimiento}','{personas.Genero}',1)";
                 using (SqlCommand comando = new SqlCommand(sql, conn))
                 {
                     comando.CommandType = CommandType.Text;

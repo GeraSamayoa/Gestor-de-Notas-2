@@ -11,7 +11,7 @@ namespace DataAcces
 {
     public class EstudianteDAL
     {
-        string conexion = @"data source=ASOFIMP\asofi; initial catalog= UITI; user id=sa; password=1908pass;";
+        string conexion = @"data source=ASOFIMP; initial catalog= UITI; user id=sa; password=1908pass;";
         public EstudianteDAL()
         {
 
@@ -37,10 +37,10 @@ namespace DataAcces
                     {
                         estudiantes.Add(new Estudiante
                         {
-                            NoCarne = Convert.ToInt32(item["NoCarne"]),
-                            Estatus = item["Estatus"].ToString(),
-                            //FechaIngreso = Convert.ToDateTime(item["FechaIngreso"]),
-                            Contrasenia = item["Contrasenia"].ToString()
+                            //NoCarne = Convert.ToInt32(item["NoCarne"]),
+                            Estatus = Convert.ToChar(item["Estatus"]),
+                            FechaIngreso = Convert.ToDateTime(item["FechaIngreso"]),
+                            //Contrasenia = item["Contrasenia"].ToString()
                         }
                         );
 
@@ -55,7 +55,8 @@ namespace DataAcces
             using (SqlConnection conn = new SqlConnection(conexion))
             {
                 conn.Open();
-                string sql = $"INSERT INTO Estudiante VALUES({estudiantes.NoCarne},'{estudiantes.Estatus}','{estudiantes.Contrasenia}')";
+                //insert into Estudiante values('1','2023-10-03',457856);
+                string sql = $"INSERT INTO Estudiante VALUES('{estudiantes.Estatus}','{estudiantes.FechaIngreso}',{estudiantes.IdPersona})";
                 using (SqlCommand comando = new SqlCommand(sql, conn))
                 {
                     comando.CommandType = CommandType.Text;
@@ -69,7 +70,7 @@ namespace DataAcces
             using (SqlConnection conn = new SqlConnection(conexion))
             {
                 conn.Open();
-                string sql = $"UPDATE Estudiante SET Estatus = '{estudiantes.Estatus}',Contrasenia= '{estudiantes.Contrasenia}'WHERE NoCarne = {estudiantes.NoCarne}";
+                string sql = $"UPDATE Estudiante SET Estatus = '{estudiantes.Estatus}',Contrasenia= ''WHERE NoCarne = {estudiantes.NoCarne}";
                 using (SqlCommand comando = new SqlCommand(sql, conn))
                 {
                     comando.CommandType = CommandType.Text;

@@ -11,7 +11,7 @@ namespace DataAcces
 {
     public class CicloDAL
     {
-        string conexion = @"data source= ASOFIMP\asofi; initial catalog= UITI; user id=sa; password=00123456;";
+        string conexion = @"data source= ASOFIMP; initial catalog= UITI; user id=sa; password=00123456;";
         public CicloDAL()
         {
 

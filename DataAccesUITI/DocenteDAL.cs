@@ -11,7 +11,7 @@ namespace DataAcces
 {
     public class DocenteDAL
     {
-        string conexion = @"data source= ASOFIMP\asofi; initial catalog= UITI; user id=sa; password=1908pass;";
+        string conexion = @"data source= ASOFIMP; initial catalog= UITI; user id=sa; password=1908pass;";
         public DocenteDAL()
         {
 

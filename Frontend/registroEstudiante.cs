@@ -37,13 +37,13 @@ namespace Frontend
         {
             Estudiante estudiante = new Estudiante();
             Persona persona = new Persona();
-            estudiante.NoCarne = int.Parse(txtNoCarne.Text);
-            estudiante.Contrasenia = txtContraseña.Text;
+            //estudiante.NoCarne = int.Parse(txtNoCarne.Text);
+            //estudiante.Contrasenia = txtContraseña.Text;
             persona.Nombre = txtNombre.Text;
             persona.Apellido = txtApellido.Text;
             persona.Genero = txtGenero.Text;
             persona.FechaNacimiento = dateTimePicker1.Value;
-            estudiante.Estatus = txtEstatus.Text;
+            estudiante.Estatus = char.Parse(txtEstatus.Text);
 
             estudianteDAL.InsertEstudiante(estudiante);
             personaDAL.InsertPersona(persona);
@@ -57,7 +57,7 @@ namespace Frontend
             Estudiante estudiante = new Estudiante();
             Persona persona = new Persona();
             estudiante.NoCarne = int.Parse(txtNoCarne.Text);
-            estudiante.Contrasenia = txtContraseña.Text;
+            //estudiante.Contrasenia = txtContraseña.Text;
             persona.Nombre = txtNombre.Text;
             persona.Apellido = txtApellido.Text;
             persona.Genero = txtGenero.Text;
@@ -74,7 +74,7 @@ namespace Frontend
             Estudiante estudiante = new Estudiante();
             Persona persona = new Persona();
             estudiante.NoCarne = int.Parse(txtNoCarne.Text);
-            estudiante.Contrasenia = txtContraseña.Text;
+            //estudiante.Contrasenia = txtContraseña.Text;
             persona.Nombre = txtNombre.Text;
             persona.Apellido = txtApellido.Text;
             persona.Genero = txtGenero.Text;
