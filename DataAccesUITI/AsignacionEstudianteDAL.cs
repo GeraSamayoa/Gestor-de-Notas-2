@@ -12,7 +12,7 @@ namespace DataAcces
     public class AsignacionEstudianteDAL
     {
 
-        string conexion = @"data source= DESKTOP-LIBT4K5\SQLEXPRESS; initial catalog= UITI; user id=sa; password=00123456;";
+        string conexion = @"data source=ASOFIMP\asofi; initial catalog= UITI; user id=sa; password=1908pass;";
         public AsignacionEstudianteDAL()
         {
 
