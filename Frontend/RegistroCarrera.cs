@@ -16,5 +16,20 @@ namespace Frontend
         {
             InitializeComponent();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RegistroCarrera_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
