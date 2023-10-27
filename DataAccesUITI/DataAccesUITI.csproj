@@ -59,6 +59,7 @@
     <Compile Include="ReporteBoletaDAL.cs" />
     <Compile Include="SeccionDAL.cs" />
     <Compile Include="UniversidadDAL.cs" />
+    <Compile Include="UsuarioDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Backend\Entities.csproj">

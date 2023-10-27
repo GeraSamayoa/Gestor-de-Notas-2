@@ -12,7 +12,7 @@ namespace Backend
         //Tomar en cuenta :D
        public char Estatus {  get; set; }
        public DateTime FechaIngreso { get; set; }
-       //public string Contrasenia { get; set; }
+       public string Contrasenia { get; set; }
         
 
         public AsignacionEstudiante IdAsignacionEstudiante {  get; set; }

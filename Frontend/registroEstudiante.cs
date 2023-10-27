@@ -38,9 +38,10 @@ namespace Frontend
             Estudiante estudiante = new Estudiante();
             Persona persona = new Persona();
             estudiante.IdPersona = int.Parse(txtDPI.Text);
-            //estudiante.Contrasenia = txtContraseña.Text;
+            estudiante.Contrasenia = txtContraseña.Text;
             persona.Nombre = txtNombre.Text;
             persona.Apellido = txtApellido.Text;
+            lbUsuario.Text = txtUsuario.Text;
             persona.Genero = txtGenero.Text;
             persona.IdPersona = int.Parse(txtDPI.Text);
             persona.FechaNacimiento = dateTimePicker1.Value;
