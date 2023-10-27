@@ -55,7 +55,7 @@ namespace DataAcces
             using (SqlConnection conn = new SqlConnection(conexion))
             {
                 conn.Open();
-                string sql = $"INSERT INTO Estudiante VALUES({estudiantes.NoCarne},'{estudiantes.Estatus}','{estudiantes.FechaIngreso}','{estudiantes.Contrasenia}')";
+                string sql = $"INSERT INTO Estudiante VALUES({estudiantes.NoCarne},'{estudiantes.Estatus}','{estudiantes.Contrasenia}')";
                 using (SqlCommand comando = new SqlCommand(sql, conn))
                 {
                     comando.CommandType = CommandType.Text;
@@ -69,7 +69,7 @@ namespace DataAcces
             using (SqlConnection conn = new SqlConnection(conexion))
             {
                 conn.Open();
-                string sql = $"UPDATE Estudiante SET Estatus = '{estudiantes.Estatus}',FechaIngreso= '{estudiantes.FechaIngreso},Contrasenia= '{estudiantes.Contrasenia}'WHERE NoCarne = {estudiantes.NoCarne}";
+                string sql = $"UPDATE Estudiante SET Estatus = '{estudiantes.Estatus}',Contrasenia= '{estudiantes.Contrasenia}'WHERE NoCarne = {estudiantes.NoCarne}";
                 using (SqlCommand comando = new SqlCommand(sql, conn))
                 {
                     comando.CommandType = CommandType.Text;

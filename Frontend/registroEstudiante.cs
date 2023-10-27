@@ -42,6 +42,8 @@ namespace Frontend
             persona.Nombre = txtNombre.Text;
             persona.Apellido = txtApellido.Text;
             persona.Genero = txtGenero.Text;
+            persona.FechaNacimiento = dateTimePicker1.Value;
+            estudiante.Estatus = txtEstatus.Text;
 
             estudianteDAL.InsertEstudiante(estudiante);
             personaDAL.InsertPersona(persona);

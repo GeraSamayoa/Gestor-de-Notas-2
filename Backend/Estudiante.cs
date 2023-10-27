@@ -10,8 +10,8 @@ namespace Backend
     {
        public int NoCarne {  get; set; }
         //Tomar en cuenta :D
-       public char Estatus {  get; set; }
-       public DateTime FechaIngreso { get; set; }
+       public string Estatus {  get; set; }
+       //public DateTime FechaIngreso { get; set; }
        public string Contrasenia { get; set; }
         
 
