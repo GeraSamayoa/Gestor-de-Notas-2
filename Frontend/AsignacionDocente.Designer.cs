@@ -140,6 +140,7 @@
             this.btnActualizarAsigDocente.TabIndex = 60;
             this.btnActualizarAsigDocente.Text = "Actualizar";
             this.btnActualizarAsigDocente.UseVisualStyleBackColor = false;
+            this.btnActualizarAsigDocente.Click += new System.EventHandler(this.btnActualizarAsigDocente_Click);
             // 
             // btnAgregarAsigDocente
             // 
@@ -324,7 +325,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AsignacionDocente";
             this.Text = "AsignacionDocente";
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsigEstudiante)).EndInit();

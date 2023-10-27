@@ -16,5 +16,10 @@ namespace Frontend
         {
             InitializeComponent();
         }
+
+        private void btnActualizarAsigDocente_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
