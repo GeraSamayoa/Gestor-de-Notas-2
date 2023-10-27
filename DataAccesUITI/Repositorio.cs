@@ -154,8 +154,8 @@ namespace DataAccesUITI
                         {
                             Estudiante estudiante= new Estudiante
                             {
-                                NoCarne = Convert.ToInt32(reader["NoCarne"]),
-                                Nombre = reader["Nombre"].ToString(),
+                                NoCarne = Convert.ToInt32(reader["Carne"]),
+                                Nombre = reader["NombreCompleto"].ToString(),
                                 Estatus = Convert.ToChar(reader["Estatus"]),
                             };
                             listaEstudiantes.Add(estudiante);
