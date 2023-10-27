@@ -44,14 +44,17 @@ namespace Frontend
             Persona persona = new Persona();
             Usuario usuario = new Usuario();
             estudiante.IdPersona = int.Parse(txtDPI.Text);
-            estudiante.Contrasenia = txtContraseña.Text;
+            usuario.Contrasena = txtContraseña.Text;
             persona.Nombre = txtNombre.Text;
             persona.Apellido = txtApellido.Text;
             usuario.NombreUsuario = txtUsuario.Text;
+            usuario.DPI = int.Parse(txtDPI.Text);
             persona.Genero = txtGenero.Text;
             persona.IdPersona = int.Parse(txtDPI.Text);
             persona.FechaNacimiento = dateTimePicker1.Value;
             estudiante.Estatus = char.Parse(txtEstatus.Text);
+            estudiante.Nombre = txtNombre.Text;
+            estudiante.Apellido = txtApellido.Text;
 
             personaDAL.InsertPersona(persona);
             estudianteDAL.InsertEstudiante(estudiante);
@@ -102,6 +105,11 @@ namespace Frontend
         }
 
         private void txtDPI_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
         {
 
         }

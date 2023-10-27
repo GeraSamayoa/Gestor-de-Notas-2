@@ -13,6 +13,7 @@ namespace DataAccesUITI
         public int IdUsuario { get; set; }
         public string NombreUsuario { get; set; }
         public string Contrasena { get; set; }
+        public int DPI { get; set; }
     }
     public class UsuarioDAL
     {
@@ -42,6 +43,7 @@ namespace DataAccesUITI
                             IdUsuario = Convert.ToInt32(item["IdUsuario"]),
                             NombreUsuario = item["NombreUsuario"].ToString(),
                             Contrasena = item["Contrasena"].ToString() 
+                            
                         });
                     }
                 }
@@ -53,7 +55,7 @@ namespace DataAccesUITI
             using (SqlConnection conn = new SqlConnection(conexion))
             {
                 conn.Open();
-                string sql = $"INSERT INTO Usuario VALUES({usuarios.IdUsuario},'{usuarios.NombreUsuario}','{usuarios.Contrasena}')";
+                string sql = $"INSERT INTO UsuarioEstudiante VALUES('{usuarios.NombreUsuario}','{usuarios.Contrasena}','{usuarios.DPI}')";
                 using (SqlCommand comando = new SqlCommand(sql, conn))
                 {
                     int filasAfectadas = comando.ExecuteNonQuery();
@@ -70,7 +72,7 @@ namespace DataAccesUITI
             using (SqlConnection conn = new SqlConnection(conexion))
             {
                 conn.Open();
-                string sql = $"UPDATE Usuario SET NombreUsuario='{usuarios.NombreUsuario}', Contrasena='{usuarios.Contrasena}' WHERE IdUsuario={usuarios.IdUsuario}";
+                string sql = $"UPDATE UsuarioEstudiante SET NombreUsuario='{usuarios.NombreUsuario}', Contrasena='{usuarios.Contrasena}' WHERE IdUsuario={usuarios.IdUsuario}";
                 using (SqlCommand comando = new SqlCommand(sql, conn))
                 {
                     int filasAfectadas = comando.ExecuteNonQuery();
@@ -87,7 +89,7 @@ namespace DataAccesUITI
             using (SqlConnection conn = new SqlConnection(conexion))
             {
                 conn.Open();
-                string sql = $"DELETE FROM Usuario WHERE IdUsuario={idUsuario}";
+                string sql = $"DELETE FROM UsuarioEstudiante WHERE IdUsuario={idUsuario}";
                 using (SqlCommand comando = new SqlCommand(sql, conn))
                 {
                     int filasAfectadas = comando.ExecuteNonQuery();

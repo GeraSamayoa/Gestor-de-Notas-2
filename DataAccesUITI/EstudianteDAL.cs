@@ -56,7 +56,7 @@ namespace DataAcces
             {
                 conn.Open();
                 //insert into Estudiante values('1','2023-10-03',457856);
-                string sql = $"INSERT INTO Estudiante VALUES('{estudiantes.Estatus}','2023-10-27',{estudiantes.IdPersona})";
+                string sql = $"INSERT INTO Estudiante VALUES('{estudiantes.Estatus}',{estudiantes.IdPersona},'{estudiantes.Nombre}'+' '+'{estudiantes.Apellido}' )";
                 using (SqlCommand comando = new SqlCommand(sql, conn))
                 {
                     comando.CommandType = CommandType.Text;
