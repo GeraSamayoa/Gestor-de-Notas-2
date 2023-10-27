@@ -11,6 +11,7 @@ using System.Windows.Forms;
 namespace Frontend
 {
     public partial class AsignacionDocente : Form
+
     {
         public AsignacionDocente()
         {
@@ -18,6 +19,11 @@ namespace Frontend
         }
 
         private void btnActualizarAsigDocente_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAgregarAsigDocente_Click(object sender, EventArgs e)
         {
 
         }
