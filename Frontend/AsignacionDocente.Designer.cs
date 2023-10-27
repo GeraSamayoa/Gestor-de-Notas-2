@@ -161,6 +161,7 @@
             this.btnAgregarAsigDocente.TabIndex = 59;
             this.btnAgregarAsigDocente.Text = "Agregar";
             this.btnAgregarAsigDocente.UseVisualStyleBackColor = false;
+            this.btnAgregarAsigDocente.Click += new System.EventHandler(this.btnAgregarAsigDocente_Click);
             // 
             // dgvAsigEstudiante
             // 
