@@ -101,19 +101,44 @@ namespace DataAccesUITI
                     {
                         while (reader.Read())
                         {
-                            Carrera carrera = new Carrera
+                            Jornada jornada = new Jornada
                             {
-                                IdCarrera = Convert.ToInt32(reader["IdCarrera"]),
-                                NombreCarrera = reader["NombreCarrera"].ToString(),
+                                IdJornada = Convert.ToInt32(reader["IdJornada"]),
+                                Tipo = reader["Tipo"].ToString(),
                                 //Estatus = Convert.ToChar(reader["Estatus"]),
                             };
-                            listaCarreras.Add(carrera);
+                            listaJornadas.Add(jornada);
                         }
                     }
                 }
                
             }
             return listaJornadas;
+        }
+        public List<Seccion> ObtenerSecciones()
+        {
+            List<Seccion> listaSecciones = new List<Seccion>();
+            using (SqlConnection conn = new SqlConnection(conexion))
+            {
+                conn.Open();
+                using (SqlCommand comando = new SqlCommand("SELECT * FROM Seccion", conn))
+                {
+                    using (SqlDataReader reader = comando.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Seccion seccion = new Seccion
+                            {
+                                IdSeccion = Convert.ToInt32(reader["IdSeccion"]),
+                                Tipo = Convert.ToChar(reader["Tipo"]),
+                                //Estatus = Convert.ToChar(reader["Estatus"]),
+                            };
+                            listaSecciones.Add(seccion);
+                        }
+                    }
+                }
+            }
+            return listaSecciones;
         }
     }
 }
