@@ -62,6 +62,15 @@
             this.carreraTableAdapter = new Frontend.UITIDataSetTableAdapters.CarreraTableAdapter();
             this.jornadaTableAdapter = new Frontend.UITIDataSetTableAdapters.JornadaTableAdapter();
             this.seccionTableAdapter = new Frontend.UITIDataSetTableAdapters.SeccionTableAdapter();
+            this.uITIDataSet1 = new Frontend.UITIDataSet1();
+            this.usuarioDocenteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usuarioDocenteTableAdapter = new Frontend.UITIDataSet1TableAdapters.UsuarioDocenteTableAdapter();
+            this.docenteBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.docenteTableAdapter1 = new Frontend.UITIDataSet1TableAdapters.DocenteTableAdapter();
+            this.idDocenteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dPIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreCompletoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.seccionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uITIDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.carreraBindingSource)).BeginInit();
@@ -70,6 +79,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsigEstudiante)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.docenteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uITIDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioDocenteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.docenteBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -218,8 +230,15 @@
             // 
             // dgvAsigEstudiante
             // 
+            this.dgvAsigEstudiante.AutoGenerateColumns = false;
             this.dgvAsigEstudiante.BackgroundColor = System.Drawing.Color.White;
             this.dgvAsigEstudiante.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAsigEstudiante.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDocenteDataGridViewTextBoxColumn,
+            this.estatusDataGridViewTextBoxColumn,
+            this.dPIDataGridViewTextBoxColumn,
+            this.nombreCompletoDataGridViewTextBoxColumn});
+            this.dgvAsigEstudiante.DataSource = this.docenteBindingSource1;
             this.dgvAsigEstudiante.Location = new System.Drawing.Point(64, 464);
             this.dgvAsigEstudiante.Name = "dgvAsigEstudiante";
             this.dgvAsigEstudiante.RowHeadersWidth = 51;
@@ -383,6 +402,62 @@
             // 
             this.seccionTableAdapter.ClearBeforeFill = true;
             // 
+            // uITIDataSet1
+            // 
+            this.uITIDataSet1.DataSetName = "UITIDataSet1";
+            this.uITIDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // usuarioDocenteBindingSource
+            // 
+            this.usuarioDocenteBindingSource.DataMember = "UsuarioDocente";
+            this.usuarioDocenteBindingSource.DataSource = this.uITIDataSet1;
+            // 
+            // usuarioDocenteTableAdapter
+            // 
+            this.usuarioDocenteTableAdapter.ClearBeforeFill = true;
+            // 
+            // docenteBindingSource1
+            // 
+            this.docenteBindingSource1.DataMember = "Docente";
+            this.docenteBindingSource1.DataSource = this.uITIDataSet1;
+            // 
+            // docenteTableAdapter1
+            // 
+            this.docenteTableAdapter1.ClearBeforeFill = true;
+            // 
+            // idDocenteDataGridViewTextBoxColumn
+            // 
+            this.idDocenteDataGridViewTextBoxColumn.DataPropertyName = "IdDocente";
+            this.idDocenteDataGridViewTextBoxColumn.HeaderText = "IdDocente";
+            this.idDocenteDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idDocenteDataGridViewTextBoxColumn.Name = "idDocenteDataGridViewTextBoxColumn";
+            this.idDocenteDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDocenteDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // estatusDataGridViewTextBoxColumn
+            // 
+            this.estatusDataGridViewTextBoxColumn.DataPropertyName = "Estatus";
+            this.estatusDataGridViewTextBoxColumn.HeaderText = "Estatus";
+            this.estatusDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.estatusDataGridViewTextBoxColumn.Name = "estatusDataGridViewTextBoxColumn";
+            this.estatusDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // dPIDataGridViewTextBoxColumn
+            // 
+            this.dPIDataGridViewTextBoxColumn.DataPropertyName = "DPI";
+            this.dPIDataGridViewTextBoxColumn.HeaderText = "DPI";
+            this.dPIDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dPIDataGridViewTextBoxColumn.Name = "dPIDataGridViewTextBoxColumn";
+            this.dPIDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // nombreCompletoDataGridViewTextBoxColumn
+            // 
+            this.nombreCompletoDataGridViewTextBoxColumn.DataPropertyName = "NombreCompleto";
+            this.nombreCompletoDataGridViewTextBoxColumn.HeaderText = "NombreCompleto";
+            this.nombreCompletoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nombreCompletoDataGridViewTextBoxColumn.Name = "nombreCompletoDataGridViewTextBoxColumn";
+            this.nombreCompletoDataGridViewTextBoxColumn.Width = 125;
+            // 
             // AsignacionDocente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -423,6 +498,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsigEstudiante)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.docenteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uITIDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioDocenteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.docenteBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -461,5 +539,14 @@
         private UITIDataSetTableAdapters.JornadaTableAdapter jornadaTableAdapter;
         private System.Windows.Forms.BindingSource seccionBindingSource;
         private UITIDataSetTableAdapters.SeccionTableAdapter seccionTableAdapter;
+        private UITIDataSet1 uITIDataSet1;
+        private System.Windows.Forms.BindingSource usuarioDocenteBindingSource;
+        private UITIDataSet1TableAdapters.UsuarioDocenteTableAdapter usuarioDocenteTableAdapter;
+        private System.Windows.Forms.BindingSource docenteBindingSource1;
+        private UITIDataSet1TableAdapters.DocenteTableAdapter docenteTableAdapter1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDocenteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn estatusDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dPIDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreCompletoDataGridViewTextBoxColumn;
     }
 }

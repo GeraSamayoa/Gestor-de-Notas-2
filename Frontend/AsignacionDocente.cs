@@ -103,6 +103,10 @@ namespace Frontend
 
         private void AsignacionDocente_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'uITIDataSet1.Docente' Puede moverla o quitarla según sea necesario.
+            this.docenteTableAdapter1.Fill(this.uITIDataSet1.Docente);
+            // TODO: esta línea de código carga datos en la tabla 'uITIDataSet1.UsuarioDocente' Puede moverla o quitarla según sea necesario.
+            this.usuarioDocenteTableAdapter.Fill(this.uITIDataSet1.UsuarioDocente);
             /*// TODO: esta línea de código carga datos en la tabla 'uITIDataSet.Seccion' Puede moverla o quitarla según sea necesario.
             this.seccionTableAdapter.Fill(this.uITIDataSet.Seccion);
             // TODO: esta línea de código carga datos en la tabla 'uITIDataSet.Jornada' Puede moverla o quitarla según sea necesario.
