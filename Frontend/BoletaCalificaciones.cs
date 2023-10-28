@@ -22,7 +22,7 @@ namespace Frontend
             List<Estudiante> estudiantes = repositorio.ObtenerEstudiantes();
             comboBoxEstudiantes.DataSource = estudiantes;
             comboBoxEstudiantes.DisplayMember = "Nombre";
-            comboBoxEstudiantes.ValueMember = "NumeroCarne";
+            comboBoxEstudiantes.ValueMember = "NoCarne";
         }
 
         private void comboBoxEstudiantes_SelectedIndexChanged(object sender, EventArgs e)
@@ -30,7 +30,7 @@ namespace Frontend
             if (comboBoxEstudiantes.SelectedValue != null)
             {
                 int numeroCarne = Convert.ToInt32(comboBoxEstudiantes.SelectedValue);
-                CargarNotasDelEstudiante(numeroCarne);
+                CargarNotasDelEstudiante(numeroCarne);  
             }
         }
 
