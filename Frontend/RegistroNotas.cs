@@ -88,9 +88,9 @@ namespace Frontend
 
         }
 
-        private void btnAgregarRegEstudiante_Click(object sender, EventArgs e)
+        /*private void btnAgregarRegEstudiante_Click(object sender, EventArgs e)
         {
 
-        }
+        }*/
     }
 }

@@ -60,7 +60,7 @@ namespace DataAcces
             using (SqlConnection conn = new SqlConnection(conexion))
             {
                 conn.Open();
-                string sql = $"INSERT INTO RegistroNotas VALUES({registroNotas.IdNota},'{registroNotas.NotaPrimerParcial}','{registroNotas.NotaSegundoParcial},'{registroNotas.NotaActividades},'{registroNotas.NotaExamenFinal}')";
+                string sql = $"INSERT INTO RegistroNotas VALUES('{registroNotas.NotaPrimerParcial}','{registroNotas.NotaSegundoParcial},'{registroNotas.NotaActividades},'{registroNotas.NotaExamenFinal}')";
                 using (SqlCommand comando = new SqlCommand(sql, conn))
                 {
                     comando.CommandType = CommandType.Text;
