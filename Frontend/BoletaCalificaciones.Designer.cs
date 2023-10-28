@@ -39,10 +39,6 @@
             this.dvgCalificaciones = new System.Windows.Forms.DataGridView();
             this.uITIDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.uITIDataSet = new Frontend.UITIDataSet();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePickerBoleta = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtFechaBoleta = new System.Windows.Forms.TextBox();
             this.registroNotasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.registroNotasTableAdapter = new Frontend.UITIDataSetTableAdapters.RegistroNotasTableAdapter();
             this.idRegistroNotaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -78,12 +74,13 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(295, 94);
+            this.label1.Location = new System.Drawing.Point(117, 60);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(488, 50);
+            this.label1.Size = new System.Drawing.Size(577, 50);
             this.label1.TabIndex = 2;
-            this.label1.Text = "\"Boleta Calificaciones\"";
+            this.label1.Text = "\"Reporte General de Notas\"";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox1
             // 
@@ -143,6 +140,7 @@
             this.label2.Size = new System.Drawing.Size(100, 23);
             this.label2.TabIndex = 32;
             this.label2.Text = "N. de Carné";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // comboBoxEstudiantes
             // 
@@ -173,10 +171,10 @@
             this.notaFinalDataGridViewTextBoxColumn,
             this.estatusAprobadoDataGridViewTextBoxColumn});
             this.dvgCalificaciones.DataSource = this.registroNotasBindingSource;
-            this.dvgCalificaciones.Location = new System.Drawing.Point(126, 362);
+            this.dvgCalificaciones.Location = new System.Drawing.Point(12, 362);
             this.dvgCalificaciones.Name = "dvgCalificaciones";
             this.dvgCalificaciones.RowHeadersWidth = 51;
-            this.dvgCalificaciones.Size = new System.Drawing.Size(905, 230);
+            this.dvgCalificaciones.Size = new System.Drawing.Size(1148, 230);
             this.dvgCalificaciones.TabIndex = 42;
             // 
             // uITIDataSetBindingSource
@@ -188,41 +186,6 @@
             // 
             this.uITIDataSet.DataSetName = "UITIDataSet";
             this.uITIDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(459, 177);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(107, 23);
-            this.label3.TabIndex = 43;
-            this.label3.Text = "Fecha Boleta";
-            // 
-            // dateTimePickerBoleta
-            // 
-            this.dateTimePickerBoleta.Location = new System.Drawing.Point(462, 209);
-            this.dateTimePickerBoleta.Name = "dateTimePickerBoleta";
-            this.dateTimePickerBoleta.Size = new System.Drawing.Size(260, 29);
-            this.dateTimePickerBoleta.TabIndex = 44;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(123, 177);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(101, 23);
-            this.label4.TabIndex = 45;
-            this.label4.Text = "N. de Boleta";
-            // 
-            // txtFechaBoleta
-            // 
-            this.txtFechaBoleta.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.txtFechaBoleta.Location = new System.Drawing.Point(126, 211);
-            this.txtFechaBoleta.Name = "txtFechaBoleta";
-            this.txtFechaBoleta.Size = new System.Drawing.Size(291, 29);
-            this.txtFechaBoleta.TabIndex = 46;
             // 
             // registroNotasBindingSource
             // 
@@ -347,11 +310,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.ClientSize = new System.Drawing.Size(1067, 623);
-            this.Controls.Add(this.txtFechaBoleta);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.dateTimePickerBoleta);
-            this.Controls.Add(this.label3);
+            this.ClientSize = new System.Drawing.Size(1172, 623);
             this.Controls.Add(this.dvgCalificaciones);
             this.Controls.Add(this.comboBoxEstudiantes);
             this.Controls.Add(this.label2);
@@ -387,10 +346,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBoxEstudiantes;
         private System.Windows.Forms.DataGridView dvgCalificaciones;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePickerBoleta;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtFechaBoleta;
         private System.Windows.Forms.BindingSource uITIDataSetBindingSource;
         private UITIDataSet uITIDataSet;
         private System.Windows.Forms.BindingSource registroNotasBindingSource;

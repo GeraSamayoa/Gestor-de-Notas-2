@@ -70,5 +70,15 @@ namespace Frontend
             this.registroNotasTableAdapter.Fill(this.uITIDataSet.RegistroNotas);
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
