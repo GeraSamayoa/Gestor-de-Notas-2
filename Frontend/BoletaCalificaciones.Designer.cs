@@ -35,8 +35,8 @@
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnSiguienteDocente = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBoxCurso = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.comboBoxEstudiantes = new System.Windows.Forms.ComboBox();
+            this.dvgCalificaciones = new System.Windows.Forms.DataGridView();
             this.uITIDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.uITIDataSet = new Frontend.UITIDataSet();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,7 +44,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtFechaBoleta = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgCalificaciones)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uITIDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uITIDataSet)).BeginInit();
             this.SuspendLayout();
@@ -90,6 +90,7 @@
             this.btnActualizar.TabIndex = 21;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnSiguienteDocente
             // 
@@ -120,26 +121,26 @@
             this.label2.TabIndex = 32;
             this.label2.Text = "N. de Carné";
             // 
-            // comboBoxCurso
+            // comboBoxEstudiantes
             // 
-            this.comboBoxCurso.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.comboBoxCurso.FormattingEnabled = true;
-            this.comboBoxCurso.Location = new System.Drawing.Point(126, 309);
-            this.comboBoxCurso.Name = "comboBoxCurso";
-            this.comboBoxCurso.Size = new System.Drawing.Size(304, 29);
-            this.comboBoxCurso.TabIndex = 41;
+            this.comboBoxEstudiantes.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.comboBoxEstudiantes.FormattingEnabled = true;
+            this.comboBoxEstudiantes.Location = new System.Drawing.Point(126, 309);
+            this.comboBoxEstudiantes.Name = "comboBoxEstudiantes";
+            this.comboBoxEstudiantes.Size = new System.Drawing.Size(304, 29);
+            this.comboBoxEstudiantes.TabIndex = 41;
             // 
-            // dataGridView1
+            // dvgCalificaciones
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.DataSource = this.uITIDataSetBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(126, 362);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(611, 230);
-            this.dataGridView1.TabIndex = 42;
+            this.dvgCalificaciones.AutoGenerateColumns = false;
+            this.dvgCalificaciones.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dvgCalificaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgCalificaciones.DataSource = this.uITIDataSetBindingSource;
+            this.dvgCalificaciones.Location = new System.Drawing.Point(126, 362);
+            this.dvgCalificaciones.Name = "dvgCalificaciones";
+            this.dvgCalificaciones.RowHeadersWidth = 51;
+            this.dvgCalificaciones.Size = new System.Drawing.Size(611, 230);
+            this.dvgCalificaciones.TabIndex = 42;
             // 
             // uITIDataSetBindingSource
             // 
@@ -196,8 +197,8 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dateTimePickerBoleta);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.comboBoxCurso);
+            this.Controls.Add(this.dvgCalificaciones);
+            this.Controls.Add(this.comboBoxEstudiantes);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnSiguienteDocente);
             this.Controls.Add(this.btnActualizar);
@@ -208,7 +209,7 @@
             this.Name = "BoletaCalificaciones";
             this.Text = "BoletaCalificaciones";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgCalificaciones)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uITIDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uITIDataSet)).EndInit();
             this.ResumeLayout(false);
@@ -223,8 +224,8 @@
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnSiguienteDocente;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBoxCurso;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox comboBoxEstudiantes;
+        private System.Windows.Forms.DataGridView dvgCalificaciones;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dateTimePickerBoleta;
         private System.Windows.Forms.Label label4;
