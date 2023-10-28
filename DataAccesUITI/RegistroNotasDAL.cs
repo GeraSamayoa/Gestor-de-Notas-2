@@ -55,21 +55,21 @@ namespace DataAcces
             return registroNotas;
 
         }
-        public bool InsertRegistroNotas(RegistroNotas registroNotas)
-        {
-            using (SqlConnection conn = new SqlConnection(conexion))
-            {
+        //public bool InsertRegistroNotas(RegistroNotas registroNotas)
+        //{
+          //  using (SqlConnection conn = new SqlConnection(conexion))
+            //{
 
-                conn.Open();
-                string sql = $"INSERT INTO RegistroNotas (IdDocente,IdEstudiante,PrimerParcial,SegundoParcial,Actividades,Examenfinal,Zona,NotaFinal,EstatusAprobado) VALUES (@IdDocente,@IdEstudiante,@PrimerParcial,@SegundoParcial,@Actividades,@Examenfinal,@Zona,@Notafinal,@EstatusAprobado)";
-                using (SqlCommand comando = new SqlCommand(sql, conn))
-                {
-                    comando.CommandType = CommandType.Text;
-                    comando.ExecuteNonQuery();
-                }
-            }
-            return true;
-        }
+              //  conn.Open();
+                //string sql = $"INSERT INTO RegistroNotas (IdDocente,IdEstudiante,PrimerParcial,SegundoParcial,Actividades,Examenfinal,Zona,NotaFinal,EstatusAprobado) VALUES (@IdDocente,@IdEstudiante,@PrimerParcial,@SegundoParcial,@Actividades,@Examenfinal,@Zona,@Notafinal,@EstatusAprobado)";
+                //using (SqlCommand comando = new SqlCommand(sql, conn))
+                //{
+                  //  comando.CommandType = CommandType.Text;
+                    //comando.ExecuteNonQuery();
+                //}
+            //}
+            //return true;
+        //}
         public bool UpdateRegistroNotas(RegistroNotas registroNotas)
         {
             using (SqlConnection conn = new SqlConnection(conexion))

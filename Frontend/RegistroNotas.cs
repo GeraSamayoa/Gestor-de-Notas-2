@@ -52,7 +52,7 @@ namespace Frontend
         {
             Backend.RegistroNotas registroNotas1 = new Backend.RegistroNotas();
 
-            registroNotasDAL.InsertRegistroNotas(registroNotas1);
+            registroNotasDAL.GuardarRegistroNota(registroNotas1);
             dgvRegEstudiante.DataSource = registroNotasDAL.GetRegistroNotas();
 
             int idDocenteSeleccionado = (int)comboBoxDocente.SelectedValue;
