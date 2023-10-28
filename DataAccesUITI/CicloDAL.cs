@@ -11,7 +11,7 @@ namespace DataAcces
 {
     public class CicloDAL
     {
-        string conexion = @"data source= ASOFIMP; initial catalog= UITI; user id=sa; password=00123456;";
+        string conexion = @"data source= ASOFIMP; initial catalog= UITI; user id=sa; password=1908pass;";
         public CicloDAL()
         {
 
@@ -53,16 +53,38 @@ namespace DataAcces
         {
             using (SqlConnection conn = new SqlConnection(conexion))
             {
+                try {
+                    conn.Open();
+                    string sql = $"INSERT INTO Ciclo VALUES('{ciclos.TipoCiclo}')";
+                    using (SqlCommand comando = new SqlCommand(sql, conn))
+                    {
+                        comando.CommandType = CommandType.Text;
+                        comando.ExecuteNonQuery();
+                    }
+                    return true;
+                }
+                catch (Exception ex) { return false; }
+            }
+            
+        }
+
+        public int SetIdCiclo(Ciclo ciclos) 
+        {
+            using (SqlConnection conn = new SqlConnection(conexion)) 
+            {
                 conn.Open();
-                string sql = $"INSERT INTO Ciclo VALUES({ciclos.IdCiclo},'{ciclos.TipoCiclo}')";
+                string sql = $"select IdCiclo from Ciclo where tipo = '{ciclos.TipoCiclo}'";
                 using (SqlCommand comando = new SqlCommand(sql, conn))
                 {
                     comando.CommandType = CommandType.Text;
                     comando.ExecuteNonQuery();
+                    int idciclo = Convert.ToInt32(comando.ExecuteScalar());
+                    return idciclo;
                 }
             }
-            return true;
         }
+
+
         public bool UpdateCiclo(Ciclo ciclos)
         {
             using (SqlConnection conn = new SqlConnection(conexion))

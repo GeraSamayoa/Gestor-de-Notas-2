@@ -15,6 +15,9 @@ namespace Backend
         public char Estatus { get; set; }
         public Universidad Universidad { get; set; }
 
+        public int IdCiclo { get; set; }
+
+        public int IdJornada { get; set; }
 
 
 

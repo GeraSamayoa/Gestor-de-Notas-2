@@ -54,7 +54,7 @@ namespace DataAcces
             using (SqlConnection conn = new SqlConnection(conexion))
             {
                 conn.Open();
-                string sql = $"INSERT INTO Periodo VALUES({periodos.IdPeriodo},'{periodos.TipoPeriodo}')";
+                string sql = $"INSERT INTO Periodo VALUES('{periodos.TipoPeriodo}')";
                 using (SqlCommand comando = new SqlCommand(sql, conn))
                 {
                     comando.CommandType = CommandType.Text;
