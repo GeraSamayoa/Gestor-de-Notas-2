@@ -36,7 +36,7 @@ namespace Frontend
 
         private void CargarNotasDelEstudiante(int numeroCarne)
         {
-            List<RegistroNotas> notas = repositorio.ObtenerNotasPorEstudiante(numeroCarne);
+            List<Backend.RegistroNotas> notas = repositorio.ObtenerNotasPorEstudiante(numeroCarne);
             dvgCalificaciones.DataSource = notas;
         }
 
