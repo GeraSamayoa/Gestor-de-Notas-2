@@ -31,26 +31,24 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroNotas));
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnAgregarRegEstudiante = new System.Windows.Forms.Button();
-            this.txtContraseña = new System.Windows.Forms.TextBox();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.txtDirección = new System.Windows.Forms.TextBox();
-            this.txtApellido = new System.Windows.Forms.TextBox();
+            this.txtPrimerP = new System.Windows.Forms.TextBox();
+            this.txtActividades = new System.Windows.Forms.TextBox();
+            this.txtExamenF = new System.Windows.Forms.TextBox();
             this.dgvRegEstudiante = new System.Windows.Forms.DataGridView();
             this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtSegundoP = new System.Windows.Forms.TextBox();
             this.btnSiguienteDocente = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.comboBoxEstudianteAisgNota = new System.Windows.Forms.ComboBox();
+            this.comboBoxCURSO = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegEstudiante)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -66,7 +64,7 @@
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnActualizar.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizar.ForeColor = System.Drawing.Color.White;
-            this.btnActualizar.Location = new System.Drawing.Point(688, 365);
+            this.btnActualizar.Location = new System.Drawing.Point(688, 293);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(137, 55);
             this.btnActualizar.TabIndex = 41;
@@ -84,54 +82,46 @@
             this.btnAgregarRegEstudiante.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregarRegEstudiante.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarRegEstudiante.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarRegEstudiante.Location = new System.Drawing.Point(475, 363);
+            this.btnAgregarRegEstudiante.Location = new System.Drawing.Point(475, 291);
             this.btnAgregarRegEstudiante.Name = "btnAgregarRegEstudiante";
             this.btnAgregarRegEstudiante.Size = new System.Drawing.Size(137, 55);
             this.btnAgregarRegEstudiante.TabIndex = 40;
             this.btnAgregarRegEstudiante.Text = "Agregar";
             this.btnAgregarRegEstudiante.UseVisualStyleBackColor = false;
+            this.btnAgregarRegEstudiante.Click += new System.EventHandler(this.btnAgregarRegEstudiante_Click);
             // 
-            // txtContraseña
+            // txtPrimerP
             // 
-            this.txtContraseña.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.txtContraseña.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseña.Location = new System.Drawing.Point(475, 168);
-            this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(122, 25);
-            this.txtContraseña.TabIndex = 38;
+            this.txtPrimerP.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtPrimerP.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrimerP.Location = new System.Drawing.Point(475, 168);
+            this.txtPrimerP.Name = "txtPrimerP";
+            this.txtPrimerP.Size = new System.Drawing.Size(122, 25);
+            this.txtPrimerP.TabIndex = 38;
             // 
-            // txtUsuario
+            // txtActividades
             // 
-            this.txtUsuario.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.txtUsuario.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(475, 240);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(122, 25);
-            this.txtUsuario.TabIndex = 37;
+            this.txtActividades.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtActividades.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtActividades.Location = new System.Drawing.Point(475, 240);
+            this.txtActividades.Name = "txtActividades";
+            this.txtActividades.Size = new System.Drawing.Size(122, 25);
+            this.txtActividades.TabIndex = 37;
             // 
-            // txtDirección
+            // txtExamenF
             // 
-            this.txtDirección.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.txtDirección.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDirección.Location = new System.Drawing.Point(688, 240);
-            this.txtDirección.Name = "txtDirección";
-            this.txtDirección.Size = new System.Drawing.Size(122, 25);
-            this.txtDirección.TabIndex = 36;
-            // 
-            // txtApellido
-            // 
-            this.txtApellido.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.txtApellido.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellido.Location = new System.Drawing.Point(475, 314);
-            this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(122, 25);
-            this.txtApellido.TabIndex = 35;
+            this.txtExamenF.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtExamenF.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtExamenF.Location = new System.Drawing.Point(688, 240);
+            this.txtExamenF.Name = "txtExamenF";
+            this.txtExamenF.Size = new System.Drawing.Size(122, 25);
+            this.txtExamenF.TabIndex = 36;
             // 
             // dgvRegEstudiante
             // 
             this.dgvRegEstudiante.BackgroundColor = System.Drawing.Color.White;
             this.dgvRegEstudiante.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRegEstudiante.Location = new System.Drawing.Point(79, 429);
+            this.dgvRegEstudiante.Location = new System.Drawing.Point(79, 363);
             this.dgvRegEstudiante.Name = "dgvRegEstudiante";
             this.dgvRegEstudiante.Size = new System.Drawing.Size(746, 182);
             this.dgvRegEstudiante.TabIndex = 33;
@@ -144,16 +134,6 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(0, 18);
             this.label9.TabIndex = 32;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(472, 280);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(70, 18);
-            this.label8.TabIndex = 31;
-            this.label8.Text = "Zona Total";
             // 
             // label7
             // 
@@ -195,16 +175,6 @@
             this.label4.TabIndex = 27;
             this.label4.Text = "Actividades";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(685, 280);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 18);
-            this.label3.TabIndex = 26;
-            this.label3.Text = "Nota Final";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -239,23 +209,14 @@
             this.pictureBox1.TabIndex = 43;
             this.pictureBox1.TabStop = false;
             // 
-            // textBox1
+            // txtSegundoP
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBox1.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(688, 168);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(122, 25);
-            this.textBox1.TabIndex = 44;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBox2.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(688, 314);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(122, 25);
-            this.textBox2.TabIndex = 45;
+            this.txtSegundoP.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtSegundoP.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSegundoP.Location = new System.Drawing.Point(688, 168);
+            this.txtSegundoP.Name = "txtSegundoP";
+            this.txtSegundoP.Size = new System.Drawing.Size(122, 25);
+            this.txtSegundoP.TabIndex = 44;
             // 
             // btnSiguienteDocente
             // 
@@ -268,7 +229,7 @@
             this.btnSiguienteDocente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSiguienteDocente.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSiguienteDocente.ForeColor = System.Drawing.Color.White;
-            this.btnSiguienteDocente.Location = new System.Drawing.Point(869, 499);
+            this.btnSiguienteDocente.Location = new System.Drawing.Point(869, 384);
             this.btnSiguienteDocente.Name = "btnSiguienteDocente";
             this.btnSiguienteDocente.Size = new System.Drawing.Size(137, 55);
             this.btnSiguienteDocente.TabIndex = 47;
@@ -286,7 +247,7 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminar.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(869, 365);
+            this.btnEliminar.Location = new System.Drawing.Point(869, 293);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(137, 55);
             this.btnEliminar.TabIndex = 46;
@@ -302,32 +263,49 @@
             this.comboBoxEstudianteAisgNota.Size = new System.Drawing.Size(341, 26);
             this.comboBoxEstudianteAisgNota.TabIndex = 48;
             // 
+            // comboBoxCURSO
+            // 
+            this.comboBoxCURSO.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.comboBoxCURSO.FormattingEnabled = true;
+            this.comboBoxCURSO.Location = new System.Drawing.Point(79, 240);
+            this.comboBoxCURSO.Name = "comboBoxCURSO";
+            this.comboBoxCURSO.Size = new System.Drawing.Size(341, 26);
+            this.comboBoxCURSO.TabIndex = 50;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(76, 208);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(46, 18);
+            this.label3.TabIndex = 49;
+            this.label3.Text = "Curso:";
+            // 
             // RegistroNotas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.ClientSize = new System.Drawing.Size(1035, 623);
+            this.ClientSize = new System.Drawing.Size(1035, 550);
+            this.Controls.Add(this.comboBoxCURSO);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBoxEstudianteAisgNota);
             this.Controls.Add(this.btnSiguienteDocente);
             this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtSegundoP);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnAgregarRegEstudiante);
-            this.Controls.Add(this.txtContraseña);
-            this.Controls.Add(this.txtUsuario);
-            this.Controls.Add(this.txtDirección);
-            this.Controls.Add(this.txtApellido);
+            this.Controls.Add(this.txtPrimerP);
+            this.Controls.Add(this.txtActividades);
+            this.Controls.Add(this.txtExamenF);
             this.Controls.Add(this.dgvRegEstudiante);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -344,25 +322,23 @@
         #endregion
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnAgregarRegEstudiante;
-        private System.Windows.Forms.TextBox txtContraseña;
-        private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.TextBox txtDirección;
-        private System.Windows.Forms.TextBox txtApellido;
+        private System.Windows.Forms.TextBox txtPrimerP;
+        private System.Windows.Forms.TextBox txtActividades;
+        private System.Windows.Forms.TextBox txtExamenF;
         private System.Windows.Forms.DataGridView dgvRegEstudiante;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtSegundoP;
         private System.Windows.Forms.Button btnSiguienteDocente;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.ComboBox comboBoxEstudianteAisgNota;
+        private System.Windows.Forms.ComboBox comboBoxCURSO;
+        private System.Windows.Forms.Label label3;
     }
 }

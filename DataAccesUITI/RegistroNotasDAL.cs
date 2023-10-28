@@ -9,7 +9,7 @@ using Backend;
 
 namespace DataAcces
 {
-    internal class RegistroNotasDAL
+    public class RegistroNotasDAL
     {
 
         string conexion = @"data source= ASOFIMP; initial catalog= UITI; user id=sa; password=1908pass;";
@@ -92,6 +92,22 @@ namespace DataAcces
                 using (SqlCommand comando = new SqlCommand(sql, conn))
                 {
                     comando.CommandType = CommandType.Text;
+                    comando.ExecuteNonQuery();
+                }
+            }
+            return true;
+        }
+        public bool GuardarRegistroNota(RegistroNotas registroNotas)
+        {
+            using (SqlConnection conn = new SqlConnection(conexion))
+            {
+                conn.Open();
+                string sql = "INSERT INTO AsignacionDocente (IdCurso, IdEstudiante) VALUES (@IdDocente, @IdJornada, @IdCarrera, @IdCurso, @IdSeccion)";
+                using (SqlCommand comando = new SqlCommand(sql, conn))
+                {
+                   
+                    comando.Parameters.AddWithValue("@IdCurso", registroNotas.Curso.IdCurso);
+                    comando.Parameters.AddWithValue("@IdEstudiante", registroNotas.Estudiante.NoCarne);
                     comando.ExecuteNonQuery();
                 }
             }
