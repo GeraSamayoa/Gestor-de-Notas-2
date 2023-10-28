@@ -165,6 +165,39 @@ namespace DataAccesUITI
             }
             return listaEstudiantes;
         }
+        public List<RegistroNotas> ObtenerNotasPorEstudiante(int numeroCarne)
+        {
+            List<RegistroNotas> listaNotas = new List<RegistroNotas>();
+            using (SqlConnection conn = new SqlConnection(conexion))
+            {
+                conn.Open();
+                string query = @"
+            SELECT * 
+            FROM ReporteBoleta 
+            INNER JOIN AsignacionEstudiante ON ReporteBoleta.IdAsignacionEstudiante = AsignacionEstudiante.IdAsignacionEstudiante
+            WHERE AsignacionEstudiante.NoCarne = @NumeroCarne";
+
+                using (SqlCommand comando = new SqlCommand(query, conn))
+                {
+                    comando.Parameters.AddWithValue("@NumeroCarne", numeroCarne);
+
+                    using (SqlDataReader reader = comando.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            RegistroNotas notas = new RegistroNotas
+                            {
+                                IdNota = Convert.ToInt32(reader["IdNota"]),
+                                // Aquí deberías mapear el resto de los campos de la nota
+                            };
+
+                            listaNotas.Add(notas);
+                        }
+                    }
+                }
+            }
+            return listaNotas;
+        }
 
     }
 }

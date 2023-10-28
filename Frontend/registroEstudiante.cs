@@ -52,10 +52,9 @@ namespace Frontend
             persona.Apellido = txtApellido.Text;
             usuario.NombreUsuario = txtUsuario.Text;
             usuario.DPI = int.Parse(txtDPI.Text);
-            persona.Genero = txtGenero.Text;
+            persona.Genero = (comboBoxGeneroRE.Text);
             persona.IdPersona = int.Parse(txtDPI.Text);
-            persona.FechaNacimiento = dateTimePicker1.Value;
-            estudiante.Estatus = char.Parse(txtEstatus.Text);
+            estudiante.Estatus = Convert.ToChar(comboBoxEstatusRE.Text);
             estudiante.Nombre = txtNombre.Text;
             estudiante.Apellido = txtApellido.Text;
 
@@ -64,11 +63,10 @@ namespace Frontend
             usuarioDAL.InsertUsuario(usuario);
             dgvRegEstudiante.DataSource = personaDAL.GetPersona();
             //dgvRegEstudiante.DataSource = estudianteDAL.GetEstudiante();
-            
 
         }
 
-        private void btnActualizar_Click(object sender, EventArgs e)
+        private void btnActualizar_Click(object sender, EventArgs e)    
         {
             Estudiante estudiante = new Estudiante();
             Persona persona = new Persona();
@@ -76,7 +74,7 @@ namespace Frontend
             //estudiante.Contrasenia = txtContraseña.Text;
             persona.Nombre = txtNombre.Text;
             persona.Apellido = txtApellido.Text;
-            persona.Genero = txtGenero.Text;
+            persona.Genero = (comboBoxGeneroRE.Text);
 
             estudianteDAL.UpdateEstudiante(estudiante);
             personaDAL.UpdatePersona(persona);
@@ -93,7 +91,7 @@ namespace Frontend
             //estudiante.Contrasenia = txtContraseña.Text;
             persona.Nombre = txtNombre.Text;
             persona.Apellido = txtApellido.Text;
-            persona.Genero = txtGenero.Text;
+            persona.Genero = (comboBoxGeneroRE.Text);
 
             estudianteDAL.DeleteEstudiante(estudiante);
             personaDAL.DeletePersona(persona);
@@ -118,6 +116,16 @@ namespace Frontend
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxEstatusRD_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvRegEstudiante_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

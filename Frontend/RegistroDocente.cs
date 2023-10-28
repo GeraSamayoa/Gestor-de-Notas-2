@@ -48,12 +48,11 @@ namespace Frontend
             persona.Apellido = txtApellidoDocente.Text;
             usuarioDocente.NombreUsuario = txtUsuarioDocente.Text;
             usuarioDocente.DPI = int.Parse(txtDPIDocente.Text);
-            persona.Genero = txtGeneroDocente.Text;
+            docente.Estatus = Convert.ToChar(comboBoxEstatusRD.Text);
             persona.IdPersona = int.Parse(txtDPIDocente.Text);
-            //persona.FechaNacimiento = dateTimePicker1.Value;
             docente.Nombre = txtNombreDocente.Text;
             docente.Apellido = txtApellidoDocente.Text;
-            docente.Estatus = char.Parse(txtEstatusDocente.Text);
+            persona.Genero = (comboBoxGeneroRD.Text);
 
             personaDAL.InsertPersona(persona);
             usuarioDocenteDAL.InsertUsuarioDocente(usuarioDocente);
@@ -81,6 +80,11 @@ namespace Frontend
                 MessageBox.Show("Gracias por usar el sistema");
                 this.Close();
             }
+        }
+
+        private void comboBoxEstatusRD_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

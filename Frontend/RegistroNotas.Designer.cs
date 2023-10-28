@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroNotas));
-            this.btnActualizar = new System.Windows.Forms.Button();
             this.btnAgregarRegEstudiante = new System.Windows.Forms.Button();
             this.txtPrimerP = new System.Windows.Forms.TextBox();
             this.txtActividades = new System.Windows.Forms.TextBox();
@@ -45,33 +44,12 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtSegundoP = new System.Windows.Forms.TextBox();
             this.btnSiguienteDocente = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
             this.comboBoxEstudianteAisgNota = new System.Windows.Forms.ComboBox();
-            this.comboBoxCURSO = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.comboBoxDocente = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegEstudiante)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnActualizar
-            // 
-            this.btnActualizar.BackColor = System.Drawing.Color.SlateGray;
-            this.btnActualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnActualizar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnActualizar.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray;
-            this.btnActualizar.FlatAppearance.BorderSize = 0;
-            this.btnActualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateGray;
-            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnActualizar.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizar.ForeColor = System.Drawing.Color.White;
-            this.btnActualizar.Location = new System.Drawing.Point(688, 293);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(137, 55);
-            this.btnActualizar.TabIndex = 41;
-            this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.UseVisualStyleBackColor = false;
             // 
             // btnAgregarRegEstudiante
             // 
@@ -238,24 +216,6 @@
             this.btnSiguienteDocente.Text = "Salir";
             this.btnSiguienteDocente.UseVisualStyleBackColor = false;
             // 
-            // btnEliminar
-            // 
-            this.btnEliminar.BackColor = System.Drawing.Color.SlateGray;
-            this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray;
-            this.btnEliminar.FlatAppearance.BorderSize = 0;
-            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateGray;
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEliminar.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(869, 293);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(137, 55);
-            this.btnEliminar.TabIndex = 46;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            // 
             // comboBoxEstudianteAisgNota
             // 
             this.comboBoxEstudianteAisgNota.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -264,25 +224,6 @@
             this.comboBoxEstudianteAisgNota.Name = "comboBoxEstudianteAisgNota";
             this.comboBoxEstudianteAisgNota.Size = new System.Drawing.Size(341, 26);
             this.comboBoxEstudianteAisgNota.TabIndex = 48;
-            // 
-            // comboBoxCURSO
-            // 
-            this.comboBoxCURSO.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.comboBoxCURSO.FormattingEnabled = true;
-            this.comboBoxCURSO.Location = new System.Drawing.Point(88, 307);
-            this.comboBoxCURSO.Name = "comboBoxCURSO";
-            this.comboBoxCURSO.Size = new System.Drawing.Size(341, 26);
-            this.comboBoxCURSO.TabIndex = 50;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(85, 275);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 18);
-            this.label3.TabIndex = 49;
-            this.label3.Text = "Curso:";
             // 
             // label8
             // 
@@ -311,14 +252,10 @@
             this.ClientSize = new System.Drawing.Size(1035, 550);
             this.Controls.Add(this.comboBoxDocente);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.comboBoxCURSO);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBoxEstudianteAisgNota);
             this.Controls.Add(this.btnSiguienteDocente);
-            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.txtSegundoP);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnAgregarRegEstudiante);
             this.Controls.Add(this.txtPrimerP);
             this.Controls.Add(this.txtActividades);
@@ -343,7 +280,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnAgregarRegEstudiante;
         private System.Windows.Forms.TextBox txtPrimerP;
         private System.Windows.Forms.TextBox txtActividades;
@@ -359,10 +295,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txtSegundoP;
         private System.Windows.Forms.Button btnSiguienteDocente;
-        private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.ComboBox comboBoxEstudianteAisgNota;
-        private System.Windows.Forms.ComboBox comboBoxCURSO;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox comboBoxDocente;
     }

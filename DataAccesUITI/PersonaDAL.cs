@@ -40,7 +40,6 @@ namespace DataAcces
                             IdPersona = Convert.ToInt32(item["DPI"]),
                             Nombre = item["Nombre"].ToString(),
                             Apellido = item["Apellido"].ToString(),
-                            //FechaNacimiento = Convert.ToDateTime(item["FechaNacimiento"]),
                             Genero = item["Genero"].ToString()
 
                         }
@@ -57,7 +56,7 @@ namespace DataAcces
             using (SqlConnection conn = new SqlConnection(conexion))
             {
                 conn.Open();
-                string sql = $"INSERT INTO Persona VALUES({personas.IdPersona},'{personas.Nombre}','{personas.Apellido}','2000-08-08','{personas.Genero}',1)";
+                string sql = $"INSERT INTO Persona VALUES({personas.IdPersona},'{personas.Nombre}','{personas.Apellido}','{personas.Genero}',1)";
                 using (SqlCommand comando = new SqlCommand(sql, conn))
                 {
                     comando.CommandType = CommandType.Text;
@@ -71,7 +70,7 @@ namespace DataAcces
             using (SqlConnection conn = new SqlConnection(conexion))
             {
                 conn.Open();
-                string sql = $"UPDATE Persona SET Nombre = '{personas.Nombre}',Apellido= '{personas.Apellido},FechaNacimiento= '{personas.FechaNacimiento},Genero= '{personas.Genero}'WHERE IdPersona = {personas.IdPersona}";
+                string sql = $"UPDATE Persona SET Nombre = '{personas.Nombre}',Apellido= '{personas.Apellido},Genero= '{personas.Genero}'WHERE IdPersona = {personas.IdPersona}";
                 using (SqlCommand comando = new SqlCommand(sql, conn))
                 {
                     comando.CommandType = CommandType.Text;
