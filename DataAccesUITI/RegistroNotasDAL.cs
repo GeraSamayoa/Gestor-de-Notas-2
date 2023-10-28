@@ -107,9 +107,9 @@ namespace DataAcces
                 using (SqlCommand comando = new SqlCommand(sql, conn))
                 {
                    
-                   
-                    comando.Parameters.AddWithValue("@IdEstudiante", registroNotas.Estudiante.NoCarne);
                     comando.Parameters.AddWithValue("@IdDocente", registroNotas.Docente.IdDocente);
+                    comando.Parameters.AddWithValue("@IdEstudiante", registroNotas.Estudiante.NoCarne);
+                   
                     comando.ExecuteNonQuery();
                 }
             }

@@ -44,7 +44,7 @@ namespace Frontend
         private void btnAgregarRegEstudiante_Click(object sender, EventArgs e)
         {
             Backend.RegistroNotas registroNotas1 = new Backend.RegistroNotas();
-
+           
             registroNotasDAL.GuardarRegistroNota(registroNotas1);
             dgvRegEstudiante.DataSource = registroNotasDAL.GetRegistroNotas();
 
@@ -67,22 +67,22 @@ namespace Frontend
                 MessageBox.Show("Hubo un error al guardar la asignación");
             }
 
-            int Zona = int.Parse(txtPrimerP.Text) + int.Parse(txtSegundoP.Text) + int.Parse(txtActividades.Text);
+           // int Zona = int.Parse(txtPrimerP.Text) + int.Parse(txtSegundoP.Text) + int.Parse(txtActividades.Text);
 
             // Agregar los resultados al DataGridView
-            dgvRegEstudiante.Rows.Add("Primer Parcial", int.Parse(txtPrimerP.Text));
-            dgvRegEstudiante.Rows.Add("Segundo Parcial", int.Parse(txtSegundoP.Text));
-            dgvRegEstudiante.Rows.Add("Actividades", int.Parse(txtActividades.Text));
-            dgvRegEstudiante.Rows.Add("Zona", Zona);
+            //dgvRegEstudiante.Rows.Add("Primer Parcial", int.Parse(txtPrimerP.Text));
+            //dgvRegEstudiante.Rows.Add("Segundo Parcial", int.Parse(txtSegundoP.Text));
+            //dgvRegEstudiante.Rows.Add("Actividades", int.Parse(txtActividades.Text));
+            //dgvRegEstudiante.Rows.Add("Zona", Zona);
 
-            int NotaFinal = int.Parse(txtPrimerP.Text) + int.Parse(txtSegundoP.Text) + int.Parse(txtActividades.Text)+int.Parse(txtExamenF.Text) ;
+            //int NotaFinal = int.Parse(txtPrimerP.Text) + int.Parse(txtSegundoP.Text) + int.Parse(txtActividades.Text)+int.Parse(txtExamenF.Text) ;
 
             // Agregar los resultados al DataGridView
-            dgvRegEstudiante.Rows.Add("Primer Parcial", int.Parse(txtPrimerP.Text));
-            dgvRegEstudiante.Rows.Add("Segundo Parcial", int.Parse(txtSegundoP.Text));
-            dgvRegEstudiante.Rows.Add("Actividades", int.Parse(txtActividades.Text));
-            dgvRegEstudiante.Rows.Add("ExamenFinal", int.Parse(txtExamenF.Text));
-            dgvRegEstudiante.Rows.Add("NotaFinal", NotaFinal);
+            //dgvRegEstudiante.Rows.Add("Primer Parcial", int.Parse(txtPrimerP.Text));
+            //dgvRegEstudiante.Rows.Add("Segundo Parcial", int.Parse(txtSegundoP.Text));
+            //dgvRegEstudiante.Rows.Add("Actividades", int.Parse(txtActividades.Text));
+            //dgvRegEstudiante.Rows.Add("ExamenFinal", int.Parse(txtExamenF.Text));
+            //dgvRegEstudiante.Rows.Add("NotaFinal", NotaFinal);
 
 
 
