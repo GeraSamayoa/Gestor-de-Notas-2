@@ -59,5 +59,16 @@ namespace Frontend
                 CargarNotasDelEstudiante(numeroCarne);
             }
         }
+
+        private void BoletaCalificaciones_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'uITIDataSet1.Estudiante' Puede moverla o quitarla según sea necesario.
+            this.estudianteTableAdapter.Fill(this.uITIDataSet1.Estudiante);
+            // TODO: esta línea de código carga datos en la tabla 'uITIDataSet.ReporteBoleta' Puede moverla o quitarla según sea necesario.
+            this.reporteBoletaTableAdapter.Fill(this.uITIDataSet.ReporteBoleta);
+            // TODO: esta línea de código carga datos en la tabla 'uITIDataSet.RegistroNotas' Puede moverla o quitarla según sea necesario.
+            this.registroNotasTableAdapter.Fill(this.uITIDataSet.RegistroNotas);
+
+        }
     }
 }
