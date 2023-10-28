@@ -28,7 +28,7 @@ namespace Frontend
         {
             AsignacionEstudiante EstudianteMenu = new AsignacionEstudiante();
             EstudianteMenu.Show();
-            this.Hide();
+      
         }
 
         private void btnSalirEstudiante_Click(object sender, EventArgs e)

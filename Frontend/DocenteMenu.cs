@@ -26,7 +26,6 @@ namespace Frontend
         {
             AsignacionDocente DocenteMenu= new AsignacionDocente();
             DocenteMenu.Show();
-            this.Close();
 
         }
 

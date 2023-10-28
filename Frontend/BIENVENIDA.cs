@@ -26,7 +26,6 @@ namespace Frontend
         {
             login BIENVENIDA = new login();
             BIENVENIDA.Show();
-            this.Close();
 
         }
 
