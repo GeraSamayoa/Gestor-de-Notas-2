@@ -36,7 +36,19 @@ namespace Frontend
 
         private void RegistroCurso_Load(object sender, EventArgs e)
         {
-           
+            // TODO: esta línea de código carga datos en la tabla 'uITIDataSet1.Curso' Puede moverla o quitarla según sea necesario.
+            this.cursoTableAdapter.Fill(this.uITIDataSet1.Curso);
+            // TODO: esta línea de código carga datos en la tabla 'uITIDataSet1.Carrera' Puede moverla o quitarla según sea necesario.
+            this.carreraTableAdapter1.Fill(this.uITIDataSet1.Carrera);
+            // TODO: esta línea de código carga datos en la tabla 'uITIDataSet1.Ciclo' Puede moverla o quitarla según sea necesario.
+            this.cicloTableAdapter1.Fill(this.uITIDataSet1.Ciclo);
+            // TODO: esta línea de código carga datos en la tabla 'uITIDataSet1.Universidad' Puede moverla o quitarla según sea necesario.
+            this.universidadTableAdapter1.Fill(this.uITIDataSet1.Universidad);
+            // TODO: esta línea de código carga datos en la tabla 'uITIDataSet1.Jornada' Puede moverla o quitarla según sea necesario.
+            this.jornadaTableAdapter1.Fill(this.uITIDataSet1.Jornada);
+            // TODO: esta línea de código carga datos en la tabla 'uITIDataSet1.Seccion' Puede moverla o quitarla según sea necesario.
+            this.seccionTableAdapter1.Fill(this.uITIDataSet1.Seccion);
+
 
         }
 

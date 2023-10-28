@@ -67,6 +67,31 @@
             this.seccionTableAdapter = new Frontend.UITIDataSetTableAdapters.SeccionTableAdapter();
             this.universidadBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.universidadTableAdapter = new Frontend.UITIDataSetTableAdapters.UniversidadTableAdapter();
+            this.uITIDataSet1 = new Frontend.UITIDataSet1();
+            this.seccionBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.seccionTableAdapter1 = new Frontend.UITIDataSet1TableAdapters.SeccionTableAdapter();
+            this.jornadaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.jornadaTableAdapter1 = new Frontend.UITIDataSet1TableAdapters.JornadaTableAdapter();
+            this.universidadBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.universidadTableAdapter1 = new Frontend.UITIDataSet1TableAdapters.UniversidadTableAdapter();
+            this.cicloBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.cicloTableAdapter1 = new Frontend.UITIDataSet1TableAdapters.CicloTableAdapter();
+            this.carreraBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.carreraTableAdapter1 = new Frontend.UITIDataSet1TableAdapters.CarreraTableAdapter();
+            this.cursoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cursoTableAdapter = new Frontend.UITIDataSet1TableAdapters.CursoTableAdapter();
+            this.idCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horaInicioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horaFinalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idCicloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idSeccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.universidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idJornadaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idCarreraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtNombreCurso = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCurso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uITIDataSet)).BeginInit();
@@ -76,6 +101,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.jornadaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.seccionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.universidadBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uITIDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seccionBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jornadaBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.universidadBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cicloBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carreraBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -188,7 +220,20 @@
             // 
             // dgvCurso
             // 
+            this.dgvCurso.AutoGenerateColumns = false;
             this.dgvCurso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCurso.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idCursoDataGridViewTextBoxColumn,
+            this.nombreCursoDataGridViewTextBoxColumn,
+            this.horaInicioDataGridViewTextBoxColumn,
+            this.horaFinalDataGridViewTextBoxColumn,
+            this.idCicloDataGridViewTextBoxColumn,
+            this.estatusDataGridViewTextBoxColumn,
+            this.idSeccionDataGridViewTextBoxColumn,
+            this.universidadDataGridViewTextBoxColumn,
+            this.idJornadaDataGridViewTextBoxColumn,
+            this.idCarreraDataGridViewTextBoxColumn});
+            this.dgvCurso.DataSource = this.cursoBindingSource;
             this.dgvCurso.Location = new System.Drawing.Point(43, 252);
             this.dgvCurso.Name = "dgvCurso";
             this.dgvCurso.Size = new System.Drawing.Size(707, 155);
@@ -209,7 +254,7 @@
             // comboBoxCarrera
             // 
             this.comboBoxCarrera.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.comboBoxCarrera.DataSource = this.carreraBindingSource;
+            this.comboBoxCarrera.DataSource = this.carreraBindingSource1;
             this.comboBoxCarrera.DisplayMember = "NombreCarrera";
             this.comboBoxCarrera.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.comboBoxCarrera.FormattingEnabled = true;
@@ -234,7 +279,7 @@
             // comboBoxUniversidad
             // 
             this.comboBoxUniversidad.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.comboBoxUniversidad.DataSource = this.universidadBindingSource;
+            this.comboBoxUniversidad.DataSource = this.universidadBindingSource1;
             this.comboBoxUniversidad.DisplayMember = "NombreUniversidad";
             this.comboBoxUniversidad.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.comboBoxUniversidad.FormattingEnabled = true;
@@ -271,7 +316,7 @@
             // comboBoxJornada
             // 
             this.comboBoxJornada.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.comboBoxJornada.DataSource = this.jornadaBindingSource;
+            this.comboBoxJornada.DataSource = this.jornadaBindingSource1;
             this.comboBoxJornada.DisplayMember = "Tipo";
             this.comboBoxJornada.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.comboBoxJornada.FormattingEnabled = true;
@@ -306,7 +351,7 @@
             // comboboxCiclo
             // 
             this.comboboxCiclo.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.comboboxCiclo.DataSource = this.cicloBindingSource;
+            this.comboboxCiclo.DataSource = this.cicloBindingSource1;
             this.comboboxCiclo.DisplayMember = "Tipo";
             this.comboboxCiclo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.comboboxCiclo.FormattingEnabled = true;
@@ -331,7 +376,7 @@
             // comboBoxSeccion
             // 
             this.comboBoxSeccion.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.comboBoxSeccion.DataSource = this.seccionBindingSource;
+            this.comboBoxSeccion.DataSource = this.seccionBindingSource1;
             this.comboBoxSeccion.DisplayMember = "Tipo";
             this.comboBoxSeccion.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.comboBoxSeccion.FormattingEnabled = true;
@@ -498,12 +543,154 @@
             // 
             this.universidadTableAdapter.ClearBeforeFill = true;
             // 
+            // uITIDataSet1
+            // 
+            this.uITIDataSet1.DataSetName = "UITIDataSet1";
+            this.uITIDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // seccionBindingSource1
+            // 
+            this.seccionBindingSource1.DataMember = "Seccion";
+            this.seccionBindingSource1.DataSource = this.uITIDataSet1;
+            // 
+            // seccionTableAdapter1
+            // 
+            this.seccionTableAdapter1.ClearBeforeFill = true;
+            // 
+            // jornadaBindingSource1
+            // 
+            this.jornadaBindingSource1.DataMember = "Jornada";
+            this.jornadaBindingSource1.DataSource = this.uITIDataSet1;
+            // 
+            // jornadaTableAdapter1
+            // 
+            this.jornadaTableAdapter1.ClearBeforeFill = true;
+            // 
+            // universidadBindingSource1
+            // 
+            this.universidadBindingSource1.DataMember = "Universidad";
+            this.universidadBindingSource1.DataSource = this.uITIDataSet1;
+            // 
+            // universidadTableAdapter1
+            // 
+            this.universidadTableAdapter1.ClearBeforeFill = true;
+            // 
+            // cicloBindingSource1
+            // 
+            this.cicloBindingSource1.DataMember = "Ciclo";
+            this.cicloBindingSource1.DataSource = this.uITIDataSet1;
+            // 
+            // cicloTableAdapter1
+            // 
+            this.cicloTableAdapter1.ClearBeforeFill = true;
+            // 
+            // carreraBindingSource1
+            // 
+            this.carreraBindingSource1.DataMember = "Carrera";
+            this.carreraBindingSource1.DataSource = this.uITIDataSet1;
+            // 
+            // carreraTableAdapter1
+            // 
+            this.carreraTableAdapter1.ClearBeforeFill = true;
+            // 
+            // cursoBindingSource
+            // 
+            this.cursoBindingSource.DataMember = "Curso";
+            this.cursoBindingSource.DataSource = this.uITIDataSet1;
+            // 
+            // cursoTableAdapter
+            // 
+            this.cursoTableAdapter.ClearBeforeFill = true;
+            // 
+            // idCursoDataGridViewTextBoxColumn
+            // 
+            this.idCursoDataGridViewTextBoxColumn.DataPropertyName = "IdCurso";
+            this.idCursoDataGridViewTextBoxColumn.HeaderText = "IdCurso";
+            this.idCursoDataGridViewTextBoxColumn.Name = "idCursoDataGridViewTextBoxColumn";
+            this.idCursoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nombreCursoDataGridViewTextBoxColumn
+            // 
+            this.nombreCursoDataGridViewTextBoxColumn.DataPropertyName = "NombreCurso";
+            this.nombreCursoDataGridViewTextBoxColumn.HeaderText = "NombreCurso";
+            this.nombreCursoDataGridViewTextBoxColumn.Name = "nombreCursoDataGridViewTextBoxColumn";
+            // 
+            // horaInicioDataGridViewTextBoxColumn
+            // 
+            this.horaInicioDataGridViewTextBoxColumn.DataPropertyName = "HoraInicio";
+            this.horaInicioDataGridViewTextBoxColumn.HeaderText = "HoraInicio";
+            this.horaInicioDataGridViewTextBoxColumn.Name = "horaInicioDataGridViewTextBoxColumn";
+            // 
+            // horaFinalDataGridViewTextBoxColumn
+            // 
+            this.horaFinalDataGridViewTextBoxColumn.DataPropertyName = "HoraFinal";
+            this.horaFinalDataGridViewTextBoxColumn.HeaderText = "HoraFinal";
+            this.horaFinalDataGridViewTextBoxColumn.Name = "horaFinalDataGridViewTextBoxColumn";
+            // 
+            // idCicloDataGridViewTextBoxColumn
+            // 
+            this.idCicloDataGridViewTextBoxColumn.DataPropertyName = "IdCiclo";
+            this.idCicloDataGridViewTextBoxColumn.HeaderText = "IdCiclo";
+            this.idCicloDataGridViewTextBoxColumn.Name = "idCicloDataGridViewTextBoxColumn";
+            // 
+            // estatusDataGridViewTextBoxColumn
+            // 
+            this.estatusDataGridViewTextBoxColumn.DataPropertyName = "Estatus";
+            this.estatusDataGridViewTextBoxColumn.HeaderText = "Estatus";
+            this.estatusDataGridViewTextBoxColumn.Name = "estatusDataGridViewTextBoxColumn";
+            // 
+            // idSeccionDataGridViewTextBoxColumn
+            // 
+            this.idSeccionDataGridViewTextBoxColumn.DataPropertyName = "IdSeccion";
+            this.idSeccionDataGridViewTextBoxColumn.HeaderText = "IdSeccion";
+            this.idSeccionDataGridViewTextBoxColumn.Name = "idSeccionDataGridViewTextBoxColumn";
+            // 
+            // universidadDataGridViewTextBoxColumn
+            // 
+            this.universidadDataGridViewTextBoxColumn.DataPropertyName = "Universidad";
+            this.universidadDataGridViewTextBoxColumn.HeaderText = "Universidad";
+            this.universidadDataGridViewTextBoxColumn.Name = "universidadDataGridViewTextBoxColumn";
+            // 
+            // idJornadaDataGridViewTextBoxColumn
+            // 
+            this.idJornadaDataGridViewTextBoxColumn.DataPropertyName = "IdJornada";
+            this.idJornadaDataGridViewTextBoxColumn.HeaderText = "IdJornada";
+            this.idJornadaDataGridViewTextBoxColumn.Name = "idJornadaDataGridViewTextBoxColumn";
+            // 
+            // idCarreraDataGridViewTextBoxColumn
+            // 
+            this.idCarreraDataGridViewTextBoxColumn.DataPropertyName = "IdCarrera";
+            this.idCarreraDataGridViewTextBoxColumn.HeaderText = "IdCarrera";
+            this.idCarreraDataGridViewTextBoxColumn.Name = "idCarreraDataGridViewTextBoxColumn";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(431, 184);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(116, 18);
+            this.label11.TabIndex = 93;
+            this.label11.Text = "Nombre del Curso:";
+            // 
+            // txtNombreCurso
+            // 
+            this.txtNombreCurso.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtNombreCurso.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreCurso.Location = new System.Drawing.Point(431, 205);
+            this.txtNombreCurso.Name = "txtNombreCurso";
+            this.txtNombreCurso.Size = new System.Drawing.Size(347, 25);
+            this.txtNombreCurso.TabIndex = 92;
+            // 
             // RegistroCurso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(800, 470);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.txtNombreCurso);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.comboBoxHoraFinal);
             this.Controls.Add(this.comboBoxHoraInicio);
@@ -541,6 +728,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.jornadaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.seccionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.universidadBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uITIDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seccionBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jornadaBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.universidadBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cicloBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carreraBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -585,5 +779,30 @@
         private UITIDataSetTableAdapters.SeccionTableAdapter seccionTableAdapter;
         private System.Windows.Forms.BindingSource universidadBindingSource;
         private UITIDataSetTableAdapters.UniversidadTableAdapter universidadTableAdapter;
+        private UITIDataSet1 uITIDataSet1;
+        private System.Windows.Forms.BindingSource seccionBindingSource1;
+        private UITIDataSet1TableAdapters.SeccionTableAdapter seccionTableAdapter1;
+        private System.Windows.Forms.BindingSource jornadaBindingSource1;
+        private UITIDataSet1TableAdapters.JornadaTableAdapter jornadaTableAdapter1;
+        private System.Windows.Forms.BindingSource universidadBindingSource1;
+        private UITIDataSet1TableAdapters.UniversidadTableAdapter universidadTableAdapter1;
+        private System.Windows.Forms.BindingSource cicloBindingSource1;
+        private UITIDataSet1TableAdapters.CicloTableAdapter cicloTableAdapter1;
+        private System.Windows.Forms.BindingSource carreraBindingSource1;
+        private UITIDataSet1TableAdapters.CarreraTableAdapter carreraTableAdapter1;
+        private System.Windows.Forms.BindingSource cursoBindingSource;
+        private UITIDataSet1TableAdapters.CursoTableAdapter cursoTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idCursoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreCursoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn horaInicioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn horaFinalDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idCicloDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn estatusDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idSeccionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn universidadDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idJornadaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idCarreraDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtNombreCurso;
     }
 }

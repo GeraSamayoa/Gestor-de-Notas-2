@@ -58,7 +58,7 @@
             this.label1.Location = new System.Drawing.Point(295, 94);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(488, 50);
+            this.label1.Size = new System.Drawing.Size(384, 40);
             this.label1.TabIndex = 2;
             this.label1.Text = "\"Boleta Calificaciones\"";
             // 
@@ -117,7 +117,7 @@
             this.label2.Location = new System.Drawing.Point(123, 266);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 23);
+            this.label2.Size = new System.Drawing.Size(77, 18);
             this.label2.TabIndex = 32;
             this.label2.Text = "N. de Carné";
             // 
@@ -127,7 +127,7 @@
             this.comboBoxEstudiantes.FormattingEnabled = true;
             this.comboBoxEstudiantes.Location = new System.Drawing.Point(126, 309);
             this.comboBoxEstudiantes.Name = "comboBoxEstudiantes";
-            this.comboBoxEstudiantes.Size = new System.Drawing.Size(304, 29);
+            this.comboBoxEstudiantes.Size = new System.Drawing.Size(304, 26);
             this.comboBoxEstudiantes.TabIndex = 41;
             // 
             // dvgCalificaciones
@@ -158,7 +158,7 @@
             this.label3.Location = new System.Drawing.Point(459, 177);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(107, 23);
+            this.label3.Size = new System.Drawing.Size(85, 18);
             this.label3.TabIndex = 43;
             this.label3.Text = "Fecha Boleta";
             // 
@@ -166,7 +166,7 @@
             // 
             this.dateTimePickerBoleta.Location = new System.Drawing.Point(462, 209);
             this.dateTimePickerBoleta.Name = "dateTimePickerBoleta";
-            this.dateTimePickerBoleta.Size = new System.Drawing.Size(260, 29);
+            this.dateTimePickerBoleta.Size = new System.Drawing.Size(260, 25);
             this.dateTimePickerBoleta.TabIndex = 44;
             // 
             // label4
@@ -175,7 +175,7 @@
             this.label4.Location = new System.Drawing.Point(123, 177);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(101, 23);
+            this.label4.Size = new System.Drawing.Size(80, 18);
             this.label4.TabIndex = 45;
             this.label4.Text = "N. de Boleta";
             // 
@@ -184,12 +184,12 @@
             this.txtFechaBoleta.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.txtFechaBoleta.Location = new System.Drawing.Point(126, 211);
             this.txtFechaBoleta.Name = "txtFechaBoleta";
-            this.txtFechaBoleta.Size = new System.Drawing.Size(291, 29);
+            this.txtFechaBoleta.Size = new System.Drawing.Size(291, 25);
             this.txtFechaBoleta.TabIndex = 46;
             // 
             // BoletaCalificaciones
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(1067, 623);

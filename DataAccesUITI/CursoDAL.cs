@@ -58,13 +58,13 @@ namespace DataAcces
             using (SqlConnection conn = new SqlConnection(conexion))
             {
                 conn.Open();
-                string sql = $"INSERT INTO Curso VALUES('{cursos.NombreCurso}','{cursos.HoraInicio}','{cursos.HoraFinal}',@IdCiclo,'{cursos.Estatus}',@IdSeccion,@IdUniversidad,@IdJornda,@IdCarrera)";
+                string sql = $"INSERT INTO Curso VALUES('{cursos.NombreCurso}','{cursos.HoraInicio}','{cursos.HoraFinal}',@IdCiclo,1,@IdSeccion,1,@IdJornada,@IdCarrera)";
                 using (SqlCommand comando = new SqlCommand(sql, conn))
                 {
                     comando.Parameters.AddWithValue("@IdJornada", cursos.Jornada.IdJornada);
                     comando.Parameters.AddWithValue("@IdCarrera", cursos.Carrera.IdCarrera);
                     comando.Parameters.AddWithValue("@IdSeccion", cursos.Seccion.IdSeccion);
-                    comando.Parameters.AddWithValue("@Universidad", cursos.Universidad.IdUniversidad);
+                    //comando.Parameters.AddWithValue("@Universidad", cursos.Universidad.IdUniversidad);
                     comando.Parameters.AddWithValue("@IdCiclo", cursos.Ciclo.IdCiclo);
                     comando.CommandType = CommandType.Text;
                     comando.ExecuteNonQuery();

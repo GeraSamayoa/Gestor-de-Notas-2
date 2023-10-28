@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AsignacionEstudiante));
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnActualizarAsigEst = new System.Windows.Forms.Button();
             this.btnAgregarAsigEstudiante = new System.Windows.Forms.Button();
             this.dgvAsigEstudiante = new System.Windows.Forms.DataGridView();
             this.uITIDataSet = new Frontend.UITIDataSet();
@@ -51,7 +50,6 @@
             this.comboBoxSeccionEstudiante = new System.Windows.Forms.ComboBox();
             this.seccionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnSalirAsigEstudiante = new System.Windows.Forms.Button();
-            this.btnEliminarAsigEstudiante = new System.Windows.Forms.Button();
             this.comboBoxNCarneEst = new System.Windows.Forms.ComboBox();
             this.estudianteBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.estudianteTableAdapter = new Frontend.UITIDataSetTableAdapters.EstudianteTableAdapter();
@@ -59,6 +57,18 @@
             this.carreraTableAdapter = new Frontend.UITIDataSetTableAdapters.CarreraTableAdapter();
             this.jornadaTableAdapter = new Frontend.UITIDataSetTableAdapters.JornadaTableAdapter();
             this.seccionTableAdapter = new Frontend.UITIDataSetTableAdapters.SeccionTableAdapter();
+            this.uITIDataSet1 = new Frontend.UITIDataSet1();
+            this.asignacionEstudianteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.asignacionEstudianteTableAdapter = new Frontend.UITIDataSet1TableAdapters.AsignacionEstudianteTableAdapter();
+            this.idAsignacionEstudianteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idEstudianteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idCarreraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idSeccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idJornadaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jornadaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.jornadaTableAdapter1 = new Frontend.UITIDataSet1TableAdapters.JornadaTableAdapter();
+            this.jornadaBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsigEstudiante)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uITIDataSet)).BeginInit();
@@ -67,6 +77,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.carreraBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.seccionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.estudianteBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uITIDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.asignacionEstudianteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jornadaBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jornadaBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -78,7 +92,7 @@
             this.label1.Location = new System.Drawing.Point(281, 104);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(489, 50);
+            this.label1.Size = new System.Drawing.Size(386, 40);
             this.label1.TabIndex = 2;
             this.label1.Text = "\"Asignación de Clases\"";
             // 
@@ -93,25 +107,6 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // btnActualizarAsigEst
-            // 
-            this.btnActualizarAsigEst.BackColor = System.Drawing.Color.SlateGray;
-            this.btnActualizarAsigEst.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnActualizarAsigEst.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnActualizarAsigEst.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray;
-            this.btnActualizarAsigEst.FlatAppearance.BorderSize = 0;
-            this.btnActualizarAsigEst.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateGray;
-            this.btnActualizarAsigEst.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnActualizarAsigEst.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizarAsigEst.ForeColor = System.Drawing.Color.White;
-            this.btnActualizarAsigEst.Location = new System.Drawing.Point(713, 407);
-            this.btnActualizarAsigEst.Name = "btnActualizarAsigEst";
-            this.btnActualizarAsigEst.Size = new System.Drawing.Size(137, 55);
-            this.btnActualizarAsigEst.TabIndex = 39;
-            this.btnActualizarAsigEst.Text = "Actualizar";
-            this.btnActualizarAsigEst.UseVisualStyleBackColor = false;
-            this.btnActualizarAsigEst.Click += new System.EventHandler(this.btnActualizarAsigEst_Click);
-            // 
             // btnAgregarAsigEstudiante
             // 
             this.btnAgregarAsigEstudiante.BackColor = System.Drawing.Color.SlateGray;
@@ -123,7 +118,7 @@
             this.btnAgregarAsigEstudiante.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregarAsigEstudiante.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarAsigEstudiante.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarAsigEstudiante.Location = new System.Drawing.Point(520, 407);
+            this.btnAgregarAsigEstudiante.Location = new System.Drawing.Point(675, 407);
             this.btnAgregarAsigEstudiante.Name = "btnAgregarAsigEstudiante";
             this.btnAgregarAsigEstudiante.Size = new System.Drawing.Size(137, 55);
             this.btnAgregarAsigEstudiante.TabIndex = 38;
@@ -136,7 +131,14 @@
             this.dgvAsigEstudiante.AutoGenerateColumns = false;
             this.dgvAsigEstudiante.BackgroundColor = System.Drawing.Color.White;
             this.dgvAsigEstudiante.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAsigEstudiante.DataSource = this.uITIDataSet;
+            this.dgvAsigEstudiante.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idAsignacionEstudianteDataGridViewTextBoxColumn,
+            this.idEstudianteDataGridViewTextBoxColumn,
+            this.idCarreraDataGridViewTextBoxColumn,
+            this.idCursoDataGridViewTextBoxColumn,
+            this.idSeccionDataGridViewTextBoxColumn,
+            this.idJornadaDataGridViewTextBoxColumn});
+            this.dgvAsigEstudiante.DataSource = this.asignacionEstudianteBindingSource;
             this.dgvAsigEstudiante.Location = new System.Drawing.Point(104, 510);
             this.dgvAsigEstudiante.Name = "dgvAsigEstudiante";
             this.dgvAsigEstudiante.RowHeadersWidth = 51;
@@ -154,7 +156,7 @@
             this.label9.Location = new System.Drawing.Point(492, 426);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(0, 23);
+            this.label9.Size = new System.Drawing.Size(0, 18);
             this.label9.TabIndex = 29;
             // 
             // label8
@@ -163,7 +165,7 @@
             this.label8.Location = new System.Drawing.Point(517, 195);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(74, 23);
+            this.label8.Size = new System.Drawing.Size(59, 18);
             this.label8.TabIndex = 28;
             this.label8.Text = "Sección:";
             // 
@@ -173,7 +175,7 @@
             this.label5.Location = new System.Drawing.Point(135, 273);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(158, 23);
+            this.label5.Size = new System.Drawing.Size(124, 18);
             this.label5.TabIndex = 25;
             this.label5.Text = "Cursos Disponibles:";
             // 
@@ -183,7 +185,7 @@
             this.label4.Location = new System.Drawing.Point(135, 352);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 23);
+            this.label4.Size = new System.Drawing.Size(54, 18);
             this.label4.TabIndex = 24;
             this.label4.Text = "Carrera:";
             // 
@@ -193,7 +195,7 @@
             this.label3.Location = new System.Drawing.Point(135, 426);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 23);
+            this.label3.Size = new System.Drawing.Size(58, 18);
             this.label3.TabIndex = 23;
             this.label3.Text = "Jornada:";
             // 
@@ -203,7 +205,7 @@
             this.label2.Location = new System.Drawing.Point(135, 201);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 23);
+            this.label2.Size = new System.Drawing.Size(77, 18);
             this.label2.TabIndex = 22;
             this.label2.Text = "N. de Carné";
             // 
@@ -215,7 +217,7 @@
             this.comboBoxCursoEstudiante.FormattingEnabled = true;
             this.comboBoxCursoEstudiante.Location = new System.Drawing.Point(138, 310);
             this.comboBoxCursoEstudiante.Name = "comboBoxCursoEstudiante";
-            this.comboBoxCursoEstudiante.Size = new System.Drawing.Size(304, 29);
+            this.comboBoxCursoEstudiante.Size = new System.Drawing.Size(304, 26);
             this.comboBoxCursoEstudiante.TabIndex = 40;
             this.comboBoxCursoEstudiante.ValueMember = "IdCurso";
             // 
@@ -227,12 +229,12 @@
             // comboBoxJornadaEstudiante
             // 
             this.comboBoxJornadaEstudiante.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.comboBoxJornadaEstudiante.DataSource = this.jornadaBindingSource;
+            this.comboBoxJornadaEstudiante.DataSource = this.jornadaBindingSource2;
             this.comboBoxJornadaEstudiante.DisplayMember = "Tipo";
             this.comboBoxJornadaEstudiante.FormattingEnabled = true;
             this.comboBoxJornadaEstudiante.Location = new System.Drawing.Point(138, 455);
             this.comboBoxJornadaEstudiante.Name = "comboBoxJornadaEstudiante";
-            this.comboBoxJornadaEstudiante.Size = new System.Drawing.Size(304, 29);
+            this.comboBoxJornadaEstudiante.Size = new System.Drawing.Size(304, 26);
             this.comboBoxJornadaEstudiante.TabIndex = 41;
             this.comboBoxJornadaEstudiante.ValueMember = "IdJornada";
             // 
@@ -249,7 +251,7 @@
             this.comboBoxCarreraEstudiante.FormattingEnabled = true;
             this.comboBoxCarreraEstudiante.Location = new System.Drawing.Point(138, 386);
             this.comboBoxCarreraEstudiante.Name = "comboBoxCarreraEstudiante";
-            this.comboBoxCarreraEstudiante.Size = new System.Drawing.Size(304, 29);
+            this.comboBoxCarreraEstudiante.Size = new System.Drawing.Size(304, 26);
             this.comboBoxCarreraEstudiante.TabIndex = 42;
             this.comboBoxCarreraEstudiante.ValueMember = "IdCarrera";
             // 
@@ -266,7 +268,7 @@
             this.comboBoxSeccionEstudiante.FormattingEnabled = true;
             this.comboBoxSeccionEstudiante.Location = new System.Drawing.Point(520, 232);
             this.comboBoxSeccionEstudiante.Name = "comboBoxSeccionEstudiante";
-            this.comboBoxSeccionEstudiante.Size = new System.Drawing.Size(215, 29);
+            this.comboBoxSeccionEstudiante.Size = new System.Drawing.Size(215, 26);
             this.comboBoxSeccionEstudiante.TabIndex = 43;
             this.comboBoxSeccionEstudiante.ValueMember = "IdSeccion";
             // 
@@ -286,32 +288,13 @@
             this.btnSalirAsigEstudiante.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSalirAsigEstudiante.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalirAsigEstudiante.ForeColor = System.Drawing.Color.White;
-            this.btnSalirAsigEstudiante.Location = new System.Drawing.Point(884, 541);
+            this.btnSalirAsigEstudiante.Location = new System.Drawing.Point(860, 407);
             this.btnSalirAsigEstudiante.Name = "btnSalirAsigEstudiante";
             this.btnSalirAsigEstudiante.Size = new System.Drawing.Size(137, 55);
             this.btnSalirAsigEstudiante.TabIndex = 45;
             this.btnSalirAsigEstudiante.Text = "Salir";
             this.btnSalirAsigEstudiante.UseVisualStyleBackColor = false;
             this.btnSalirAsigEstudiante.Click += new System.EventHandler(this.btnSalirAsigEstudiante_Click);
-            // 
-            // btnEliminarAsigEstudiante
-            // 
-            this.btnEliminarAsigEstudiante.BackColor = System.Drawing.Color.SlateGray;
-            this.btnEliminarAsigEstudiante.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnEliminarAsigEstudiante.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnEliminarAsigEstudiante.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray;
-            this.btnEliminarAsigEstudiante.FlatAppearance.BorderSize = 0;
-            this.btnEliminarAsigEstudiante.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateGray;
-            this.btnEliminarAsigEstudiante.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEliminarAsigEstudiante.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarAsigEstudiante.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarAsigEstudiante.Location = new System.Drawing.Point(884, 407);
-            this.btnEliminarAsigEstudiante.Name = "btnEliminarAsigEstudiante";
-            this.btnEliminarAsigEstudiante.Size = new System.Drawing.Size(137, 55);
-            this.btnEliminarAsigEstudiante.TabIndex = 44;
-            this.btnEliminarAsigEstudiante.Text = "Eliminar";
-            this.btnEliminarAsigEstudiante.UseVisualStyleBackColor = false;
-            this.btnEliminarAsigEstudiante.Click += new System.EventHandler(this.btnEliminarAsigEstudiante_Click);
             // 
             // comboBoxNCarneEst
             // 
@@ -322,7 +305,7 @@
             this.comboBoxNCarneEst.FormattingEnabled = true;
             this.comboBoxNCarneEst.Location = new System.Drawing.Point(138, 232);
             this.comboBoxNCarneEst.Name = "comboBoxNCarneEst";
-            this.comboBoxNCarneEst.Size = new System.Drawing.Size(304, 29);
+            this.comboBoxNCarneEst.Size = new System.Drawing.Size(304, 26);
             this.comboBoxNCarneEst.TabIndex = 46;
             this.comboBoxNCarneEst.ValueMember = "Carne";
             this.comboBoxNCarneEst.SelectedIndexChanged += new System.EventHandler(this.comboBoxNCarneEst_SelectedIndexChanged);
@@ -352,20 +335,83 @@
             // 
             this.seccionTableAdapter.ClearBeforeFill = true;
             // 
+            // uITIDataSet1
+            // 
+            this.uITIDataSet1.DataSetName = "UITIDataSet1";
+            this.uITIDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // asignacionEstudianteBindingSource
+            // 
+            this.asignacionEstudianteBindingSource.DataMember = "AsignacionEstudiante";
+            this.asignacionEstudianteBindingSource.DataSource = this.uITIDataSet1;
+            // 
+            // asignacionEstudianteTableAdapter
+            // 
+            this.asignacionEstudianteTableAdapter.ClearBeforeFill = true;
+            // 
+            // idAsignacionEstudianteDataGridViewTextBoxColumn
+            // 
+            this.idAsignacionEstudianteDataGridViewTextBoxColumn.DataPropertyName = "IdAsignacionEstudiante";
+            this.idAsignacionEstudianteDataGridViewTextBoxColumn.HeaderText = "IdAsignacionEstudiante";
+            this.idAsignacionEstudianteDataGridViewTextBoxColumn.Name = "idAsignacionEstudianteDataGridViewTextBoxColumn";
+            this.idAsignacionEstudianteDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idEstudianteDataGridViewTextBoxColumn
+            // 
+            this.idEstudianteDataGridViewTextBoxColumn.DataPropertyName = "IdEstudiante";
+            this.idEstudianteDataGridViewTextBoxColumn.HeaderText = "IdEstudiante";
+            this.idEstudianteDataGridViewTextBoxColumn.Name = "idEstudianteDataGridViewTextBoxColumn";
+            // 
+            // idCarreraDataGridViewTextBoxColumn
+            // 
+            this.idCarreraDataGridViewTextBoxColumn.DataPropertyName = "IdCarrera";
+            this.idCarreraDataGridViewTextBoxColumn.HeaderText = "IdCarrera";
+            this.idCarreraDataGridViewTextBoxColumn.Name = "idCarreraDataGridViewTextBoxColumn";
+            // 
+            // idCursoDataGridViewTextBoxColumn
+            // 
+            this.idCursoDataGridViewTextBoxColumn.DataPropertyName = "IdCurso";
+            this.idCursoDataGridViewTextBoxColumn.HeaderText = "IdCurso";
+            this.idCursoDataGridViewTextBoxColumn.Name = "idCursoDataGridViewTextBoxColumn";
+            // 
+            // idSeccionDataGridViewTextBoxColumn
+            // 
+            this.idSeccionDataGridViewTextBoxColumn.DataPropertyName = "IdSeccion";
+            this.idSeccionDataGridViewTextBoxColumn.HeaderText = "IdSeccion";
+            this.idSeccionDataGridViewTextBoxColumn.Name = "idSeccionDataGridViewTextBoxColumn";
+            // 
+            // idJornadaDataGridViewTextBoxColumn
+            // 
+            this.idJornadaDataGridViewTextBoxColumn.DataPropertyName = "IdJornada";
+            this.idJornadaDataGridViewTextBoxColumn.HeaderText = "IdJornada";
+            this.idJornadaDataGridViewTextBoxColumn.Name = "idJornadaDataGridViewTextBoxColumn";
+            // 
+            // jornadaBindingSource1
+            // 
+            this.jornadaBindingSource1.DataMember = "Jornada";
+            this.jornadaBindingSource1.DataSource = this.uITIDataSet1;
+            // 
+            // jornadaTableAdapter1
+            // 
+            this.jornadaTableAdapter1.ClearBeforeFill = true;
+            // 
+            // jornadaBindingSource2
+            // 
+            this.jornadaBindingSource2.DataMember = "Jornada";
+            this.jornadaBindingSource2.DataSource = this.uITIDataSet1;
+            // 
             // AsignacionEstudiante
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(1043, 735);
             this.Controls.Add(this.comboBoxNCarneEst);
             this.Controls.Add(this.btnSalirAsigEstudiante);
-            this.Controls.Add(this.btnEliminarAsigEstudiante);
             this.Controls.Add(this.comboBoxSeccionEstudiante);
             this.Controls.Add(this.comboBoxCarreraEstudiante);
             this.Controls.Add(this.comboBoxJornadaEstudiante);
             this.Controls.Add(this.comboBoxCursoEstudiante);
-            this.Controls.Add(this.btnActualizarAsigEst);
             this.Controls.Add(this.btnAgregarAsigEstudiante);
             this.Controls.Add(this.dgvAsigEstudiante);
             this.Controls.Add(this.label9);
@@ -389,6 +435,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.carreraBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.seccionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.estudianteBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uITIDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.asignacionEstudianteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jornadaBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jornadaBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -398,7 +448,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnActualizarAsigEst;
         private System.Windows.Forms.Button btnAgregarAsigEstudiante;
         private System.Windows.Forms.DataGridView dgvAsigEstudiante;
         private System.Windows.Forms.Label label9;
@@ -412,7 +461,6 @@
         private System.Windows.Forms.ComboBox comboBoxCarreraEstudiante;
         private System.Windows.Forms.ComboBox comboBoxSeccionEstudiante;
         private System.Windows.Forms.Button btnSalirAsigEstudiante;
-        private System.Windows.Forms.Button btnEliminarAsigEstudiante;
         private System.Windows.Forms.ComboBox comboBoxNCarneEst;
         private UITIDataSet uITIDataSet;
         private UITIDataSetTableAdapters.EstudianteTableAdapter estudianteTableAdapter;
@@ -425,5 +473,17 @@
         private System.Windows.Forms.BindingSource seccionBindingSource;
         private UITIDataSetTableAdapters.SeccionTableAdapter seccionTableAdapter;
         private System.Windows.Forms.BindingSource estudianteBindingSource1;
+        private UITIDataSet1 uITIDataSet1;
+        private System.Windows.Forms.BindingSource asignacionEstudianteBindingSource;
+        private UITIDataSet1TableAdapters.AsignacionEstudianteTableAdapter asignacionEstudianteTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idAsignacionEstudianteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idEstudianteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idCarreraDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idCursoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idSeccionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idJornadaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource jornadaBindingSource1;
+        private UITIDataSet1TableAdapters.JornadaTableAdapter jornadaTableAdapter1;
+        private System.Windows.Forms.BindingSource jornadaBindingSource2;
     }
 }
