@@ -31,16 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroDocente));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtEstatusDocente = new System.Windows.Forms.TextBox();
             this.txtApellidoDocente = new System.Windows.Forms.TextBox();
             this.txtNombreDocente = new System.Windows.Forms.TextBox();
             this.dgvRegDocente = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAgregarRegDocente = new System.Windows.Forms.Button();
-            this.txtGeneroDocente = new System.Windows.Forms.TextBox();
             this.txtContraseniaDocente = new System.Windows.Forms.TextBox();
             this.txtUsuarioDocente = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -50,10 +47,11 @@
             this.btnEliminarDocente = new System.Windows.Forms.Button();
             this.btnActualizarDocente = new System.Windows.Forms.Button();
             this.btnSiguienteDocente = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txtDPIDocente = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.btnSalirRegistroDocente = new System.Windows.Forms.Button();
+            this.comboBoxEstatusRD = new System.Windows.Forms.ComboBox();
+            this.comboBoxGeneroRD = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegDocente)).BeginInit();
             this.SuspendLayout();
@@ -81,15 +79,6 @@
             this.label1.Size = new System.Drawing.Size(408, 50);
             this.label1.TabIndex = 4;
             this.label1.Text = "\"Registro Docente\"";
-            // 
-            // txtEstatusDocente
-            // 
-            this.txtEstatusDocente.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.txtEstatusDocente.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEstatusDocente.Location = new System.Drawing.Point(141, 346);
-            this.txtEstatusDocente.Name = "txtEstatusDocente";
-            this.txtEstatusDocente.Size = new System.Drawing.Size(112, 29);
-            this.txtEstatusDocente.TabIndex = 23;
             // 
             // txtApellidoDocente
             // 
@@ -139,16 +128,6 @@
             this.label4.TabIndex = 18;
             this.label4.Text = "Estatus:";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(138, 388);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(148, 23);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "Fecha Nacimiento:";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -177,15 +156,6 @@
             this.btnAgregarRegDocente.Text = "Agregar";
             this.btnAgregarRegDocente.UseVisualStyleBackColor = false;
             this.btnAgregarRegDocente.Click += new System.EventHandler(this.btnAgregarRegDocente_Click);
-            // 
-            // txtGeneroDocente
-            // 
-            this.txtGeneroDocente.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.txtGeneroDocente.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGeneroDocente.Location = new System.Drawing.Point(306, 346);
-            this.txtGeneroDocente.Name = "txtGeneroDocente";
-            this.txtGeneroDocente.Size = new System.Drawing.Size(139, 29);
-            this.txtGeneroDocente.TabIndex = 31;
             // 
             // txtContraseniaDocente
             // 
@@ -299,13 +269,6 @@
             this.btnSiguienteDocente.UseVisualStyleBackColor = false;
             this.btnSiguienteDocente.Click += new System.EventHandler(this.btnSiguienteDocente_Click);
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(141, 418);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(304, 29);
-            this.dateTimePicker1.TabIndex = 36;
-            // 
             // txtDPIDocente
             // 
             this.txtDPIDocente.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -345,34 +308,59 @@
             this.btnSalirRegistroDocente.UseVisualStyleBackColor = false;
             this.btnSalirRegistroDocente.Click += new System.EventHandler(this.btnSalirRegistroDocente_Click);
             // 
+            // comboBoxEstatusRD
+            // 
+            this.comboBoxEstatusRD.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.comboBoxEstatusRD.ForeColor = System.Drawing.Color.White;
+            this.comboBoxEstatusRD.FormattingEnabled = true;
+            this.comboBoxEstatusRD.Items.AddRange(new object[] {
+            "1",
+            "0"});
+            this.comboBoxEstatusRD.Location = new System.Drawing.Point(141, 350);
+            this.comboBoxEstatusRD.Name = "comboBoxEstatusRD";
+            this.comboBoxEstatusRD.Size = new System.Drawing.Size(121, 29);
+            this.comboBoxEstatusRD.TabIndex = 40;
+            this.comboBoxEstatusRD.SelectedIndexChanged += new System.EventHandler(this.comboBoxEstatusRD_SelectedIndexChanged);
+            // 
+            // comboBoxGeneroRD
+            // 
+            this.comboBoxGeneroRD.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.comboBoxGeneroRD.ForeColor = System.Drawing.Color.White;
+            this.comboBoxGeneroRD.FormattingEnabled = true;
+            this.comboBoxGeneroRD.Items.AddRange(new object[] {
+            "Masculino",
+            "Femenino"});
+            this.comboBoxGeneroRD.Location = new System.Drawing.Point(306, 346);
+            this.comboBoxGeneroRD.Name = "comboBoxGeneroRD";
+            this.comboBoxGeneroRD.Size = new System.Drawing.Size(121, 29);
+            this.comboBoxGeneroRD.TabIndex = 41;
+            // 
             // RegistroDocente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(1090, 659);
+            this.Controls.Add(this.comboBoxGeneroRD);
+            this.Controls.Add(this.comboBoxEstatusRD);
             this.Controls.Add(this.btnSalirRegistroDocente);
             this.Controls.Add(this.txtDPIDocente);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.btnSiguienteDocente);
             this.Controls.Add(this.btnEliminarDocente);
             this.Controls.Add(this.btnActualizarDocente);
             this.Controls.Add(this.btnAgregarRegDocente);
-            this.Controls.Add(this.txtGeneroDocente);
             this.Controls.Add(this.txtContraseniaDocente);
             this.Controls.Add(this.txtUsuarioDocente);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtEstatusDocente);
             this.Controls.Add(this.txtApellidoDocente);
             this.Controls.Add(this.txtNombreDocente);
             this.Controls.Add(this.dgvRegDocente);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -393,16 +381,13 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtEstatusDocente;
         private System.Windows.Forms.TextBox txtApellidoDocente;
         private System.Windows.Forms.TextBox txtNombreDocente;
         private System.Windows.Forms.DataGridView dgvRegDocente;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnAgregarRegDocente;
-        private System.Windows.Forms.TextBox txtGeneroDocente;
         private System.Windows.Forms.TextBox txtContraseniaDocente;
         private System.Windows.Forms.TextBox txtUsuarioDocente;
         private System.Windows.Forms.Label label9;
@@ -412,9 +397,10 @@
         private System.Windows.Forms.Button btnEliminarDocente;
         private System.Windows.Forms.Button btnActualizarDocente;
         private System.Windows.Forms.Button btnSiguienteDocente;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.TextBox txtDPIDocente;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnSalirRegistroDocente;
+        private System.Windows.Forms.ComboBox comboBoxEstatusRD;
+        private System.Windows.Forms.ComboBox comboBoxGeneroRD;
     }
 }
