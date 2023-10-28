@@ -8,16 +8,20 @@ namespace Backend
 {
     public class Curso
     {
-        public List<Ciclo> ciclo { get; set; }
-        public List<Seccion> seccion{ get; set; }
+        public Ciclo Ciclo { get; set; }
+        public Seccion Seccion { get; set; }
 
-        public int IdCurso {  get; set; }
+        public Universidad Universidad { get; set; }
+        public Carrera Carrera { get; set; }
+        public Jornada Jornada { get; set; }
+
+        public int IdCurso { get; set; }
 
         public string NombreCurso { get; set; }
 
-        public TimeSpan HoraInicio { get; set; }
+        public string HoraInicio { get; set; }
 
-        public TimeSpan HoraFinal { get; set; }
+        public string HoraFinal { get; set; }
 
         public bool Estatus { get; set; }
 

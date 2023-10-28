@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Backend;
+using DataAcces;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,11 +15,13 @@ namespace Frontend
     public partial class RegistroCurso : Form
     {
         Administrador admin;
+        CursoDAL cursoDAL;
 
         public RegistroCurso()
         {
             InitializeComponent();
             admin = new Administrador();
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -32,15 +36,36 @@ namespace Frontend
 
         private void RegistroCurso_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'uITIDataSet.Ciclo' Puede moverla o quitarla según sea necesario.
-            this.cicloTableAdapter.Fill(this.uITIDataSet.Ciclo);
-            // TODO: esta línea de código carga datos en la tabla 'uITIDataSet.Carrera' Puede moverla o quitarla según sea necesario.
-            this.carreraTableAdapter.Fill(this.uITIDataSet.Carrera);
+           
 
         }
 
-        private void btnAgregarCurso_Click(object sender, EventArgs e)
+        public void btnAgregarCurso_Click(object sender, EventArgs e)
         {
+
+            int IdCarreraSeleccionado = (int)comboBoxCarrera.SelectedValue;
+            int IdCicloSeleccionado = (int)comboboxCiclo.SelectedValue;
+            int IdJornadaSeleccionado = (int)comboBoxJornada.SelectedValue;
+            int IdSeccionSeleccionado = (int)comboBoxSeccion.SelectedValue;
+
+            Backend.Curso curso = new Backend.Curso
+            {
+                Carrera = new Carrera { IdCarrera = IdCarreraSeleccionado },
+                Ciclo = new Ciclo { IdCiclo = IdCicloSeleccionado },
+                Jornada = new Jornada { IdJornada = IdJornadaSeleccionado },
+                Seccion = new Seccion { IdSeccion = IdSeccionSeleccionado }
+            };
+
+            CursoDAL dal = new CursoDAL();
+            if (dal.InsertCurso(curso)) 
+            {
+                MessageBox.Show("Asignación guardada correctamente");
+            }
+            else
+            {
+                MessageBox.Show("Hubo un error al guardar la asignación");
+            }
+
 
         }
 
@@ -48,6 +73,21 @@ namespace Frontend
         {
             admin.Show();
             Close();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void comboBoxHoraInicio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxCarrera_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
