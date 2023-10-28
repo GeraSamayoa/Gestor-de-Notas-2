@@ -68,10 +68,10 @@ namespace Frontend
             carrera.Estatus = Convert.ToChar(comboBoxEstatus.Text);
 
             //Asignacion de valores Ciclo
-            ciclo.TipoCiclo = textBoxCiclo.Text;
+            ciclo.TipoCiclo = comboBoxCiclo.Text;
 
             //Asignacion de valores Jornada
-            jornada.TipoJornada = textBoxJornada.Text;
+            jornada.TipoJornada = comboBoxJornada.Text;
 
             //asignacion de valores Periodo
             periodo.TipoPeriodo = textBoxPeriodo.Text;
@@ -110,6 +110,11 @@ namespace Frontend
         }
 
         private void dgvCarrera_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void comboBoxJornada_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

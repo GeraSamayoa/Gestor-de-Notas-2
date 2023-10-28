@@ -58,7 +58,7 @@
             this.label2.Location = new System.Drawing.Point(338, 184);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(163, 29);
+            this.label2.Size = new System.Drawing.Size(207, 37);
             this.label2.TabIndex = 10;
             this.label2.Text = "Bienvenido";
             // 
@@ -71,7 +71,7 @@
             this.label1.Location = new System.Drawing.Point(327, 128);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(183, 40);
+            this.label1.Size = new System.Drawing.Size(232, 50);
             this.label1.TabIndex = 9;
             this.label1.Text = "Estudiante";
             // 
@@ -130,10 +130,11 @@
             this.btnSalirEstudiante.TabIndex = 40;
             this.btnSalirEstudiante.Text = "Salir";
             this.btnSalirEstudiante.UseVisualStyleBackColor = false;
+            this.btnSalirEstudiante.Click += new System.EventHandler(this.btnSalirEstudiante_Click);
             // 
             // EstudianteMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(966, 413);

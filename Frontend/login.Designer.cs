@@ -39,6 +39,7 @@
             this.btnIniciarSesion = new System.Windows.Forms.Button();
             this.cmbTipoUsuario = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnSalirLogin = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonRegDocente
@@ -53,7 +54,7 @@
             this.buttonRegDocente.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRegDocente.ForeColor = System.Drawing.Color.White;
             this.buttonRegDocente.Location = new System.Drawing.Point(33, 60);
-            this.buttonRegDocente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonRegDocente.Margin = new System.Windows.Forms.Padding(4);
             this.buttonRegDocente.Name = "buttonRegDocente";
             this.buttonRegDocente.Size = new System.Drawing.Size(235, 84);
             this.buttonRegDocente.TabIndex = 0;
@@ -73,7 +74,7 @@
             this.buttonRegEstudiante.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRegEstudiante.ForeColor = System.Drawing.Color.White;
             this.buttonRegEstudiante.Location = new System.Drawing.Point(33, 204);
-            this.buttonRegEstudiante.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonRegEstudiante.Margin = new System.Windows.Forms.Padding(4);
             this.buttonRegEstudiante.Name = "buttonRegEstudiante";
             this.buttonRegEstudiante.Size = new System.Drawing.Size(235, 84);
             this.buttonRegEstudiante.TabIndex = 1;
@@ -93,7 +94,7 @@
             this.buttonAdmin.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAdmin.ForeColor = System.Drawing.Color.White;
             this.buttonAdmin.Location = new System.Drawing.Point(33, 338);
-            this.buttonAdmin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonAdmin.Margin = new System.Windows.Forms.Padding(4);
             this.buttonAdmin.Name = "buttonAdmin";
             this.buttonAdmin.Size = new System.Drawing.Size(235, 84);
             this.buttonAdmin.TabIndex = 2;
@@ -119,7 +120,7 @@
             this.txtUsuarioLogin.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.txtUsuarioLogin.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuarioLogin.Location = new System.Drawing.Point(336, 233);
-            this.txtUsuarioLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsuarioLogin.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuarioLogin.Name = "txtUsuarioLogin";
             this.txtUsuarioLogin.Size = new System.Drawing.Size(549, 29);
             this.txtUsuarioLogin.TabIndex = 4;
@@ -129,7 +130,7 @@
             this.txtContrasenaLogin.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.txtContrasenaLogin.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContrasenaLogin.Location = new System.Drawing.Point(336, 311);
-            this.txtContrasenaLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtContrasenaLogin.Margin = new System.Windows.Forms.Padding(4);
             this.txtContrasenaLogin.Name = "txtContrasenaLogin";
             this.txtContrasenaLogin.Size = new System.Drawing.Size(549, 29);
             this.txtContrasenaLogin.TabIndex = 5;
@@ -171,7 +172,7 @@
             this.btnIniciarSesion.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIniciarSesion.ForeColor = System.Drawing.Color.White;
             this.btnIniciarSesion.Location = new System.Drawing.Point(897, 480);
-            this.btnIniciarSesion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnIniciarSesion.Margin = new System.Windows.Forms.Padding(4);
             this.btnIniciarSesion.Name = "btnIniciarSesion";
             this.btnIniciarSesion.Size = new System.Drawing.Size(127, 38);
             this.btnIniciarSesion.TabIndex = 8;
@@ -203,12 +204,32 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "Seleccione (Estudiante/Docente)";
             // 
+            // btnSalirLogin
+            // 
+            this.btnSalirLogin.BackColor = System.Drawing.Color.SlateGray;
+            this.btnSalirLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSalirLogin.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnSalirLogin.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray;
+            this.btnSalirLogin.FlatAppearance.BorderSize = 0;
+            this.btnSalirLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateGray;
+            this.btnSalirLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSalirLogin.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalirLogin.ForeColor = System.Drawing.Color.White;
+            this.btnSalirLogin.Location = new System.Drawing.Point(85, 476);
+            this.btnSalirLogin.Name = "btnSalirLogin";
+            this.btnSalirLogin.Size = new System.Drawing.Size(122, 42);
+            this.btnSalirLogin.TabIndex = 41;
+            this.btnSalirLogin.Text = "Salir";
+            this.btnSalirLogin.UseVisualStyleBackColor = false;
+            this.btnSalirLogin.Click += new System.EventHandler(this.btnSalirLogin_Click);
+            // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.btnSalirLogin);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.cmbTipoUsuario);
             this.Controls.Add(this.btnIniciarSesion);
@@ -221,7 +242,7 @@
             this.Controls.Add(this.buttonRegEstudiante);
             this.Controls.Add(this.buttonRegDocente);
             this.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "login";
             this.Text = "login";
             this.ResumeLayout(false);
@@ -242,5 +263,6 @@
         private System.Windows.Forms.Button btnIniciarSesion;
         private System.Windows.Forms.ComboBox cmbTipoUsuario;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnSalirLogin;
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BoletaCalificaciones));
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -36,12 +37,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.comboBoxCurso = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.uITIDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.uITIDataSet = new Frontend.UITIDataSet();
             this.label3 = new System.Windows.Forms.Label();
             this.dateTimePickerBoleta = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.txtFechaBoleta = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uITIDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uITIDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -53,7 +58,7 @@
             this.label1.Location = new System.Drawing.Point(295, 94);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(384, 40);
+            this.label1.Size = new System.Drawing.Size(488, 50);
             this.label1.TabIndex = 2;
             this.label1.Text = "\"Boleta Calificaciones\"";
             // 
@@ -103,6 +108,7 @@
             this.btnSiguienteDocente.TabIndex = 23;
             this.btnSiguienteDocente.Text = "Salir";
             this.btnSiguienteDocente.UseVisualStyleBackColor = false;
+            this.btnSiguienteDocente.Click += new System.EventHandler(this.btnSiguienteDocente_Click);
             // 
             // label2
             // 
@@ -110,7 +116,7 @@
             this.label2.Location = new System.Drawing.Point(123, 266);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 18);
+            this.label2.Size = new System.Drawing.Size(100, 23);
             this.label2.TabIndex = 32;
             this.label2.Text = "N. de Carné";
             // 
@@ -120,17 +126,30 @@
             this.comboBoxCurso.FormattingEnabled = true;
             this.comboBoxCurso.Location = new System.Drawing.Point(126, 309);
             this.comboBoxCurso.Name = "comboBoxCurso";
-            this.comboBoxCurso.Size = new System.Drawing.Size(304, 26);
+            this.comboBoxCurso.Size = new System.Drawing.Size(304, 29);
             this.comboBoxCurso.TabIndex = 41;
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.DataSource = this.uITIDataSetBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(126, 362);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(611, 230);
             this.dataGridView1.TabIndex = 42;
+            // 
+            // uITIDataSetBindingSource
+            // 
+            this.uITIDataSetBindingSource.DataSource = this.uITIDataSet;
+            this.uITIDataSetBindingSource.Position = 0;
+            // 
+            // uITIDataSet
+            // 
+            this.uITIDataSet.DataSetName = "UITIDataSet";
+            this.uITIDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label3
             // 
@@ -138,7 +157,7 @@
             this.label3.Location = new System.Drawing.Point(459, 177);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 18);
+            this.label3.Size = new System.Drawing.Size(107, 23);
             this.label3.TabIndex = 43;
             this.label3.Text = "Fecha Boleta";
             // 
@@ -146,7 +165,7 @@
             // 
             this.dateTimePickerBoleta.Location = new System.Drawing.Point(462, 209);
             this.dateTimePickerBoleta.Name = "dateTimePickerBoleta";
-            this.dateTimePickerBoleta.Size = new System.Drawing.Size(260, 25);
+            this.dateTimePickerBoleta.Size = new System.Drawing.Size(260, 29);
             this.dateTimePickerBoleta.TabIndex = 44;
             // 
             // label4
@@ -155,7 +174,7 @@
             this.label4.Location = new System.Drawing.Point(123, 177);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 18);
+            this.label4.Size = new System.Drawing.Size(101, 23);
             this.label4.TabIndex = 45;
             this.label4.Text = "N. de Boleta";
             // 
@@ -164,12 +183,12 @@
             this.txtFechaBoleta.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.txtFechaBoleta.Location = new System.Drawing.Point(126, 211);
             this.txtFechaBoleta.Name = "txtFechaBoleta";
-            this.txtFechaBoleta.Size = new System.Drawing.Size(291, 25);
+            this.txtFechaBoleta.Size = new System.Drawing.Size(291, 29);
             this.txtFechaBoleta.TabIndex = 46;
             // 
             // BoletaCalificaciones
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(1067, 623);
@@ -190,6 +209,8 @@
             this.Text = "BoletaCalificaciones";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uITIDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uITIDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -208,5 +229,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePickerBoleta;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtFechaBoleta;
+        private System.Windows.Forms.BindingSource uITIDataSetBindingSource;
+        private UITIDataSet uITIDataSet;
     }
 }

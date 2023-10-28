@@ -115,5 +115,16 @@ namespace Frontend
             this.docenteTableAdapter.Fill(this.uITIDataSet.Docente);*/
 
         }
+
+        private void btnSalirAsigDocente_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("¿Estás seguro de que deseas salir?", "Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                MessageBox.Show("Gracias por usar el sistema");
+                this.Close();
+            }
+        }
     }
 }
