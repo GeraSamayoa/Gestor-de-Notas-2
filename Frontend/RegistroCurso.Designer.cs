@@ -37,7 +37,7 @@
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnAgregarCurso = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvCurso = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBoxCarrera = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -52,20 +52,30 @@
             this.comboBoxSeccion = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBoxFechaFinal = new System.Windows.Forms.TextBox();
-            this.textBoxFechaInicio = new System.Windows.Forms.TextBox();
             this.uITIDataSet = new Frontend.UITIDataSet();
             this.uITIDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.carreraBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.carreraTableAdapter = new Frontend.UITIDataSetTableAdapters.CarreraTableAdapter();
             this.cicloBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cicloTableAdapter = new Frontend.UITIDataSetTableAdapters.CicloTableAdapter();
+            this.label10 = new System.Windows.Forms.Label();
+            this.comboBoxHoraFinal = new System.Windows.Forms.ComboBox();
+            this.comboBoxHoraInicio = new System.Windows.Forms.ComboBox();
+            this.jornadaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.jornadaTableAdapter = new Frontend.UITIDataSetTableAdapters.JornadaTableAdapter();
+            this.seccionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.seccionTableAdapter = new Frontend.UITIDataSetTableAdapters.SeccionTableAdapter();
+            this.universidadBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.universidadTableAdapter = new Frontend.UITIDataSetTableAdapters.UniversidadTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCurso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uITIDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uITIDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.carreraBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cicloBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jornadaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seccionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.universidadBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -176,13 +186,14 @@
             this.label9.Size = new System.Drawing.Size(0, 13);
             this.label9.TabIndex = 79;
             // 
-            // dataGridView1
+            // dgvCurso
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(43, 252);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(707, 155);
-            this.dataGridView1.TabIndex = 78;
+            this.dgvCurso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCurso.Location = new System.Drawing.Point(43, 252);
+            this.dgvCurso.Name = "dgvCurso";
+            this.dgvCurso.Size = new System.Drawing.Size(707, 155);
+            this.dgvCurso.TabIndex = 78;
+            this.dgvCurso.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label3
             // 
@@ -207,6 +218,7 @@
             this.comboBoxCarrera.Size = new System.Drawing.Size(365, 21);
             this.comboBoxCarrera.TabIndex = 76;
             this.comboBoxCarrera.ValueMember = "IdCarrera";
+            this.comboBoxCarrera.SelectedIndexChanged += new System.EventHandler(this.comboBoxCarrera_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -222,14 +234,15 @@
             // comboBoxUniversidad
             // 
             this.comboBoxUniversidad.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.comboBoxUniversidad.DataSource = this.universidadBindingSource;
+            this.comboBoxUniversidad.DisplayMember = "NombreUniversidad";
             this.comboBoxUniversidad.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.comboBoxUniversidad.FormattingEnabled = true;
-            this.comboBoxUniversidad.Items.AddRange(new object[] {
-            "Central"});
             this.comboBoxUniversidad.Location = new System.Drawing.Point(240, 205);
             this.comboBoxUniversidad.Name = "comboBoxUniversidad";
             this.comboBoxUniversidad.Size = new System.Drawing.Size(166, 21);
             this.comboBoxUniversidad.TabIndex = 74;
+            this.comboBoxUniversidad.ValueMember = "IdUniversidad";
             // 
             // label6
             // 
@@ -258,16 +271,15 @@
             // comboBoxJornada
             // 
             this.comboBoxJornada.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.comboBoxJornada.DataSource = this.jornadaBindingSource;
+            this.comboBoxJornada.DisplayMember = "Tipo";
             this.comboBoxJornada.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.comboBoxJornada.FormattingEnabled = true;
-            this.comboBoxJornada.Items.AddRange(new object[] {
-            "Lunes a Viernes",
-            "Sabado",
-            "Domingo"});
             this.comboBoxJornada.Location = new System.Drawing.Point(240, 152);
             this.comboBoxJornada.Name = "comboBoxJornada";
             this.comboBoxJornada.Size = new System.Drawing.Size(166, 21);
             this.comboBoxJornada.TabIndex = 71;
+            this.comboBoxJornada.ValueMember = "IdJornada";
             // 
             // Jornada
             // 
@@ -319,15 +331,15 @@
             // comboBoxSeccion
             // 
             this.comboBoxSeccion.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.comboBoxSeccion.DataSource = this.seccionBindingSource;
+            this.comboBoxSeccion.DisplayMember = "Tipo";
             this.comboBoxSeccion.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.comboBoxSeccion.FormattingEnabled = true;
-            this.comboBoxSeccion.Items.AddRange(new object[] {
-            "A",
-            "B"});
             this.comboBoxSeccion.Location = new System.Drawing.Point(431, 157);
             this.comboBoxSeccion.Name = "comboBoxSeccion";
             this.comboBoxSeccion.Size = new System.Drawing.Size(166, 21);
             this.comboBoxSeccion.TabIndex = 85;
+            this.comboBoxSeccion.ValueMember = "IdSeccion";
             // 
             // label5
             // 
@@ -350,24 +362,6 @@
             this.label8.Size = new System.Drawing.Size(91, 18);
             this.label8.TabIndex = 88;
             this.label8.Text = "Hora de Inicio:";
-            // 
-            // textBoxFechaFinal
-            // 
-            this.textBoxFechaFinal.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBoxFechaFinal.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxFechaFinal.Location = new System.Drawing.Point(612, 102);
-            this.textBoxFechaFinal.Name = "textBoxFechaFinal";
-            this.textBoxFechaFinal.Size = new System.Drawing.Size(166, 25);
-            this.textBoxFechaFinal.TabIndex = 89;
-            // 
-            // textBoxFechaInicio
-            // 
-            this.textBoxFechaInicio.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBoxFechaInicio.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxFechaInicio.Location = new System.Drawing.Point(431, 103);
-            this.textBoxFechaInicio.Name = "textBoxFechaInicio";
-            this.textBoxFechaInicio.Size = new System.Drawing.Size(166, 25);
-            this.textBoxFechaInicio.TabIndex = 90;
             // 
             // uITIDataSet
             // 
@@ -397,14 +391,122 @@
             // 
             this.cicloTableAdapter.ClearBeforeFill = true;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(564, 121);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(0, 13);
+            this.label10.TabIndex = 91;
+            // 
+            // comboBoxHoraFinal
+            // 
+            this.comboBoxHoraFinal.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.comboBoxHoraFinal.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.comboBoxHoraFinal.FormattingEnabled = true;
+            this.comboBoxHoraFinal.Items.AddRange(new object[] {
+            "00:00:00",
+            "01:00:00",
+            "02:00:00",
+            "03:00:00",
+            "04:00:00",
+            "05:00:00",
+            "06:00:00",
+            "07:00:00",
+            "08:00:00",
+            "09:00:00",
+            "10:00:00",
+            "11:00:00",
+            "12:00:00",
+            "13:00:00",
+            "14:00:00",
+            "15:00:00",
+            "16:00:00",
+            "17:00:00",
+            "18:00:00",
+            "19:00:00",
+            "20:00:00",
+            "21:00:00",
+            "22:00:00",
+            "23:00:00"});
+            this.comboBoxHoraFinal.Location = new System.Drawing.Point(612, 102);
+            this.comboBoxHoraFinal.Name = "comboBoxHoraFinal";
+            this.comboBoxHoraFinal.Size = new System.Drawing.Size(166, 21);
+            this.comboBoxHoraFinal.TabIndex = 90;
+            // 
+            // comboBoxHoraInicio
+            // 
+            this.comboBoxHoraInicio.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.comboBoxHoraInicio.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.comboBoxHoraInicio.FormattingEnabled = true;
+            this.comboBoxHoraInicio.Items.AddRange(new object[] {
+            "00:00:00",
+            "01:00:00",
+            "02:00:00",
+            "03:00:00",
+            "04:00:00",
+            "05:00:00",
+            "06:00:00",
+            "07:00:00",
+            "08:00:00",
+            "09:00:00",
+            "10:00:00",
+            "11:00:00",
+            "12:00:00",
+            "13:00:00",
+            "14:00:00",
+            "15:00:00",
+            "16:00:00",
+            "17:00:00",
+            "18:00:00",
+            "19:00:00",
+            "20:00:00",
+            "21:00:00",
+            "22:00:00",
+            "23:00:00"});
+            this.comboBoxHoraInicio.Location = new System.Drawing.Point(431, 102);
+            this.comboBoxHoraInicio.Name = "comboBoxHoraInicio";
+            this.comboBoxHoraInicio.Size = new System.Drawing.Size(166, 21);
+            this.comboBoxHoraInicio.TabIndex = 89;
+            this.comboBoxHoraInicio.SelectedIndexChanged += new System.EventHandler(this.comboBoxHoraInicio_SelectedIndexChanged);
+            // 
+            // jornadaBindingSource
+            // 
+            this.jornadaBindingSource.DataMember = "Jornada";
+            this.jornadaBindingSource.DataSource = this.uITIDataSet;
+            // 
+            // jornadaTableAdapter
+            // 
+            this.jornadaTableAdapter.ClearBeforeFill = true;
+            // 
+            // seccionBindingSource
+            // 
+            this.seccionBindingSource.DataMember = "Seccion";
+            this.seccionBindingSource.DataSource = this.uITIDataSet;
+            // 
+            // seccionTableAdapter
+            // 
+            this.seccionTableAdapter.ClearBeforeFill = true;
+            // 
+            // universidadBindingSource
+            // 
+            this.universidadBindingSource.DataMember = "Universidad";
+            this.universidadBindingSource.DataSource = this.uITIDataSet;
+            // 
+            // universidadTableAdapter
+            // 
+            this.universidadTableAdapter.ClearBeforeFill = true;
+            // 
             // RegistroCurso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(800, 470);
-            this.Controls.Add(this.textBoxFechaInicio);
-            this.Controls.Add(this.textBoxFechaFinal);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.comboBoxHoraFinal);
+            this.Controls.Add(this.comboBoxHoraInicio);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.comboBoxSeccion);
@@ -414,7 +516,7 @@
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnAgregarCurso);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvCurso);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBoxCarrera);
             this.Controls.Add(this.label7);
@@ -431,11 +533,14 @@
             this.Text = "RegistroCurso";
             this.Load += new System.EventHandler(this.RegistroCurso_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCurso)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uITIDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uITIDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.carreraBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cicloBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jornadaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seccionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.universidadBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -450,7 +555,7 @@
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnAgregarCurso;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvCurso;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBoxCarrera;
         private System.Windows.Forms.Label label7;
@@ -465,13 +570,20 @@
         private System.Windows.Forms.ComboBox comboBoxSeccion;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBoxFechaFinal;
-        private System.Windows.Forms.TextBox textBoxFechaInicio;
         private System.Windows.Forms.BindingSource uITIDataSetBindingSource;
         private UITIDataSet uITIDataSet;
         private System.Windows.Forms.BindingSource carreraBindingSource;
         private UITIDataSetTableAdapters.CarreraTableAdapter carreraTableAdapter;
         private System.Windows.Forms.BindingSource cicloBindingSource;
         private UITIDataSetTableAdapters.CicloTableAdapter cicloTableAdapter;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox comboBoxHoraFinal;
+        private System.Windows.Forms.ComboBox comboBoxHoraInicio;
+        private System.Windows.Forms.BindingSource jornadaBindingSource;
+        private UITIDataSetTableAdapters.JornadaTableAdapter jornadaTableAdapter;
+        private System.Windows.Forms.BindingSource seccionBindingSource;
+        private UITIDataSetTableAdapters.SeccionTableAdapter seccionTableAdapter;
+        private System.Windows.Forms.BindingSource universidadBindingSource;
+        private UITIDataSetTableAdapters.UniversidadTableAdapter universidadTableAdapter;
     }
 }

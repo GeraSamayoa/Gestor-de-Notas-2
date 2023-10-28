@@ -90,6 +90,7 @@
             this.txtNombreCarrera.Name = "txtNombreCarrera";
             this.txtNombreCarrera.Size = new System.Drawing.Size(368, 25);
             this.txtNombreCarrera.TabIndex = 44;
+            this.txtNombreCarrera.TextChanged += new System.EventHandler(this.txtNombreCarrera_TextChanged);
             // 
             // label4
             // 
