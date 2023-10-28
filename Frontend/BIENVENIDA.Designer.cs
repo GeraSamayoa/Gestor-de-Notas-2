@@ -31,6 +31,7 @@
             System.Windows.Forms.Button btnSiguiente;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BIENVENIDA));
             this.label1 = new System.Windows.Forms.Label();
+            this.btnSalirBienvenida = new System.Windows.Forms.Button();
             btnSiguiente = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -59,18 +60,39 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(40, 240);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(808, 138);
+            this.label1.Size = new System.Drawing.Size(998, 170);
             this.label1.TabIndex = 0;
             this.label1.Text = "\"Universidad Interamericana \r\nde Tecnología e Innovación\"";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // btnSalirBienvenida
+            // 
+            this.btnSalirBienvenida.BackColor = System.Drawing.Color.SlateGray;
+            this.btnSalirBienvenida.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSalirBienvenida.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnSalirBienvenida.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray;
+            this.btnSalirBienvenida.FlatAppearance.BorderSize = 0;
+            this.btnSalirBienvenida.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateGray;
+            this.btnSalirBienvenida.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSalirBienvenida.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalirBienvenida.ForeColor = System.Drawing.Color.White;
+            this.btnSalirBienvenida.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSalirBienvenida.Location = new System.Drawing.Point(55, 530);
+            this.btnSalirBienvenida.Name = "btnSalirBienvenida";
+            this.btnSalirBienvenida.Size = new System.Drawing.Size(122, 47);
+            this.btnSalirBienvenida.TabIndex = 42;
+            this.btnSalirBienvenida.Text = "Salir";
+            this.btnSalirBienvenida.UseVisualStyleBackColor = false;
+            this.btnSalirBienvenida.Click += new System.EventHandler(this.btnSalirBienvenida_Click);
+            // 
             // BIENVENIDA
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(860, 600);
+            this.Controls.Add(this.btnSalirBienvenida);
             this.Controls.Add(btnSiguiente);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -85,6 +107,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnSalirBienvenida;
     }
 }
 

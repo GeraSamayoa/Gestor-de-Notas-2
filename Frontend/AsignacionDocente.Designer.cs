@@ -34,9 +34,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBoxSeccionDocente = new System.Windows.Forms.ComboBox();
+            this.seccionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.uITIDataSet = new Frontend.UITIDataSet();
             this.comboBoxCarreraDocente = new System.Windows.Forms.ComboBox();
+            this.carreraBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBoxJornadaDocente = new System.Windows.Forms.ComboBox();
+            this.jornadaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBoxCursoDocente = new System.Windows.Forms.ComboBox();
+            this.cursoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnActualizarAsigDocente = new System.Windows.Forms.Button();
             this.btnAgregarAsigDocente = new System.Windows.Forms.Button();
             this.dgvAsigEstudiante = new System.Windows.Forms.DataGridView();
@@ -51,25 +56,20 @@
             this.btnSalirAsigDocente = new System.Windows.Forms.Button();
             this.btnEliminarAsigDocente = new System.Windows.Forms.Button();
             this.comboBoxIDdocente = new System.Windows.Forms.ComboBox();
-            this.uITIDataSet = new Frontend.UITIDataSet();
             this.docenteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.docenteTableAdapter = new Frontend.UITIDataSetTableAdapters.DocenteTableAdapter();
-            this.cursoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cursoTableAdapter = new Frontend.UITIDataSetTableAdapters.CursoTableAdapter();
-            this.carreraBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.carreraTableAdapter = new Frontend.UITIDataSetTableAdapters.CarreraTableAdapter();
-            this.jornadaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.jornadaTableAdapter = new Frontend.UITIDataSetTableAdapters.JornadaTableAdapter();
-            this.seccionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.seccionTableAdapter = new Frontend.UITIDataSetTableAdapters.SeccionTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAsigEstudiante)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seccionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uITIDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.docenteBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.carreraBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jornadaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.seccionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAsigEstudiante)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.docenteBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -78,7 +78,7 @@
             this.label4.Location = new System.Drawing.Point(-51, 305);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 18);
+            this.label4.Size = new System.Drawing.Size(72, 23);
             this.label4.TabIndex = 48;
             this.label4.Text = "Carrera:";
             // 
@@ -88,7 +88,7 @@
             this.label3.Location = new System.Drawing.Point(-51, 407);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 18);
+            this.label3.Size = new System.Drawing.Size(75, 23);
             this.label3.TabIndex = 47;
             this.label3.Text = "Jornada:";
             // 
@@ -101,7 +101,7 @@
             this.label1.Location = new System.Drawing.Point(144, -39);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(386, 40);
+            this.label1.Size = new System.Drawing.Size(489, 50);
             this.label1.TabIndex = 44;
             this.label1.Text = "\"Asignación de Clases\"";
             // 
@@ -113,9 +113,19 @@
             this.comboBoxSeccionDocente.FormattingEnabled = true;
             this.comboBoxSeccionDocente.Location = new System.Drawing.Point(480, 186);
             this.comboBoxSeccionDocente.Name = "comboBoxSeccionDocente";
-            this.comboBoxSeccionDocente.Size = new System.Drawing.Size(215, 26);
+            this.comboBoxSeccionDocente.Size = new System.Drawing.Size(215, 29);
             this.comboBoxSeccionDocente.TabIndex = 64;
             this.comboBoxSeccionDocente.ValueMember = "IdSeccion";
+            // 
+            // seccionBindingSource
+            // 
+            this.seccionBindingSource.DataMember = "Seccion";
+            this.seccionBindingSource.DataSource = this.uITIDataSet;
+            // 
+            // uITIDataSet
+            // 
+            this.uITIDataSet.DataSetName = "UITIDataSet";
+            this.uITIDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // comboBoxCarreraDocente
             // 
@@ -125,9 +135,14 @@
             this.comboBoxCarreraDocente.FormattingEnabled = true;
             this.comboBoxCarreraDocente.Location = new System.Drawing.Point(98, 340);
             this.comboBoxCarreraDocente.Name = "comboBoxCarreraDocente";
-            this.comboBoxCarreraDocente.Size = new System.Drawing.Size(304, 26);
+            this.comboBoxCarreraDocente.Size = new System.Drawing.Size(304, 29);
             this.comboBoxCarreraDocente.TabIndex = 63;
             this.comboBoxCarreraDocente.ValueMember = "IdCarrera";
+            // 
+            // carreraBindingSource
+            // 
+            this.carreraBindingSource.DataMember = "Carrera";
+            this.carreraBindingSource.DataSource = this.uITIDataSet;
             // 
             // comboBoxJornadaDocente
             // 
@@ -137,9 +152,14 @@
             this.comboBoxJornadaDocente.FormattingEnabled = true;
             this.comboBoxJornadaDocente.Location = new System.Drawing.Point(98, 409);
             this.comboBoxJornadaDocente.Name = "comboBoxJornadaDocente";
-            this.comboBoxJornadaDocente.Size = new System.Drawing.Size(304, 26);
+            this.comboBoxJornadaDocente.Size = new System.Drawing.Size(304, 29);
             this.comboBoxJornadaDocente.TabIndex = 62;
             this.comboBoxJornadaDocente.ValueMember = "IdJornada";
+            // 
+            // jornadaBindingSource
+            // 
+            this.jornadaBindingSource.DataMember = "Jornada";
+            this.jornadaBindingSource.DataSource = this.uITIDataSet;
             // 
             // comboBoxCursoDocente
             // 
@@ -149,9 +169,14 @@
             this.comboBoxCursoDocente.FormattingEnabled = true;
             this.comboBoxCursoDocente.Location = new System.Drawing.Point(98, 264);
             this.comboBoxCursoDocente.Name = "comboBoxCursoDocente";
-            this.comboBoxCursoDocente.Size = new System.Drawing.Size(304, 26);
+            this.comboBoxCursoDocente.Size = new System.Drawing.Size(304, 29);
             this.comboBoxCursoDocente.TabIndex = 61;
             this.comboBoxCursoDocente.ValueMember = "IdCurso";
+            // 
+            // cursoBindingSource
+            // 
+            this.cursoBindingSource.DataMember = "Curso";
+            this.cursoBindingSource.DataSource = this.uITIDataSet;
             // 
             // btnActualizarAsigDocente
             // 
@@ -207,7 +232,7 @@
             this.label9.Location = new System.Drawing.Point(452, 380);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(0, 18);
+            this.label9.Size = new System.Drawing.Size(0, 23);
             this.label9.TabIndex = 56;
             // 
             // label8
@@ -216,7 +241,7 @@
             this.label8.Location = new System.Drawing.Point(477, 149);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(59, 18);
+            this.label8.Size = new System.Drawing.Size(74, 23);
             this.label8.TabIndex = 55;
             this.label8.Text = "Sección:";
             // 
@@ -226,7 +251,7 @@
             this.label5.Location = new System.Drawing.Point(95, 227);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(124, 18);
+            this.label5.Size = new System.Drawing.Size(158, 23);
             this.label5.TabIndex = 54;
             this.label5.Text = "Cursos Disponibles:";
             // 
@@ -236,7 +261,7 @@
             this.label2.Location = new System.Drawing.Point(95, 306);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 18);
+            this.label2.Size = new System.Drawing.Size(72, 23);
             this.label2.TabIndex = 53;
             this.label2.Text = "Carrera:";
             // 
@@ -246,7 +271,7 @@
             this.label6.Location = new System.Drawing.Point(95, 380);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(58, 18);
+            this.label6.Size = new System.Drawing.Size(75, 23);
             this.label6.TabIndex = 52;
             this.label6.Text = "Jornada:";
             // 
@@ -256,7 +281,7 @@
             this.label7.Location = new System.Drawing.Point(95, 155);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(104, 18);
+            this.label7.Size = new System.Drawing.Size(133, 23);
             this.label7.TabIndex = 51;
             this.label7.Text = "Código Docente:";
             // 
@@ -280,7 +305,7 @@
             this.label10.Location = new System.Drawing.Point(241, 58);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(386, 40);
+            this.label10.Size = new System.Drawing.Size(489, 50);
             this.label10.TabIndex = 49;
             this.label10.Text = "\"Asignación de Clases\"";
             // 
@@ -301,6 +326,7 @@
             this.btnSalirAsigDocente.TabIndex = 66;
             this.btnSalirAsigDocente.Text = "Salir";
             this.btnSalirAsigDocente.UseVisualStyleBackColor = false;
+            this.btnSalirAsigDocente.Click += new System.EventHandler(this.btnSalirAsigDocente_Click);
             // 
             // btnEliminarAsigDocente
             // 
@@ -328,14 +354,9 @@
             this.comboBoxIDdocente.FormattingEnabled = true;
             this.comboBoxIDdocente.Location = new System.Drawing.Point(98, 186);
             this.comboBoxIDdocente.Name = "comboBoxIDdocente";
-            this.comboBoxIDdocente.Size = new System.Drawing.Size(304, 26);
+            this.comboBoxIDdocente.Size = new System.Drawing.Size(304, 29);
             this.comboBoxIDdocente.TabIndex = 67;
             this.comboBoxIDdocente.ValueMember = "IdDocente";
-            // 
-            // uITIDataSet
-            // 
-            this.uITIDataSet.DataSetName = "UITIDataSet";
-            this.uITIDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // docenteBindingSource
             // 
@@ -346,37 +367,17 @@
             // 
             this.docenteTableAdapter.ClearBeforeFill = true;
             // 
-            // cursoBindingSource
-            // 
-            this.cursoBindingSource.DataMember = "Curso";
-            this.cursoBindingSource.DataSource = this.uITIDataSet;
-            // 
             // cursoTableAdapter
             // 
             this.cursoTableAdapter.ClearBeforeFill = true;
-            // 
-            // carreraBindingSource
-            // 
-            this.carreraBindingSource.DataMember = "Carrera";
-            this.carreraBindingSource.DataSource = this.uITIDataSet;
             // 
             // carreraTableAdapter
             // 
             this.carreraTableAdapter.ClearBeforeFill = true;
             // 
-            // jornadaBindingSource
-            // 
-            this.jornadaBindingSource.DataMember = "Jornada";
-            this.jornadaBindingSource.DataSource = this.uITIDataSet;
-            // 
             // jornadaTableAdapter
             // 
             this.jornadaTableAdapter.ClearBeforeFill = true;
-            // 
-            // seccionBindingSource
-            // 
-            this.seccionBindingSource.DataMember = "Seccion";
-            this.seccionBindingSource.DataSource = this.uITIDataSet;
             // 
             // seccionTableAdapter
             // 
@@ -384,7 +385,7 @@
             // 
             // AsignacionDocente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(1067, 658);
@@ -414,14 +415,14 @@
             this.Name = "AsignacionDocente";
             this.Text = "AsignacionDocente";
             this.Load += new System.EventHandler(this.AsignacionDocente_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAsigEstudiante)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seccionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uITIDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.docenteBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.carreraBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jornadaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.seccionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAsigEstudiante)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.docenteBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
