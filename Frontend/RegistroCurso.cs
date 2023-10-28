@@ -21,7 +21,7 @@ namespace Frontend
         {
             InitializeComponent();
             admin = new Administrador();
-
+            //cursoDAL = new CursoDAL(); 
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -54,23 +54,32 @@ namespace Frontend
 
         public void btnAgregarCurso_Click(object sender, EventArgs e)
         {
+            Curso curso1 = new Curso();
 
             int IdCarreraSeleccionado = (int)comboBoxCarrera.SelectedValue;
             int IdCicloSeleccionado = (int)comboboxCiclo.SelectedValue;
             int IdJornadaSeleccionado = (int)comboBoxJornada.SelectedValue;
             int IdSeccionSeleccionado = (int)comboBoxSeccion.SelectedValue;
 
+
+            //cursoDAL.InsertCurso(curso1);
+
             Backend.Curso curso = new Backend.Curso
             {
                 Carrera = new Carrera { IdCarrera = IdCarreraSeleccionado },
                 Ciclo = new Ciclo { IdCiclo = IdCicloSeleccionado },
                 Jornada = new Jornada { IdJornada = IdJornadaSeleccionado },
-                Seccion = new Seccion { IdSeccion = IdSeccionSeleccionado }
+                Seccion = new Seccion { IdSeccion = IdSeccionSeleccionado },
+              
             };
 
             CursoDAL dal = new CursoDAL();
+            curso.NombreCurso = txtNombreCurso.Text;
+            curso.HoraInicio = comboBoxHoraInicio.Text;
+            curso.HoraFinal = comboBoxHoraFinal.Text;
             if (dal.InsertCurso(curso)) 
             {
+
                 MessageBox.Show("Asignación guardada correctamente");
             }
             else
