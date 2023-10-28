@@ -47,10 +47,10 @@
             this.label9 = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBoxCiclo = new System.Windows.Forms.TextBox();
-            this.textBoxJornada = new System.Windows.Forms.TextBox();
             this.textBoxPeriodo = new System.Windows.Forms.TextBox();
             this.universidadTableAdapter = new Frontend.UITIDataSetTableAdapters.UniversidadTableAdapter();
+            this.comboBoxCiclo = new System.Windows.Forms.ComboBox();
+            this.comboBoxJornada = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.universidadBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uITIDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarrera)).BeginInit();
@@ -226,7 +226,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(179, 204);
+            this.label9.Location = new System.Drawing.Point(179, 199);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(0, 13);
@@ -262,29 +262,11 @@
             this.pictureBox1.TabIndex = 65;
             this.pictureBox1.TabStop = false;
             // 
-            // textBoxCiclo
-            // 
-            this.textBoxCiclo.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBoxCiclo.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCiclo.Location = new System.Drawing.Point(47, 192);
-            this.textBoxCiclo.Name = "textBoxCiclo";
-            this.textBoxCiclo.Size = new System.Drawing.Size(166, 25);
-            this.textBoxCiclo.TabIndex = 66;
-            // 
-            // textBoxJornada
-            // 
-            this.textBoxJornada.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBoxJornada.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxJornada.Location = new System.Drawing.Point(246, 192);
-            this.textBoxJornada.Name = "textBoxJornada";
-            this.textBoxJornada.Size = new System.Drawing.Size(166, 25);
-            this.textBoxJornada.TabIndex = 67;
-            // 
             // textBoxPeriodo
             // 
             this.textBoxPeriodo.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.textBoxPeriodo.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPeriodo.Location = new System.Drawing.Point(434, 192);
+            this.textBoxPeriodo.Location = new System.Drawing.Point(434, 193);
             this.textBoxPeriodo.Name = "textBoxPeriodo";
             this.textBoxPeriodo.Size = new System.Drawing.Size(166, 25);
             this.textBoxPeriodo.TabIndex = 68;
@@ -293,15 +275,52 @@
             // 
             this.universidadTableAdapter.ClearBeforeFill = true;
             // 
+            // comboBoxCiclo
+            // 
+            this.comboBoxCiclo.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.comboBoxCiclo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.comboBoxCiclo.FormattingEnabled = true;
+            this.comboBoxCiclo.Items.AddRange(new object[] {
+            "Primero",
+            "Segundo",
+            "Tercero",
+            "Cuarto",
+            "Quinto ",
+            "Sexto ",
+            "Septimo",
+            "Octavo",
+            "Noveno",
+            "Decimo"});
+            this.comboBoxCiclo.Location = new System.Drawing.Point(44, 195);
+            this.comboBoxCiclo.Name = "comboBoxCiclo";
+            this.comboBoxCiclo.Size = new System.Drawing.Size(166, 21);
+            this.comboBoxCiclo.TabIndex = 69;
+            // 
+            // comboBoxJornada
+            // 
+            this.comboBoxJornada.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.comboBoxJornada.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.comboBoxJornada.FormattingEnabled = true;
+            this.comboBoxJornada.Items.AddRange(new object[] {
+            "Plan Diario",
+            "Plan Sabado",
+            "Plan Domingo",
+            "Plan fin de semana"});
+            this.comboBoxJornada.Location = new System.Drawing.Point(246, 195);
+            this.comboBoxJornada.Name = "comboBoxJornada";
+            this.comboBoxJornada.Size = new System.Drawing.Size(166, 21);
+            this.comboBoxJornada.TabIndex = 70;
+            this.comboBoxJornada.SelectedIndexChanged += new System.EventHandler(this.comboBoxJornada_SelectedIndexChanged);
+            // 
             // RegistroCarrera
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(800, 475);
+            this.Controls.Add(this.comboBoxJornada);
+            this.Controls.Add(this.comboBoxCiclo);
             this.Controls.Add(this.textBoxPeriodo);
-            this.Controls.Add(this.textBoxJornada);
-            this.Controls.Add(this.textBoxCiclo);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEliminar);
@@ -346,11 +365,11 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBoxCiclo;
-        private System.Windows.Forms.TextBox textBoxJornada;
         private System.Windows.Forms.TextBox textBoxPeriodo;
         private UITIDataSet uITIDataSet;
         private System.Windows.Forms.BindingSource universidadBindingSource;
         private UITIDataSetTableAdapters.UniversidadTableAdapter universidadTableAdapter;
+        private System.Windows.Forms.ComboBox comboBoxCiclo;
+        private System.Windows.Forms.ComboBox comboBoxJornada;
     }
 }
