@@ -70,7 +70,7 @@ namespace Frontend
 
         private void btnAgregarAsigDocente_Click(object sender, EventArgs e)
         {
-
+                
                 int idDocenteSeleccionado = (int)comboBoxIDdocente.SelectedValue;
                 int idJornadaSeleccionada = (int)comboBoxJornadaDocente.SelectedValue;
                 int idCarreraSeleccionada = (int)comboBoxCarreraDocente.SelectedValue;

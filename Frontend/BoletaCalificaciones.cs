@@ -20,18 +20,12 @@ namespace Frontend
         private void CargarEstudiantes()
         {
             List<Estudiante> estudiantes = repositorio.ObtenerEstudiantes();
-            comboBoxEstudiantes.DataSource = estudiantes;
-            comboBoxEstudiantes.DisplayMember = "Nombre";
-            comboBoxEstudiantes.ValueMember = "NoCarne";
+ 
         }
 
         private void comboBoxEstudiantes_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBoxEstudiantes.SelectedValue != null && comboBoxEstudiantes.SelectedValue.GetType() != typeof(string))
-            {
-                int numeroCarne = Convert.ToInt32(comboBoxEstudiantes.SelectedValue);
-                CargarNotasDelEstudiante(numeroCarne);
-            }
+           
         }
 
         private void CargarNotasDelEstudiante(int numeroCarne)
@@ -53,11 +47,7 @@ namespace Frontend
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            if (comboBoxEstudiantes.SelectedValue != null && comboBoxEstudiantes.SelectedValue.GetType() != typeof(string))
-            {
-                int numeroCarne = Convert.ToInt32(comboBoxEstudiantes.SelectedValue);
-                CargarNotasDelEstudiante(numeroCarne);
-            }
+        
         }
 
         private void BoletaCalificaciones_Load(object sender, EventArgs e)

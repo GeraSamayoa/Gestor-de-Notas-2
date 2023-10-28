@@ -34,13 +34,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnSiguienteDocente = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBoxEstudiantes = new System.Windows.Forms.ComboBox();
+            this.estudianteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.uITIDataSet1 = new Frontend.UITIDataSet1();
             this.dvgCalificaciones = new System.Windows.Forms.DataGridView();
-            this.uITIDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.uITIDataSet = new Frontend.UITIDataSet();
-            this.registroNotasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.registroNotasTableAdapter = new Frontend.UITIDataSetTableAdapters.RegistroNotasTableAdapter();
             this.idRegistroNotaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idDocenteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idEstudianteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,21 +47,23 @@
             this.zonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.notaFinalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estatusAprobadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.registroNotasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.uITIDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.uITIDataSet = new Frontend.UITIDataSet();
+            this.registroNotasTableAdapter = new Frontend.UITIDataSetTableAdapters.RegistroNotasTableAdapter();
             this.fKIdRegistroNotaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reporteBoletaTableAdapter = new Frontend.UITIDataSetTableAdapters.ReporteBoletaTableAdapter();
             this.reporteBoletaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.uITIDataSet1 = new Frontend.UITIDataSet1();
-            this.estudianteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.estudianteTableAdapter = new Frontend.UITIDataSet1TableAdapters.EstudianteTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estudianteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uITIDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvgCalificaciones)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.registroNotasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uITIDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uITIDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.registroNotasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKIdRegistroNotaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reporteBoletaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uITIDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.estudianteBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -74,7 +72,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(117, 60);
+            this.label1.Location = new System.Drawing.Point(103, 122);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(577, 50);
@@ -85,7 +83,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(787, 13);
+            this.pictureBox1.Location = new System.Drawing.Point(915, 13);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(244, 248);
@@ -123,7 +121,7 @@
             this.btnSiguienteDocente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSiguienteDocente.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSiguienteDocente.ForeColor = System.Drawing.Color.White;
-            this.btnSiguienteDocente.Location = new System.Drawing.Point(854, 498);
+            this.btnSiguienteDocente.Location = new System.Drawing.Point(12, 13);
             this.btnSiguienteDocente.Name = "btnSiguienteDocente";
             this.btnSiguienteDocente.Size = new System.Drawing.Size(137, 55);
             this.btnSiguienteDocente.TabIndex = 23;
@@ -131,28 +129,15 @@
             this.btnSiguienteDocente.UseVisualStyleBackColor = false;
             this.btnSiguienteDocente.Click += new System.EventHandler(this.btnSiguienteDocente_Click);
             // 
-            // label2
+            // estudianteBindingSource
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(123, 266);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 23);
-            this.label2.TabIndex = 32;
-            this.label2.Text = "N. de Carné";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.estudianteBindingSource.DataMember = "Estudiante";
+            this.estudianteBindingSource.DataSource = this.uITIDataSet1;
             // 
-            // comboBoxEstudiantes
+            // uITIDataSet1
             // 
-            this.comboBoxEstudiantes.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.comboBoxEstudiantes.DataSource = this.estudianteBindingSource;
-            this.comboBoxEstudiantes.DisplayMember = "NombreCompleto";
-            this.comboBoxEstudiantes.FormattingEnabled = true;
-            this.comboBoxEstudiantes.Location = new System.Drawing.Point(126, 309);
-            this.comboBoxEstudiantes.Name = "comboBoxEstudiantes";
-            this.comboBoxEstudiantes.Size = new System.Drawing.Size(304, 29);
-            this.comboBoxEstudiantes.TabIndex = 41;
-            this.comboBoxEstudiantes.ValueMember = "Carne";
+            this.uITIDataSet1.DataSetName = "UITIDataSet1";
+            this.uITIDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dvgCalificaciones
             // 
@@ -171,30 +156,11 @@
             this.notaFinalDataGridViewTextBoxColumn,
             this.estatusAprobadoDataGridViewTextBoxColumn});
             this.dvgCalificaciones.DataSource = this.registroNotasBindingSource;
-            this.dvgCalificaciones.Location = new System.Drawing.Point(12, 362);
+            this.dvgCalificaciones.Location = new System.Drawing.Point(12, 268);
             this.dvgCalificaciones.Name = "dvgCalificaciones";
             this.dvgCalificaciones.RowHeadersWidth = 51;
-            this.dvgCalificaciones.Size = new System.Drawing.Size(1148, 230);
+            this.dvgCalificaciones.Size = new System.Drawing.Size(1148, 369);
             this.dvgCalificaciones.TabIndex = 42;
-            // 
-            // uITIDataSetBindingSource
-            // 
-            this.uITIDataSetBindingSource.DataSource = this.uITIDataSet;
-            this.uITIDataSetBindingSource.Position = 0;
-            // 
-            // uITIDataSet
-            // 
-            this.uITIDataSet.DataSetName = "UITIDataSet";
-            this.uITIDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // registroNotasBindingSource
-            // 
-            this.registroNotasBindingSource.DataMember = "RegistroNotas";
-            this.registroNotasBindingSource.DataSource = this.uITIDataSetBindingSource;
-            // 
-            // registroNotasTableAdapter
-            // 
-            this.registroNotasTableAdapter.ClearBeforeFill = true;
             // 
             // idRegistroNotaDataGridViewTextBoxColumn
             // 
@@ -277,6 +243,25 @@
             this.estatusAprobadoDataGridViewTextBoxColumn.Name = "estatusAprobadoDataGridViewTextBoxColumn";
             this.estatusAprobadoDataGridViewTextBoxColumn.Width = 125;
             // 
+            // registroNotasBindingSource
+            // 
+            this.registroNotasBindingSource.DataMember = "RegistroNotas";
+            this.registroNotasBindingSource.DataSource = this.uITIDataSetBindingSource;
+            // 
+            // uITIDataSetBindingSource
+            // 
+            this.uITIDataSetBindingSource.DataSource = this.uITIDataSet;
+            this.uITIDataSetBindingSource.Position = 0;
+            // 
+            // uITIDataSet
+            // 
+            this.uITIDataSet.DataSetName = "UITIDataSet";
+            this.uITIDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // registroNotasTableAdapter
+            // 
+            this.registroNotasTableAdapter.ClearBeforeFill = true;
+            // 
             // fKIdRegistroNotaBindingSource
             // 
             this.fKIdRegistroNotaBindingSource.DataMember = "FK_IdRegistroNota";
@@ -291,16 +276,6 @@
             this.reporteBoletaBindingSource.DataMember = "ReporteBoleta";
             this.reporteBoletaBindingSource.DataSource = this.uITIDataSet;
             // 
-            // uITIDataSet1
-            // 
-            this.uITIDataSet1.DataSetName = "UITIDataSet1";
-            this.uITIDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // estudianteBindingSource
-            // 
-            this.estudianteBindingSource.DataMember = "Estudiante";
-            this.estudianteBindingSource.DataSource = this.uITIDataSet1;
-            // 
             // estudianteTableAdapter
             // 
             this.estudianteTableAdapter.ClearBeforeFill = true;
@@ -312,8 +287,6 @@
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(1172, 623);
             this.Controls.Add(this.dvgCalificaciones);
-            this.Controls.Add(this.comboBoxEstudiantes);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnSiguienteDocente);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.pictureBox1);
@@ -324,14 +297,14 @@
             this.Text = "BoletaCalificaciones";
             this.Load += new System.EventHandler(this.BoletaCalificaciones_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estudianteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uITIDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvgCalificaciones)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.registroNotasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uITIDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uITIDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.registroNotasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKIdRegistroNotaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reporteBoletaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uITIDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.estudianteBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -343,8 +316,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnSiguienteDocente;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBoxEstudiantes;
         private System.Windows.Forms.DataGridView dvgCalificaciones;
         private System.Windows.Forms.BindingSource uITIDataSetBindingSource;
         private UITIDataSet uITIDataSet;
