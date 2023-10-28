@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="UITIDataSet3" targetNamespace="http://tempuri.org/UITIDataSet3.xsd" xmlns:mstns="http://tempuri.org/UITIDataSet3.xsd" xmlns="http://tempuri.org/UITIDataSet3.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="UITIConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="UITIConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Frontend.Properties.Settings.GlobalReference.Default.UITIConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DocentesTableAdapter" GeneratorDataComponentClassName="DocentesTableAdapter" Name="Docentes" UserDataComponentName="DocentesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="UITIConnectionString (Settings)" DbObjectName="UITI.dbo.Docentes" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT IdDocente, Estatus, DPI, NombreCompleto FROM dbo.Docentes</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IdDocente" DataSetColumn="IdDocente" />
+              <Mapping SourceColumn="Estatus" DataSetColumn="Estatus" />
+              <Mapping SourceColumn="DPI" DataSetColumn="DPI" />
+              <Mapping SourceColumn="NombreCompleto" DataSetColumn="NombreCompleto" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EstudiantesTableAdapter" GeneratorDataComponentClassName="EstudiantesTableAdapter" Name="Estudiantes" UserDataComponentName="EstudiantesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="UITIConnectionString (Settings)" DbObjectName="UITI.dbo.Estudiantes" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Carne, Estatus, DPI, NombreCompleto FROM dbo.Estudiantes</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Carne" DataSetColumn="Carne" />
+              <Mapping SourceColumn="Estatus" DataSetColumn="Estatus" />
+              <Mapping SourceColumn="DPI" DataSetColumn="DPI" />
+              <Mapping SourceColumn="NombreCompleto" DataSetColumn="NombreCompleto" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="UITIDataSet3" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="UITIDataSet3" msprop:Generator_DataSetName="UITIDataSet3">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Docentes" msprop:Generator_RowEvHandlerName="DocentesRowChangeEventHandler" msprop:Generator_RowDeletedName="DocentesRowDeleted" msprop:Generator_RowDeletingName="DocentesRowDeleting" msprop:Generator_RowEvArgName="DocentesRowChangeEvent" msprop:Generator_TablePropName="Docentes" msprop:Generator_RowChangedName="DocentesRowChanged" msprop:Generator_RowChangingName="DocentesRowChanging" msprop:Generator_TableClassName="DocentesDataTable" msprop:Generator_RowClassName="DocentesRow" msprop:Generator_TableVarName="tableDocentes" msprop:Generator_UserTableName="Docentes">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdDocente" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="IdDocente" msprop:Generator_ColumnPropNameInTable="IdDocenteColumn" msprop:Generator_ColumnVarNameInTable="columnIdDocente" msprop:Generator_UserColumnName="IdDocente" type="xs:int" />
+              <xs:element name="Estatus" msprop:Generator_ColumnPropNameInRow="Estatus" msprop:Generator_ColumnPropNameInTable="EstatusColumn" msprop:Generator_ColumnVarNameInTable="columnEstatus" msprop:Generator_UserColumnName="Estatus" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DPI" msprop:Generator_ColumnPropNameInRow="DPI" msprop:Generator_ColumnPropNameInTable="DPIColumn" msprop:Generator_ColumnVarNameInTable="columnDPI" msprop:Generator_UserColumnName="DPI" type="xs:int" minOccurs="0" />
+              <xs:element name="NombreCompleto" msprop:Generator_ColumnPropNameInRow="NombreCompleto" msprop:Generator_ColumnPropNameInTable="NombreCompletoColumn" msprop:Generator_ColumnVarNameInTable="columnNombreCompleto" msprop:Generator_UserColumnName="NombreCompleto">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Estudiantes" msprop:Generator_RowEvHandlerName="EstudiantesRowChangeEventHandler" msprop:Generator_RowDeletedName="EstudiantesRowDeleted" msprop:Generator_RowDeletingName="EstudiantesRowDeleting" msprop:Generator_RowEvArgName="EstudiantesRowChangeEvent" msprop:Generator_TablePropName="Estudiantes" msprop:Generator_RowChangedName="EstudiantesRowChanged" msprop:Generator_RowChangingName="EstudiantesRowChanging" msprop:Generator_TableClassName="EstudiantesDataTable" msprop:Generator_RowClassName="EstudiantesRow" msprop:Generator_TableVarName="tableEstudiantes" msprop:Generator_UserTableName="Estudiantes">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Carne" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="Carne" msprop:Generator_ColumnPropNameInTable="CarneColumn" msprop:Generator_ColumnVarNameInTable="columnCarne" msprop:Generator_UserColumnName="Carne" type="xs:int" />
+              <xs:element name="Estatus" msprop:Generator_ColumnPropNameInRow="Estatus" msprop:Generator_ColumnPropNameInTable="EstatusColumn" msprop:Generator_ColumnVarNameInTable="columnEstatus" msprop:Generator_UserColumnName="Estatus" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DPI" msprop:Generator_ColumnPropNameInRow="DPI" msprop:Generator_ColumnPropNameInTable="DPIColumn" msprop:Generator_ColumnVarNameInTable="columnDPI" msprop:Generator_UserColumnName="DPI" type="xs:int" />
+              <xs:element name="NombreCompleto" msprop:Generator_ColumnPropNameInRow="NombreCompleto" msprop:Generator_ColumnPropNameInTable="NombreCompletoColumn" msprop:Generator_ColumnVarNameInTable="columnNombreCompleto" msprop:Generator_UserColumnName="NombreCompleto" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Docentes" />
+      <xs:field xpath="mstns:IdDocente" />
+    </xs:unique>
+    <xs:unique name="Estudiantes_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Estudiantes" />
+      <xs:field xpath="mstns:Carne" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

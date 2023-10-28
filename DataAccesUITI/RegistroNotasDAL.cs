@@ -103,13 +103,15 @@ namespace DataAcces
             using (SqlConnection conn = new SqlConnection(conexion))
             {
                 conn.Open();
-                string sql = "INSERT INTO RegistroNotas (IdDocente, IdEstudiante,PrimerParcial,SegundoParcial,Actividades,ExamenFinal,Zona,NotaFinal,EstatusAprobado) VALUES (@IdDocente, @IdEstudiante,@PrimerParcial,@SegundoParcial,@Actividades,@ExamenFinal,@Zona,@NotaFinal,@EstatusAprobado)";
+
+
+                string sql = $"INSERT INTO RegistroNotas VALUES (@IdDocente, @IdEstudiante,{registroNotas.NotaPrimerParcial},{registroNotas.NotaSegundoParcial},{registroNotas.NotaActividades},{registroNotas.NotaExamenFinal},{registroNotas.Zona},{registroNotas.NotaTotal},'{registroNotas.EstatusAprobacion}')";
                 using (SqlCommand comando = new SqlCommand(sql, conn))
                 {
                    
                     comando.Parameters.AddWithValue("@IdDocente", registroNotas.Docente.IdDocente);
                     comando.Parameters.AddWithValue("@IdEstudiante", registroNotas.Estudiante.NoCarne);
-                   
+                    comando.CommandType = CommandType.Text;
                     comando.ExecuteNonQuery();
                 }
             }

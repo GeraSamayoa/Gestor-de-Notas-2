@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroNotas));
             this.btnAgregarRegEstudiante = new System.Windows.Forms.Button();
             this.txtPrimerP = new System.Windows.Forms.TextBox();
@@ -47,8 +48,23 @@
             this.comboBoxEstudianteAisgNota = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.comboBoxDocente = new System.Windows.Forms.ComboBox();
+            this.uITIDataSet1 = new Frontend.UITIDataSet1();
+            this.registroNotasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.registroNotasTableAdapter = new Frontend.UITIDataSet1TableAdapters.RegistroNotasTableAdapter();
+            this.idRegistroNotaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDocenteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idEstudianteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.primerParcialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.segundoParcialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.actividadesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.examenFinalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.zonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.notaFinalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estatusAprobadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegEstudiante)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uITIDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.registroNotasBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAgregarRegEstudiante
@@ -62,7 +78,7 @@
             this.btnAgregarRegEstudiante.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregarRegEstudiante.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarRegEstudiante.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarRegEstudiante.Location = new System.Drawing.Point(475, 291);
+            this.btnAgregarRegEstudiante.Location = new System.Drawing.Point(688, 290);
             this.btnAgregarRegEstudiante.Name = "btnAgregarRegEstudiante";
             this.btnAgregarRegEstudiante.Size = new System.Drawing.Size(137, 55);
             this.btnAgregarRegEstudiante.TabIndex = 40;
@@ -74,7 +90,7 @@
             // 
             this.txtPrimerP.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.txtPrimerP.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrimerP.Location = new System.Drawing.Point(475, 168);
+            this.txtPrimerP.Location = new System.Drawing.Point(475, 154);
             this.txtPrimerP.Name = "txtPrimerP";
             this.txtPrimerP.Size = new System.Drawing.Size(122, 25);
             this.txtPrimerP.TabIndex = 38;
@@ -83,7 +99,7 @@
             // 
             this.txtActividades.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.txtActividades.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtActividades.Location = new System.Drawing.Point(475, 240);
+            this.txtActividades.Location = new System.Drawing.Point(475, 226);
             this.txtActividades.Name = "txtActividades";
             this.txtActividades.Size = new System.Drawing.Size(122, 25);
             this.txtActividades.TabIndex = 37;
@@ -92,15 +108,28 @@
             // 
             this.txtExamenF.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.txtExamenF.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtExamenF.Location = new System.Drawing.Point(688, 240);
+            this.txtExamenF.Location = new System.Drawing.Point(688, 226);
             this.txtExamenF.Name = "txtExamenF";
             this.txtExamenF.Size = new System.Drawing.Size(122, 25);
             this.txtExamenF.TabIndex = 36;
             // 
             // dgvRegEstudiante
             // 
+            this.dgvRegEstudiante.AutoGenerateColumns = false;
             this.dgvRegEstudiante.BackgroundColor = System.Drawing.Color.White;
             this.dgvRegEstudiante.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRegEstudiante.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idRegistroNotaDataGridViewTextBoxColumn,
+            this.idDocenteDataGridViewTextBoxColumn,
+            this.idEstudianteDataGridViewTextBoxColumn,
+            this.primerParcialDataGridViewTextBoxColumn,
+            this.segundoParcialDataGridViewTextBoxColumn,
+            this.actividadesDataGridViewTextBoxColumn,
+            this.examenFinalDataGridViewTextBoxColumn,
+            this.zonaDataGridViewTextBoxColumn,
+            this.notaFinalDataGridViewTextBoxColumn,
+            this.estatusAprobadoDataGridViewTextBoxColumn});
+            this.dgvRegEstudiante.DataSource = this.registroNotasBindingSource;
             this.dgvRegEstudiante.Location = new System.Drawing.Point(79, 363);
             this.dgvRegEstudiante.Name = "dgvRegEstudiante";
             this.dgvRegEstudiante.Size = new System.Drawing.Size(746, 182);
@@ -118,7 +147,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(472, 138);
+            this.label7.Location = new System.Drawing.Point(472, 124);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(94, 18);
@@ -128,7 +157,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(685, 206);
+            this.label6.Location = new System.Drawing.Point(685, 192);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(88, 18);
@@ -138,7 +167,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(685, 138);
+            this.label5.Location = new System.Drawing.Point(685, 124);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(107, 18);
@@ -148,7 +177,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(472, 206);
+            this.label4.Location = new System.Drawing.Point(472, 192);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 18);
@@ -193,7 +222,7 @@
             // 
             this.txtSegundoP.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.txtSegundoP.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSegundoP.Location = new System.Drawing.Point(688, 168);
+            this.txtSegundoP.Location = new System.Drawing.Point(688, 154);
             this.txtSegundoP.Name = "txtSegundoP";
             this.txtSegundoP.Size = new System.Drawing.Size(122, 25);
             this.txtSegundoP.TabIndex = 44;
@@ -244,6 +273,81 @@
             this.comboBoxDocente.Size = new System.Drawing.Size(341, 26);
             this.comboBoxDocente.TabIndex = 52;
             // 
+            // uITIDataSet1
+            // 
+            this.uITIDataSet1.DataSetName = "UITIDataSet1";
+            this.uITIDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // registroNotasBindingSource
+            // 
+            this.registroNotasBindingSource.DataMember = "RegistroNotas";
+            this.registroNotasBindingSource.DataSource = this.uITIDataSet1;
+            // 
+            // registroNotasTableAdapter
+            // 
+            this.registroNotasTableAdapter.ClearBeforeFill = true;
+            // 
+            // idRegistroNotaDataGridViewTextBoxColumn
+            // 
+            this.idRegistroNotaDataGridViewTextBoxColumn.DataPropertyName = "IdRegistroNota";
+            this.idRegistroNotaDataGridViewTextBoxColumn.HeaderText = "IdRegistroNota";
+            this.idRegistroNotaDataGridViewTextBoxColumn.Name = "idRegistroNotaDataGridViewTextBoxColumn";
+            this.idRegistroNotaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idDocenteDataGridViewTextBoxColumn
+            // 
+            this.idDocenteDataGridViewTextBoxColumn.DataPropertyName = "IdDocente";
+            this.idDocenteDataGridViewTextBoxColumn.HeaderText = "IdDocente";
+            this.idDocenteDataGridViewTextBoxColumn.Name = "idDocenteDataGridViewTextBoxColumn";
+            // 
+            // idEstudianteDataGridViewTextBoxColumn
+            // 
+            this.idEstudianteDataGridViewTextBoxColumn.DataPropertyName = "IdEstudiante";
+            this.idEstudianteDataGridViewTextBoxColumn.HeaderText = "IdEstudiante";
+            this.idEstudianteDataGridViewTextBoxColumn.Name = "idEstudianteDataGridViewTextBoxColumn";
+            // 
+            // primerParcialDataGridViewTextBoxColumn
+            // 
+            this.primerParcialDataGridViewTextBoxColumn.DataPropertyName = "PrimerParcial";
+            this.primerParcialDataGridViewTextBoxColumn.HeaderText = "PrimerParcial";
+            this.primerParcialDataGridViewTextBoxColumn.Name = "primerParcialDataGridViewTextBoxColumn";
+            // 
+            // segundoParcialDataGridViewTextBoxColumn
+            // 
+            this.segundoParcialDataGridViewTextBoxColumn.DataPropertyName = "SegundoParcial";
+            this.segundoParcialDataGridViewTextBoxColumn.HeaderText = "SegundoParcial";
+            this.segundoParcialDataGridViewTextBoxColumn.Name = "segundoParcialDataGridViewTextBoxColumn";
+            // 
+            // actividadesDataGridViewTextBoxColumn
+            // 
+            this.actividadesDataGridViewTextBoxColumn.DataPropertyName = "Actividades";
+            this.actividadesDataGridViewTextBoxColumn.HeaderText = "Actividades";
+            this.actividadesDataGridViewTextBoxColumn.Name = "actividadesDataGridViewTextBoxColumn";
+            // 
+            // examenFinalDataGridViewTextBoxColumn
+            // 
+            this.examenFinalDataGridViewTextBoxColumn.DataPropertyName = "ExamenFinal";
+            this.examenFinalDataGridViewTextBoxColumn.HeaderText = "ExamenFinal";
+            this.examenFinalDataGridViewTextBoxColumn.Name = "examenFinalDataGridViewTextBoxColumn";
+            // 
+            // zonaDataGridViewTextBoxColumn
+            // 
+            this.zonaDataGridViewTextBoxColumn.DataPropertyName = "Zona";
+            this.zonaDataGridViewTextBoxColumn.HeaderText = "Zona";
+            this.zonaDataGridViewTextBoxColumn.Name = "zonaDataGridViewTextBoxColumn";
+            // 
+            // notaFinalDataGridViewTextBoxColumn
+            // 
+            this.notaFinalDataGridViewTextBoxColumn.DataPropertyName = "NotaFinal";
+            this.notaFinalDataGridViewTextBoxColumn.HeaderText = "NotaFinal";
+            this.notaFinalDataGridViewTextBoxColumn.Name = "notaFinalDataGridViewTextBoxColumn";
+            // 
+            // estatusAprobadoDataGridViewTextBoxColumn
+            // 
+            this.estatusAprobadoDataGridViewTextBoxColumn.DataPropertyName = "EstatusAprobado";
+            this.estatusAprobadoDataGridViewTextBoxColumn.HeaderText = "EstatusAprobado";
+            this.estatusAprobadoDataGridViewTextBoxColumn.Name = "estatusAprobadoDataGridViewTextBoxColumn";
+            // 
             // RegistroNotas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -272,8 +376,11 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "RegistroNotas";
             this.Text = "RegistroNotas";
+            this.Load += new System.EventHandler(this.RegistroNotas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegEstudiante)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uITIDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.registroNotasBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -298,5 +405,18 @@
         private System.Windows.Forms.ComboBox comboBoxEstudianteAisgNota;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox comboBoxDocente;
+        private UITIDataSet1 uITIDataSet1;
+        private System.Windows.Forms.BindingSource registroNotasBindingSource;
+        private UITIDataSet1TableAdapters.RegistroNotasTableAdapter registroNotasTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idRegistroNotaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDocenteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idEstudianteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn primerParcialDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn segundoParcialDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn actividadesDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn examenFinalDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn zonaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn notaFinalDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn estatusAprobadoDataGridViewTextBoxColumn;
     }
 }

@@ -10,26 +10,11 @@ namespace Backend
         public int NotaSegundoParcial { get; set; }
         public int NotaActividades { get; set; }
         public int NotaExamenFinal { get; set; }
-        public int Zona
-        {
-            get
-            {
-                return NotaPrimerParcial + NotaSegundoParcial + NotaActividades;
-            }
-        }
-        public int NotaTotal
-        {
-            get
-            {
-                return Zona + NotaExamenFinal;
-            }
-        }
+        public int Zona{ get; set;}
+        public int NotaTotal{get; set;}
         public string EstatusAprobacion
         {
-            get
-            {
-                return NotaTotal >= 61 ? "Aprobado" : "Reprobado";
-            }
+            get; set;
         }
         public Docente Docente { get; set; }
         public Carrera Carrera { get; set; }

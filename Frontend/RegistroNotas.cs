@@ -43,10 +43,10 @@ namespace Frontend
         }
         private void btnAgregarRegEstudiante_Click(object sender, EventArgs e)
         {
-            Backend.RegistroNotas registroNotas1 = new Backend.RegistroNotas();
-           
-            registroNotasDAL.GuardarRegistroNota(registroNotas1);
-            dgvRegEstudiante.DataSource = registroNotasDAL.GetRegistroNotas();
+            //Backend.RegistroNotas registroNotas1 = new Backend.RegistroNotas();
+
+            //registroNotasDAL.GuardarRegistroNota(registroNotas1);
+            //dgvRegEstudiante.DataSource = registroNotasDAL.GetRegistroNotas();
 
             int idDocenteSeleccionado = (int)comboBoxDocente.SelectedValue;
             int IdEstudianteSeleccionado = (int)comboBoxEstudianteAisgNota.SelectedValue;
@@ -58,6 +58,26 @@ namespace Frontend
             };
 
             RegistroNotasDAL dal = new RegistroNotasDAL();
+            registroNotas.NotaPrimerParcial = Convert.ToInt32(txtPrimerP.Text);
+            registroNotas.NotaSegundoParcial = Convert.ToInt32(txtSegundoP.Text);
+            registroNotas.NotaActividades = Convert.ToInt32(txtActividades.Text);
+            registroNotas.NotaExamenFinal = Convert.ToInt32(txtExamenF.Text);
+            registroNotas.Zona = registroNotas.NotaSegundoParcial + registroNotas.NotaSegundoParcial + registroNotas.NotaActividades;
+            registroNotas.NotaTotal = registroNotas.Zona + registroNotas.NotaExamenFinal;
+
+            if (registroNotas.NotaTotal < 61)
+            {
+                registroNotas.EstatusAprobacion = "Reprobado";
+            }
+            else if (registroNotas.NotaTotal > 60)
+            {
+                registroNotas.EstatusAprobacion = "Aprobado";
+            }
+            else 
+            {
+                MessageBox.Show("Hubo un error al guardar la asignación");
+            }
+
             if (dal.GuardarRegistroNota(registroNotas))
             {
                 MessageBox.Show("Asignación guardada correctamente");
@@ -87,6 +107,13 @@ namespace Frontend
 
 
 
+
+        }
+
+        private void RegistroNotas_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'uITIDataSet1.RegistroNotas' Puede moverla o quitarla según sea necesario.
+            this.registroNotasTableAdapter.Fill(this.uITIDataSet1.RegistroNotas);
 
         }
 
