@@ -63,7 +63,7 @@ namespace Frontend
 
         private void btnAgregarAsigEstudiante_Click(object sender, EventArgs e)
         {
-            int noCarneSeleccionado = (int)comboBoxNCarneEst.SelectedValue;
+            int IdEstudianteSeleccionado = (int)comboBoxNCarneEst.SelectedValue;
             int idJornadaSeleccionada = (int)comboBoxJornadaEstudiante.SelectedValue;
             int idCarreraSeleccionada = (int)comboBoxCarreraEstudiante.SelectedValue;
             int idCursoSeleccionado = (int)comboBoxCursoEstudiante.SelectedValue;
@@ -71,7 +71,7 @@ namespace Frontend
 
             Backend.AsignacionEstudiante asignacion = new Backend.AsignacionEstudiante
             {
-                Estudiante = new Estudiante { NoCarne = noCarneSeleccionado },
+                Estudiante = new Estudiante { NoCarne = IdEstudianteSeleccionado },
                 Jornada = new Jornada { IdJornada = idJornadaSeleccionada },
                 Carrera = new Carrera { IdCarrera = idCarreraSeleccionada },
                 Curso = new Curso { IdCurso = idCursoSeleccionado },

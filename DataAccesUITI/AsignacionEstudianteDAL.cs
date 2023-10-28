@@ -99,10 +99,10 @@ namespace DataAcces
             using (SqlConnection conn = new SqlConnection(conexion))
             {
                 conn.Open();
-                string sql = "INSERT INTO AsignacionEstudiante (NoCarne, IdJornada, IdCarrera, IdCurso, IdSeccion) VALUES (@NoCarne, @IdJornada, @IdCarrera, @IdCurso, @IdSeccion)";
+                string sql = "INSERT INTO AsignacionEstudiante (IdEstudiante, IdJornada, IdCarrera, IdCurso, IdSeccion) VALUES (@IdEstudiante, @IdJornada, @IdCarrera, @IdCurso, @IdSeccion)";
                 using (SqlCommand comando = new SqlCommand(sql, conn))
                 {
-                    comando.Parameters.AddWithValue("@NoCarne", asignacionEstudiante.Estudiante.NoCarne);
+                    comando.Parameters.AddWithValue("@IdEstudiante", asignacionEstudiante.Estudiante.NoCarne);
                     comando.Parameters.AddWithValue("@IdJornada", asignacionEstudiante.Jornada.IdJornada);
                     comando.Parameters.AddWithValue("@IdCarrera", asignacionEstudiante.Carrera.IdCarrera);
                     comando.Parameters.AddWithValue("@IdCurso", asignacionEstudiante.Curso.IdCurso);
