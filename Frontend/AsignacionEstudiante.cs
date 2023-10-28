@@ -26,7 +26,7 @@ namespace Frontend
             List<Estudiante> estudiantes = repositorio.ObtenerEstudiantes();
             comboBoxNCarneEst.DataSource = estudiantes;
             comboBoxNCarneEst.DisplayMember = "Nombre";
-            comboBoxNCarneEst.ValueMember = "Carne";
+            comboBoxNCarneEst.ValueMember = "NoCarne";
         }
 
         private void CargarCursos()
@@ -115,6 +115,11 @@ namespace Frontend
         }
 
         private void comboBoxNCarneEst_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void estudianteBindingSource_CurrentChanged(object sender, EventArgs e)
         {
 
         }

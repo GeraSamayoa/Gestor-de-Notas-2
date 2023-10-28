@@ -156,7 +156,7 @@ namespace DataAccesUITI
                             {
                                 NoCarne = Convert.ToInt32(reader["Carne"]),
                                 Nombre = reader["NombreCompleto"].ToString(),
-                                Estatus = Convert.ToChar(reader["Estatus"]),
+                                //Estatus = Convert.ToChar(reader["Estatus"]),
                             };
                             listaEstudiantes.Add(estudiante);
                         }

@@ -44,6 +44,8 @@ namespace Frontend
 
         private void RegistroCarrera_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'uITIDataSet.Universidad' Puede moverla o quitarla según sea necesario.
+            this.universidadTableAdapter.Fill(this.uITIDataSet.Universidad);
 
         }
 

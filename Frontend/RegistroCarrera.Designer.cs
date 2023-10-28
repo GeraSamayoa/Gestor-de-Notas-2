@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroCarrera));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -49,8 +50,13 @@
             this.textBoxCiclo = new System.Windows.Forms.TextBox();
             this.textBoxJornada = new System.Windows.Forms.TextBox();
             this.textBoxPeriodo = new System.Windows.Forms.TextBox();
+            this.uITIDataSet = new Frontend.UITIDataSet();
+            this.universidadBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.universidadTableAdapter = new Frontend.UITIDataSetTableAdapters.UniversidadTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarrera)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uITIDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.universidadBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -148,14 +154,15 @@
             // comboBoxUniversidad
             // 
             this.comboBoxUniversidad.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.comboBoxUniversidad.DataSource = this.universidadBindingSource;
+            this.comboBoxUniversidad.DisplayMember = "NombreUniversidad";
             this.comboBoxUniversidad.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.comboBoxUniversidad.FormattingEnabled = true;
-            this.comboBoxUniversidad.Items.AddRange(new object[] {
-            "Central"});
             this.comboBoxUniversidad.Location = new System.Drawing.Point(609, 124);
             this.comboBoxUniversidad.Name = "comboBoxUniversidad";
             this.comboBoxUniversidad.Size = new System.Drawing.Size(166, 21);
             this.comboBoxUniversidad.TabIndex = 55;
+            this.comboBoxUniversidad.ValueMember = "IdUniversidad";
             // 
             // label3
             // 
@@ -298,6 +305,20 @@
             this.textBoxPeriodo.Size = new System.Drawing.Size(166, 25);
             this.textBoxPeriodo.TabIndex = 68;
             // 
+            // uITIDataSet
+            // 
+            this.uITIDataSet.DataSetName = "UITIDataSet";
+            this.uITIDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // universidadBindingSource
+            // 
+            this.universidadBindingSource.DataMember = "Universidad";
+            this.universidadBindingSource.DataSource = this.uITIDataSet;
+            // 
+            // universidadTableAdapter
+            // 
+            this.universidadTableAdapter.ClearBeforeFill = true;
+            // 
             // RegistroCarrera
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -329,6 +350,8 @@
             this.Load += new System.EventHandler(this.RegistroCarrera_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarrera)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uITIDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.universidadBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -356,5 +379,8 @@
         private System.Windows.Forms.TextBox textBoxCiclo;
         private System.Windows.Forms.TextBox textBoxJornada;
         private System.Windows.Forms.TextBox textBoxPeriodo;
+        private UITIDataSet uITIDataSet;
+        private System.Windows.Forms.BindingSource universidadBindingSource;
+        private UITIDataSetTableAdapters.UniversidadTableAdapter universidadTableAdapter;
     }
 }
