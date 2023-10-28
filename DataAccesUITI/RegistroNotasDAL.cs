@@ -59,6 +59,7 @@ namespace DataAcces
         {
             using (SqlConnection conn = new SqlConnection(conexion))
             {
+
                 conn.Open();
                 string sql = $"INSERT INTO RegistroNotas (IdDocente,IdEstudiante,PrimerParcial,SegundoParcial,Actividades,Examenfinal,Zona,NotaFinal,EstatusAprobado) VALUES (@IdDocente,@IdEstudiante,@PrimerParcial,@SegundoParcial,@Actividades,@Examenfinal,@Zona,@Notafinal,@EstatusAprobado)";
                 using (SqlCommand comando = new SqlCommand(sql, conn))
@@ -108,6 +109,7 @@ namespace DataAcces
                    
                     comando.Parameters.AddWithValue("@IdCurso", registroNotas.Curso.IdCurso);
                     comando.Parameters.AddWithValue("@IdEstudiante", registroNotas.Estudiante.NoCarne);
+                    comando.Parameters.AddWithValue("@IdDocente", registroNotas.Docente.IdDocente);
                     comando.ExecuteNonQuery();
                 }
             }
