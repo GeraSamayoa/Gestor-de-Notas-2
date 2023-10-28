@@ -49,6 +49,8 @@
             this.comboBoxEstudianteAisgNota = new System.Windows.Forms.ComboBox();
             this.comboBoxCURSO = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.comboBoxDocente = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegEstudiante)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -178,7 +180,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(76, 126);
+            this.label2.Location = new System.Drawing.Point(85, 193);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 18);
@@ -258,7 +260,7 @@
             // 
             this.comboBoxEstudianteAisgNota.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.comboBoxEstudianteAisgNota.FormattingEnabled = true;
-            this.comboBoxEstudianteAisgNota.Location = new System.Drawing.Point(79, 158);
+            this.comboBoxEstudianteAisgNota.Location = new System.Drawing.Point(88, 225);
             this.comboBoxEstudianteAisgNota.Name = "comboBoxEstudianteAisgNota";
             this.comboBoxEstudianteAisgNota.Size = new System.Drawing.Size(341, 26);
             this.comboBoxEstudianteAisgNota.TabIndex = 48;
@@ -267,7 +269,7 @@
             // 
             this.comboBoxCURSO.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.comboBoxCURSO.FormattingEnabled = true;
-            this.comboBoxCURSO.Location = new System.Drawing.Point(79, 240);
+            this.comboBoxCURSO.Location = new System.Drawing.Point(88, 307);
             this.comboBoxCURSO.Name = "comboBoxCURSO";
             this.comboBoxCURSO.Size = new System.Drawing.Size(341, 26);
             this.comboBoxCURSO.TabIndex = 50;
@@ -275,12 +277,31 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(76, 208);
+            this.label3.Location = new System.Drawing.Point(85, 275);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 18);
             this.label3.TabIndex = 49;
             this.label3.Text = "Curso:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(85, 117);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(60, 18);
+            this.label8.TabIndex = 51;
+            this.label8.Text = "Docente:";
+            // 
+            // comboBoxDocente
+            // 
+            this.comboBoxDocente.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.comboBoxDocente.FormattingEnabled = true;
+            this.comboBoxDocente.Location = new System.Drawing.Point(88, 154);
+            this.comboBoxDocente.Name = "comboBoxDocente";
+            this.comboBoxDocente.Size = new System.Drawing.Size(341, 26);
+            this.comboBoxDocente.TabIndex = 52;
             // 
             // RegistroNotas
             // 
@@ -288,6 +309,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(1035, 550);
+            this.Controls.Add(this.comboBoxDocente);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.comboBoxCURSO);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBoxEstudianteAisgNota);
@@ -340,5 +363,7 @@
         private System.Windows.Forms.ComboBox comboBoxEstudianteAisgNota;
         private System.Windows.Forms.ComboBox comboBoxCURSO;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox comboBoxDocente;
     }
 }
