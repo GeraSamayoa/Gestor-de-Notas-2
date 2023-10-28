@@ -37,8 +37,8 @@
             this.Jornada = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.comboBoxEstatus = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.comboBoxUniversidad = new System.Windows.Forms.ComboBox();
+            this.universidadBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.uITIDataSet = new Frontend.UITIDataSet();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvCarrera = new System.Windows.Forms.DataGridView();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -50,13 +50,11 @@
             this.textBoxCiclo = new System.Windows.Forms.TextBox();
             this.textBoxJornada = new System.Windows.Forms.TextBox();
             this.textBoxPeriodo = new System.Windows.Forms.TextBox();
-            this.uITIDataSet = new Frontend.UITIDataSet();
-            this.universidadBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.universidadTableAdapter = new Frontend.UITIDataSetTableAdapters.UniversidadTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.universidadBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uITIDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarrera)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uITIDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.universidadBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -77,7 +75,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(35, 100);
+            this.label2.Location = new System.Drawing.Point(44, 108);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(135, 18);
             this.label2.TabIndex = 46;
@@ -88,7 +86,7 @@
             // 
             this.txtNombreCarrera.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.txtNombreCarrera.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreCarrera.Location = new System.Drawing.Point(35, 121);
+            this.txtNombreCarrera.Location = new System.Drawing.Point(44, 129);
             this.txtNombreCarrera.Name = "txtNombreCarrera";
             this.txtNombreCarrera.Size = new System.Drawing.Size(368, 25);
             this.txtNombreCarrera.TabIndex = 44;
@@ -98,7 +96,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(35, 164);
+            this.label4.Location = new System.Drawing.Point(44, 172);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 18);
             this.label4.TabIndex = 50;
@@ -109,7 +107,7 @@
             this.Jornada.AutoSize = true;
             this.Jornada.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Jornada.ForeColor = System.Drawing.Color.Black;
-            this.Jornada.Location = new System.Drawing.Point(234, 164);
+            this.Jornada.Location = new System.Drawing.Point(243, 172);
             this.Jornada.Name = "Jornada";
             this.Jornada.Size = new System.Drawing.Size(58, 18);
             this.Jornada.TabIndex = 51;
@@ -120,7 +118,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(422, 103);
+            this.label6.Location = new System.Drawing.Point(431, 111);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(50, 18);
             this.label6.TabIndex = 54;
@@ -135,41 +133,27 @@
             this.comboBoxEstatus.Items.AddRange(new object[] {
             "1",
             "0"});
-            this.comboBoxEstatus.Location = new System.Drawing.Point(425, 124);
+            this.comboBoxEstatus.Location = new System.Drawing.Point(434, 132);
             this.comboBoxEstatus.Name = "comboBoxEstatus";
             this.comboBoxEstatus.Size = new System.Drawing.Size(166, 21);
             this.comboBoxEstatus.TabIndex = 53;
             // 
-            // label7
+            // universidadBindingSource
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(606, 103);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(42, 18);
-            this.label7.TabIndex = 56;
-            this.label7.Text = "Sede:";
+            this.universidadBindingSource.DataMember = "Universidad";
+            this.universidadBindingSource.DataSource = this.uITIDataSet;
             // 
-            // comboBoxUniversidad
+            // uITIDataSet
             // 
-            this.comboBoxUniversidad.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.comboBoxUniversidad.DataSource = this.universidadBindingSource;
-            this.comboBoxUniversidad.DisplayMember = "NombreUniversidad";
-            this.comboBoxUniversidad.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.comboBoxUniversidad.FormattingEnabled = true;
-            this.comboBoxUniversidad.Location = new System.Drawing.Point(609, 124);
-            this.comboBoxUniversidad.Name = "comboBoxUniversidad";
-            this.comboBoxUniversidad.Size = new System.Drawing.Size(166, 21);
-            this.comboBoxUniversidad.TabIndex = 55;
-            this.comboBoxUniversidad.ValueMember = "IdUniversidad";
+            this.uITIDataSet.DataSetName = "UITIDataSet";
+            this.uITIDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(422, 163);
+            this.label3.Location = new System.Drawing.Point(431, 171);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 18);
             this.label3.TabIndex = 58;
@@ -270,10 +254,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(686, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(629, 9);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(102, 74);
+            this.pictureBox1.Size = new System.Drawing.Size(159, 120);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 65;
             this.pictureBox1.TabStop = false;
@@ -282,7 +266,7 @@
             // 
             this.textBoxCiclo.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.textBoxCiclo.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCiclo.Location = new System.Drawing.Point(38, 184);
+            this.textBoxCiclo.Location = new System.Drawing.Point(47, 192);
             this.textBoxCiclo.Name = "textBoxCiclo";
             this.textBoxCiclo.Size = new System.Drawing.Size(166, 25);
             this.textBoxCiclo.TabIndex = 66;
@@ -291,7 +275,7 @@
             // 
             this.textBoxJornada.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.textBoxJornada.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxJornada.Location = new System.Drawing.Point(237, 184);
+            this.textBoxJornada.Location = new System.Drawing.Point(246, 192);
             this.textBoxJornada.Name = "textBoxJornada";
             this.textBoxJornada.Size = new System.Drawing.Size(166, 25);
             this.textBoxJornada.TabIndex = 67;
@@ -300,20 +284,10 @@
             // 
             this.textBoxPeriodo.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.textBoxPeriodo.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPeriodo.Location = new System.Drawing.Point(425, 184);
+            this.textBoxPeriodo.Location = new System.Drawing.Point(434, 192);
             this.textBoxPeriodo.Name = "textBoxPeriodo";
             this.textBoxPeriodo.Size = new System.Drawing.Size(166, 25);
             this.textBoxPeriodo.TabIndex = 68;
-            // 
-            // uITIDataSet
-            // 
-            this.uITIDataSet.DataSetName = "UITIDataSet";
-            this.uITIDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // universidadBindingSource
-            // 
-            this.universidadBindingSource.DataMember = "Universidad";
-            this.universidadBindingSource.DataSource = this.uITIDataSet;
             // 
             // universidadTableAdapter
             // 
@@ -336,8 +310,6 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.dgvCarrera);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.comboBoxUniversidad);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.comboBoxEstatus);
             this.Controls.Add(this.Jornada);
@@ -348,10 +320,10 @@
             this.Name = "RegistroCarrera";
             this.Text = "RegistroCarrera";
             this.Load += new System.EventHandler(this.RegistroCarrera_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.universidadBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uITIDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarrera)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uITIDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.universidadBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -366,8 +338,6 @@
         private System.Windows.Forms.Label Jornada;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboBoxEstatus;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBoxUniversidad;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dgvCarrera;
         private System.Windows.Forms.Button btnEliminar;

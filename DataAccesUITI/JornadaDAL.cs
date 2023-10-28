@@ -55,7 +55,7 @@ namespace DataAcces
             using (SqlConnection conn = new SqlConnection(conexion))
             {
                 conn.Open();
-                string sql = $"INSERT INTO Jornada VALUES({jornadas.IdJornada},'{jornadas.IdJornada}','{jornadas.TipoJornada}','{jornadas.Estatus}')";
+                string sql = $"INSERT INTO Jornada VALUES('{jornadas.TipoJornada}',1)";
                 using (SqlCommand comando = new SqlCommand(sql, conn))
                 {
                     comando.CommandType = CommandType.Text;
@@ -64,6 +64,25 @@ namespace DataAcces
             }
             return true;
         }
+
+        public int SetIdJornada(Jornada jornada)
+        {
+            using (SqlConnection conn = new SqlConnection(conexion))
+            {
+                conn.Open();
+                string sql = $"SELECT IdJornada from Jornada WHERE Tipo ={jornada.TipoJornada}";
+                using (SqlCommand comando = new SqlCommand(sql, conn))
+                {
+                    comando.CommandType = CommandType.Text;
+                    comando.ExecuteNonQuery();
+                    int idJornada = Convert.ToInt32(comando.ExecuteScalar());
+                    return idJornada;
+                }
+                
+            }
+    
+        }
+
         public bool UpdateJornada(Jornada jornadas)
         {
             using (SqlConnection conn = new SqlConnection(conexion))

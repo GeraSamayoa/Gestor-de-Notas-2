@@ -57,7 +57,7 @@ namespace Frontend
 
         private void btnAgregarCarrera_Click(object sender, EventArgs e)
         {
-           /* //Clases
+           //Clases
             Carrera carrera = new Carrera();
             Ciclo ciclo = new Ciclo();
             Jornada jornada = new Jornada();
@@ -80,11 +80,15 @@ namespace Frontend
             cicloDAL.InsertCiclo(ciclo);
             periodoDAL.InsertPeriodo(periodo);
             jornadaDAL.InsertJornada(jornada);
-            //
+            
+            //prueba
+            carrera.IdCiclo = cicloDAL.SetIdCiclo(ciclo);
+            carrera.IdJornada = jornadaDAL.SetIdJornada(jornada);
+
             carreraDAL.InsertCarrera(carrera);
 
             //datagrid
-            dgvCarrera.DataSource = carreraDAL.GetCarrera();*/
+            dgvCarrera.DataSource = carreraDAL.GetCarrera();
         }
 
         private void dgvCarrera_CellContentClick(object sender, DataGridViewCellEventArgs e)
