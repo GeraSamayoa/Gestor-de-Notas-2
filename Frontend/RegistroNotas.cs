@@ -16,5 +16,10 @@ namespace Frontend
         {
             InitializeComponent();
         }
+
+        private void btnAgregarRegEstudiante_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

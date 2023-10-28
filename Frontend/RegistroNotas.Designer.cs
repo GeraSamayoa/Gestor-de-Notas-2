@@ -90,6 +90,7 @@
             this.btnAgregarRegEstudiante.TabIndex = 40;
             this.btnAgregarRegEstudiante.Text = "Agregar";
             this.btnAgregarRegEstudiante.UseVisualStyleBackColor = false;
+            this.btnAgregarRegEstudiante.Click += new System.EventHandler(this.btnAgregarRegEstudiante_Click);
             // 
             // txtContraseña
             // 

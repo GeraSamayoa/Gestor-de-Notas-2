@@ -316,11 +316,14 @@
             // 
             this.comboBoxNCarneEst.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.comboBoxNCarneEst.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.estudianteBindingSource1, "Carne", true));
+            this.comboBoxNCarneEst.DataSource = this.estudianteBindingSource1;
+            this.comboBoxNCarneEst.DisplayMember = "Carne";
             this.comboBoxNCarneEst.FormattingEnabled = true;
             this.comboBoxNCarneEst.Location = new System.Drawing.Point(138, 232);
             this.comboBoxNCarneEst.Name = "comboBoxNCarneEst";
             this.comboBoxNCarneEst.Size = new System.Drawing.Size(304, 26);
             this.comboBoxNCarneEst.TabIndex = 46;
+            this.comboBoxNCarneEst.ValueMember = "Carne";
             this.comboBoxNCarneEst.SelectedIndexChanged += new System.EventHandler(this.comboBoxNCarneEst_SelectedIndexChanged);
             // 
             // estudianteTableAdapter

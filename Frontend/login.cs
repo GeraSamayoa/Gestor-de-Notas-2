@@ -78,8 +78,9 @@ namespace Frontend
 
         private void buttonAdmin_Click(object sender, EventArgs e)
         {
-            Administrador login = new Administrador();
-            login.Show();
+            Administrador administrador = new Administrador();
+            administrador.Show();
+            Close();
         }
 
         private void label3_Click(object sender, EventArgs e)

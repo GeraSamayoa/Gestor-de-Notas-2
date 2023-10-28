@@ -12,32 +12,29 @@ namespace Frontend
 {
     public partial class Administrador : Form
     {
-        RegistroCarrera administrador;
-        RegistroCurso registroCurso;
-        ReportesAdmin reportesAdmin;
+    
         public Administrador()
         {
             InitializeComponent();
-            administrador = new RegistroCarrera();
-            registroCurso = new RegistroCurso();
-            reportesAdmin = new ReportesAdmin();
         }
 
         private void btnRegistroCarrera_Click(object sender, EventArgs e)
         {
-            administrador.Show();
+            RegistroCarrera registroCarrera = new RegistroCarrera();
+            registroCarrera.Show();
             Close();
-
         }
 
         private void btnRegistroCurso_Click(object sender, EventArgs e)
         {
-            registroCurso.Show();
+            RegistroCurso registroCurso = new RegistroCurso();
+            registroCurso.Show(); 
             Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            ReportesAdmin reportesAdmin = new ReportesAdmin();
             reportesAdmin.Show();
             Close();
         }
