@@ -80,7 +80,7 @@ namespace Frontend
             dgvRegEstudiante.Rows.Add("Segundo Parcial", int.Parse(txtSegundoP.Text));
             dgvRegEstudiante.Rows.Add("Actividades", int.Parse(txtActividades.Text));
             dgvRegEstudiante.Rows.Add("ExamenFinal", int.Parse(txtExamenF.Text));
-            dgvRegEstudiante.Rows.Add("NotaFinal", Zona);
+            dgvRegEstudiante.Rows.Add("NotaFinal", NotaFinal);
 
 
 
