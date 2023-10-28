@@ -53,16 +53,19 @@ namespace DataAcces
         {
             using (SqlConnection conn = new SqlConnection(conexion))
             {
-
-                conn.Open();
-                string sql = $"INSERT INTO Ciclo VALUES('{ciclos.TipoCiclo}')";
-                using (SqlCommand comando = new SqlCommand(sql, conn))
-                {
-                    comando.CommandType = CommandType.Text;
-                    comando.ExecuteNonQuery();
+                try {
+                    conn.Open();
+                    string sql = $"INSERT INTO Ciclo VALUES('{ciclos.TipoCiclo}')";
+                    using (SqlCommand comando = new SqlCommand(sql, conn))
+                    {
+                        comando.CommandType = CommandType.Text;
+                        comando.ExecuteNonQuery();
+                    }
+                    return true;
                 }
+                catch (Exception ex) { return false; }
             }
-            return true;
+            
         }
 
         public int SetIdCiclo(Ciclo ciclos) 

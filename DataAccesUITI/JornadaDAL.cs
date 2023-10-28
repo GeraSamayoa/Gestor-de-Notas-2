@@ -54,15 +54,23 @@ namespace DataAcces
         {
             using (SqlConnection conn = new SqlConnection(conexion))
             {
-                conn.Open();
-                string sql = $"INSERT INTO Jornada VALUES('{jornadas.TipoJornada}',1)";
-                using (SqlCommand comando = new SqlCommand(sql, conn))
+                try
                 {
-                    comando.CommandType = CommandType.Text;
-                    comando.ExecuteNonQuery();
+                    conn.Open();
+                    string sql = $"INSERT INTO Jornada VALUES('{jornadas.TipoJornada}',1)";
+                    using (SqlCommand comando = new SqlCommand(sql, conn))
+                    {
+                        comando.CommandType = CommandType.Text;
+                        comando.ExecuteNonQuery();
+                    }
+                    return true;
                 }
+                catch (Exception ex)
+                {
+                    return false;
+                }
+                
             }
-            return true;
         }
 
         public int SetIdJornada(Jornada jornada)
@@ -70,7 +78,7 @@ namespace DataAcces
             using (SqlConnection conn = new SqlConnection(conexion))
             {
                 conn.Open();
-                string sql = $"SELECT IdJornada from Jornada WHERE Tipo ={jornada.TipoJornada}";
+                string sql = $"SELECT IdJornada from Jornada WHERE Tipo ='{jornada.TipoJornada}'";
                 using (SqlCommand comando = new SqlCommand(sql, conn))
                 {
                     comando.CommandType = CommandType.Text;

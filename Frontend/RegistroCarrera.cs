@@ -77,13 +77,31 @@ namespace Frontend
             periodo.TipoPeriodo = textBoxPeriodo.Text;
 
             //Asignar valores a los DAL
-            cicloDAL.InsertCiclo(ciclo);
+           
             periodoDAL.InsertPeriodo(periodo);
             jornadaDAL.InsertJornada(jornada);
-            
+
             //prueba
-            carrera.IdCiclo = cicloDAL.SetIdCiclo(ciclo);
-            carrera.IdJornada = jornadaDAL.SetIdJornada(jornada);
+
+            if (cicloDAL.InsertCiclo(ciclo) == false)
+            {
+                carrera.IdCiclo = cicloDAL.SetIdCiclo(ciclo);
+            }
+            else 
+            {
+                cicloDAL.InsertCiclo(ciclo);
+                carrera.IdCiclo = cicloDAL.SetIdCiclo(ciclo);
+            }
+
+            if (jornadaDAL.InsertJornada(jornada) == false)
+            {
+                carrera.IdJornada = jornadaDAL.SetIdJornada(jornada);
+            }
+            else 
+            {
+                jornadaDAL.InsertJornada(jornada);
+                carrera.IdJornada = jornadaDAL.SetIdJornada(jornada);
+            }
 
             carreraDAL.InsertCarrera(carrera);
 
