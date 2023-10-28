@@ -172,10 +172,13 @@ namespace DataAccesUITI
             {
                 conn.Open();
                 string query = @"
-            SELECT * 
-            FROM ReporteBoleta 
-            INNER JOIN AsignacionEstudiante ON ReporteBoleta.IdAsignacionEstudiante = AsignacionEstudiante.IdAsignacionEstudiante
-            WHERE AsignacionEstudiante.NoCarne = @NumeroCarne";
+            SELECT 
+                Docente.Id AS IdDocente, 
+                Estudiante.Id AS IdEstudiante, 
+                (NotaPrimerParcial + NotaSegundoParcial + NotaActividades + NotaExamenFinal) AS NotaFinal
+            FROM RegistroNotas
+            JOIN Docente ON RegistroNotas.DocenteId = Docente.Id
+            JOIN Estudiante ON RegistroNotas.EstudianteId = Estudiante.Id";
 
                 using (SqlCommand comando = new SqlCommand(query, conn))
                 {
@@ -188,7 +191,6 @@ namespace DataAccesUITI
                             RegistroNotas notas = new RegistroNotas
                             {
                                 IdNota = Convert.ToInt32(reader["IdNota"]),
-                                // Aquí deberías mapear el resto de los campos de la nota
                             };
 
                             listaNotas.Add(notas);

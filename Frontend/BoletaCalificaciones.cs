@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using Backend; // Asegúrate de tener una referencia a tu proyecto Backend
-using DataAcces; // Asegúrate de tener una referencia a tu proyecto DataAcces
+using Backend;
+using DataAcces; 
 using DataAccesUITI;
 
 namespace Frontend
@@ -27,10 +27,10 @@ namespace Frontend
 
         private void comboBoxEstudiantes_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBoxEstudiantes.SelectedValue != null)
+            if (comboBoxEstudiantes.SelectedValue != null && comboBoxEstudiantes.SelectedValue.GetType() != typeof(string))
             {
                 int numeroCarne = Convert.ToInt32(comboBoxEstudiantes.SelectedValue);
-                CargarNotasDelEstudiante(numeroCarne);  
+                CargarNotasDelEstudiante(numeroCarne);
             }
         }
 
@@ -39,7 +39,6 @@ namespace Frontend
             List<Backend.RegistroNotas> notas = repositorio.ObtenerNotasPorEstudiante(numeroCarne);
             dvgCalificaciones.DataSource = notas;
         }
-
 
         private void btnSiguienteDocente_Click(object sender, EventArgs e)
         {
@@ -54,7 +53,7 @@ namespace Frontend
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            if (comboBoxEstudiantes.SelectedValue != null)
+            if (comboBoxEstudiantes.SelectedValue != null && comboBoxEstudiantes.SelectedValue.GetType() != typeof(string))
             {
                 int numeroCarne = Convert.ToInt32(comboBoxEstudiantes.SelectedValue);
                 CargarNotasDelEstudiante(numeroCarne);
