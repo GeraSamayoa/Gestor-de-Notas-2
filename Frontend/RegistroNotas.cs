@@ -22,8 +22,17 @@ namespace Frontend
             InitializeComponent();
             CargarCursos();
             CargarEstudiantes();
+            CargarDocentes();
             registroNotasDAL = new RegistroNotasDAL();
-            
+ 
+
+        }
+        private void CargarDocentes()
+        {
+            List<Docente> docentes = repositorio.ObtenerDocentes();
+            comboBoxDocente.DataSource = docentes;
+            comboBoxDocente.DisplayMember = "Nombre";
+            comboBoxDocente.ValueMember = "IdDocente";
         }
         private void CargarCursos()
         {
@@ -46,11 +55,13 @@ namespace Frontend
             registroNotasDAL.InsertRegistroNotas(registroNotas1);
             dgvRegEstudiante.DataSource = registroNotasDAL.GetRegistroNotas();
 
+            int idDocenteSeleccionado = (int)comboBoxDocente.SelectedValue;
             int idCursoSeleccionado = (int)comboBoxCURSO.SelectedValue;
             int IdEstudianteSeleccionado = (int)comboBoxEstudianteAisgNota.SelectedValue;
 
             Backend.RegistroNotas registroNotas = new Backend.RegistroNotas
             {
+                Docente = new Docente { IdDocente = idDocenteSeleccionado },
                 Estudiante = new Estudiante { NoCarne = IdEstudianteSeleccionado },
                 Curso = new Curso { IdCurso = idCursoSeleccionado },
             };
