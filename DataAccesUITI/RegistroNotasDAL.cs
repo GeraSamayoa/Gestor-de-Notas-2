@@ -103,7 +103,7 @@ namespace DataAcces
             using (SqlConnection conn = new SqlConnection(conexion))
             {
                 conn.Open();
-                string sql = "INSERT INTO RegistroNotas (IdCurso, IdEstudiante) VALUES (@IdDocente, @IdJornada, @IdCarrera, @IdCurso, @IdSeccion)";
+                string sql = "INSERT INTO RegistroNotas (IdCurso, IdEstudiante,IdDocente) VALUES (@IdCurso, @IdEstudiante,@IdDocente.)";
                 using (SqlCommand comando = new SqlCommand(sql, conn))
                 {
                    
